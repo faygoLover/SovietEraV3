@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "soviet:block/slabs/concrete_slab_red",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "soviet:block/slabs/concrete_slab_red",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "soviet:block/slabs/concrete_slab_red"
+    },
+    "facing=north": {
+      "model": "soviet:block/slabs/concrete_slab_red",
+      "y": 180
+    },
+    "facing=up": {
+      "model": "soviet:block/slabs/concrete_slab_red",
+      "x": 90
+    },
+    "facing=down": {
+      "model": "soviet:block/slabs/concrete_slab_red",
+      "x": 270
+    }
+  }
+}

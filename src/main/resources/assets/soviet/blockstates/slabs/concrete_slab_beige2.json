@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "soviet:block/slabs/concrete_slab_beige2",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "soviet:block/slabs/concrete_slab_beige2",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "soviet:block/slabs/concrete_slab_beige2"
+    },
+    "facing=north": {
+      "model": "soviet:block/slabs/concrete_slab_beige2",
+      "y": 180
+    },
+    "facing=up": {
+      "model": "soviet:block/slabs/concrete_slab_beige2",
+      "x": 90
+    },
+    "facing=down": {
+      "model": "soviet:block/slabs/concrete_slab_beige2",
+      "x": 270
+    }
+  }
+}

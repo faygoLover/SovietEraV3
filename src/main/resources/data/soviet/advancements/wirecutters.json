@@ -1,0 +1,36 @@
+{
+  "parent": "soviet:root",
+  "display": {
+    "icon": {
+      "item": "soviet:wire_cutters",
+      "nbt": "{Damage:0}"
+    },
+    "title": {
+      "translate": "adv.wc"
+    },
+    "description": {
+      "translate": "adv.wc.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "wirecutters": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "soviet:wire_cutters"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "wirecutters"
+    ]
+  ]
+}

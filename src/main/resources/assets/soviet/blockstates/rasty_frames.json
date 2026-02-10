@@ -1,0 +1,25 @@
+{
+    "multipart": [
+        {   "when": { "not_contains": "true" },
+            "apply": { "model": "soviet:block/rasty_frame_empty" }
+        },
+  	{  "when": { "contains_block_n": "true" },
+            "apply": { "model": "soviet:block/rasty_frame" }
+        },
+  	{  "when": { "contains_block_s": "true" },
+            "apply": { "model": "soviet:block/rasty_frame" }
+        },
+  	{  "when": { "contains_block_w": "true" },
+            "apply": { "model": "soviet:block/rasty_frame" }
+        },
+  	{  "when": { "contains_block_e": "true" },
+            "apply": { "model": "soviet:block/rasty_frame" }
+        },
+  	{  "when": { "contains_block_t": "true" },
+            "apply": { "model": "soviet:block/rasty_frame" }
+        },
+  	{  "when": { "contains_block_b": "true" },
+            "apply": { "model": "soviet:block/rasty_frame" }
+        }
+    ]
+}

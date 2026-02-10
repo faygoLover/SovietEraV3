@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "part=def":  { "model": "soviet:block/structural/antenn"},
+        "part=down":  { "model": "soviet:block/structural/antenn_down"},
+        "part=mid":  { "model": "soviet:block/structural/antenn"},
+        "part=up":  { "model": "soviet:block/structural/antenn_top"}
+ }
+}

@@ -1,0 +1,20 @@
+{
+  "parent": "soviet:wirecutters",
+  "display": {
+    "icon": {
+      "item": "soviet:variant_item"
+    },
+    "title": {
+      "translate": "adv.wip"
+    },
+    "description": {
+      "translate": "adv.wip.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {},
+  "requirements": []
+}

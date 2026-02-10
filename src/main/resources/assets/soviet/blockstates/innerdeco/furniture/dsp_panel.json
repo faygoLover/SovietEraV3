@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=east":  { "model": "soviet:block/innerdeco/furniture/dsp_panel", "y": 90},
+        "facing=west":  { "model": "soviet:block/innerdeco/furniture/dsp_panel", "y": 270},
+        "facing=south": { "model": "soviet:block/innerdeco/furniture/dsp_panel", "y": 180 },
+        "facing=north": { "model": "soviet:block/innerdeco/furniture/dsp_panel", "y": 0 }
+ }
+}

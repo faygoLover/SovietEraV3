@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "soviet:brick/yellow_bricks_1"
+    },
+    "title": {
+      "translate": "adv.start_exlore"
+    },
+    "description": {
+      "translate": "adv.start_exlore.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "soviet:textures/advancements/backgrounds/adv_background.png"
+  },
+  "criteria": {
+    "explore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "soviet:cracked_yellow_brick"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "explore"
+    ]
+  ]
+}

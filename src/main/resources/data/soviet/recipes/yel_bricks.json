@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "soviet:cracked_yellow_brick"
+    },
+    {
+      "item": "soviet:cracked_yellow_brick"
+    },
+    {
+      "item": "soviet:cracked_yellow_brick"
+    },
+    {
+      "item": "soviet:cracked_yellow_brick"
+    }
+  ],
+  "result": {
+    "item": "soviet:brick/yellow_bricks_3_br"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "name": "leadceramic",
+      "rolls": {
+        "min": 0.0,
+        "max": 3.0,
+        "type": "minecraft:uniform"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "soviet:armatures"
+        }
+      ]
+    },
+    {
+      "name": "leadceramic",
+      "rolls": {
+        "min": 6.0,
+        "max": 14.0,
+        "type": "minecraft:uniform"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "soviet:leadceramic_tile"
+        }
+      ]
+    }
+  ]
+}

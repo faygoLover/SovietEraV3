@@ -1,0 +1,35 @@
+{
+  "parent": "soviet:root",
+  "display": {
+    "icon": {
+      "item": "soviet:wrench"
+    },
+    "title": {
+      "translate": "adv.wrench"
+    },
+    "description": {
+      "translate": "adv.wrench.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "wrench": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "soviet:wrench"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "wrench"
+    ]
+  ]
+}

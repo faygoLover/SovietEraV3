@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "soviet:cracked_red_brick"
+    },
+    {
+      "item": "soviet:cracked_red_brick"
+    },
+    {
+      "item": "soviet:cracked_red_brick"
+    },
+    {
+      "item": "soviet:cracked_red_brick"
+    }
+  ],
+  "result": {
+    "item": "soviet:brick/soviet_bricks_br"
+  }
+}
