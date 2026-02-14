@@ -6,11 +6,11 @@ import ru.soviet.blocks.baseblock.BaseBlock;
 
 public class TilledBlock extends BaseBlock {
 
-    public TilledBlock(String info) {
+    public TilledBlock(String hoverTextKey) {
         super(BlockBehaviour.Properties.copy(Blocks.STONE)
             .requiresCorrectToolForDrops()
             .strength(5.5F, 15F)
-        , info);
+        ,hoverTextKey);
     }
     public TilledBlock() {
         super(BlockBehaviour.Properties.copy(Blocks.STONE)

@@ -1,13 +1,13 @@
 {
     "variants": {
-        "enable=false,facing=east":  { "model": "soviet:block/innerdeco/devices/small_computer", "y": 90},
-        "enable=false,facing=west":  { "model": "soviet:block/innerdeco/devices/small_computer", "y": 270},
-        "enable=false,facing=south": { "model": "soviet:block/innerdeco/devices/small_computer", "y": 180 },
-        "enable=false,facing=north": { "model": "soviet:block/innerdeco/devices/small_computer", "y": 0 },
-        "enable=true,facing=east":  { "model": "soviet:block/innerdeco/devices/small_computer_enb", "y": 90},
-        "enable=true,facing=west":  { "model": "soviet:block/innerdeco/devices/small_computer_enb", "y": 270},
-        "enable=true,facing=south": { "model": "soviet:block/innerdeco/devices/small_computer_enb", "y": 180 },
-        "enable=true,facing=north": { "model": "soviet:block/innerdeco/devices/small_computer_enb", "y": 0 }
+        "enabled=false,facing=east":  { "model": "soviet:block/innerdeco/devices/small_computer", "y": 270},
+        "enabled=false,facing=west":  { "model": "soviet:block/innerdeco/devices/small_computer", "y": 90},
+        "enabled=false,facing=south": { "model": "soviet:block/innerdeco/devices/small_computer", "y": 0},
+        "enabled=false,facing=north": { "model": "soviet:block/innerdeco/devices/small_computer", "y": 180},
+        "enabled=true,facing=east":  { "model": "soviet:block/innerdeco/devices/small_computer_enb", "y": 270},
+        "enabled=true,facing=west":  { "model": "soviet:block/innerdeco/devices/small_computer_enb", "y": 90},
+        "enabled=true,facing=south": { "model": "soviet:block/innerdeco/devices/small_computer_enb", "y": 0},
+        "enabled=true,facing=north": { "model": "soviet:block/innerdeco/devices/small_computer_enb", "y": 180}
     }
 }
 

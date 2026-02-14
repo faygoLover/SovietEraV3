@@ -10,7 +10,7 @@ public class GlassBlock extends BaseBlock {
                 .requiresCorrectToolForDrops()
                 .strength(1.0F, 2.0F)
                 //.forceSolidOff()
-                .noOcclusion());
+                .noOcclusion()
+        );
     }
 }
-

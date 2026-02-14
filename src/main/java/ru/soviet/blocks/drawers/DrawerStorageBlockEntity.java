@@ -1,0 +1,20 @@
+package ru.soviet.blocks.drawers;
+
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.block.state.BlockState;
+import ru.soviet.blocks.baseblock.BaseStorageBlockEntity;
+import ru.soviet.reg.RegBlockEntities;
+
+public class DrawerStorageBlockEntity extends BaseStorageBlockEntity<DrawerStorageMenu> {
+    public DrawerStorageBlockEntity(BlockPos pos, BlockState state) {
+        super(RegBlockEntities.DRAWER_STORAGE.get(), pos, state, Component.translatable("storage.drawer"));
+    }
+
+    @Override
+    public DrawerStorageMenu createMenu(int id, Inventory inventory, Player player) {
+        return new DrawerStorageMenu(id, inventory, this.itemHandler);
+    }
+}

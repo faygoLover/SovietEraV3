@@ -18,18 +18,7 @@ public class RegTabs extends CreativeModeTab {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, SovietEra.MODID);
 
 
-    public static final RegistryObject<CreativeModeTab> TAB_TEST = CREATIVE_MODE_TABS.register("main", () -> CreativeModeTab.builder()
-            .icon(() -> new ItemStack(RegBlocks.CONCRETE_RED_TEST.get()))
-            .title(Component.translatable("creative_tab.main"))
-            .displayItems((parameters, output) -> {
-                RegBlocks.BLOCKS.getEntries().forEach(block ->
-                        output.accept(block.get())
-                );
-            })
-            .build()
-    );
-
-    public static final RegistryObject<CreativeModeTab> TAB_MAIN = CREATIVE_MODE_TABS.register("main", () -> CreativeModeTab.builder()
+    public static final RegistryObject<CreativeModeTab> TAB_MAIN = CREATIVE_MODE_TABS.register("main_tab", () -> CreativeModeTab.builder()
             .icon(() -> new ItemStack(RegBlocksMain.CONCRETE_GRAY.get()))
             .title(Component.translatable("creative_tab.main"))
             .displayItems((parameters, output) -> {
@@ -40,7 +29,7 @@ public class RegTabs extends CreativeModeTab {
             .build()
     );
 
-    public static final RegistryObject<CreativeModeTab> TAB_INNER_DECO = CREATIVE_MODE_TABS.register("inner_deco", () -> CreativeModeTab.builder()
+    public static final RegistryObject<CreativeModeTab> TAB_INNER_DECO = CREATIVE_MODE_TABS.register("inner_deco_tab", () -> CreativeModeTab.builder()
             .icon(() -> new ItemStack(RegBlocksInner.SAFE.get()))
             .title(Component.translatable("creative_tab.inner_deco"))
             .displayItems((parameters, output) -> {
@@ -52,7 +41,7 @@ public class RegTabs extends CreativeModeTab {
             .build()
     );
 
-    public static final RegistryObject<CreativeModeTab> TAB_OUTER_DECO = CREATIVE_MODE_TABS.register("outer_deco", () -> CreativeModeTab.builder()
+    public static final RegistryObject<CreativeModeTab> TAB_OUTER_DECO = CREATIVE_MODE_TABS.register("outer_deco_tab", () -> CreativeModeTab.builder()
             .icon(() -> new ItemStack(RegBlocksOuter.CONCRETE_FENCE_BASE.get()))
             .title(Component.translatable("creative_tab.outer_deco"))
             .displayItems((parameters, output) -> {
@@ -64,11 +53,11 @@ public class RegTabs extends CreativeModeTab {
             .build()
     );
 
-    public static final RegistryObject<CreativeModeTab> TAB_SYMBOLS = CREATIVE_MODE_TABS.register("symbols", () -> CreativeModeTab.builder()
-            .icon(() -> new ItemStack(RegBlocksSymbols.ex_po.get()))
+    public static final RegistryObject<CreativeModeTab> TAB_SYMBOLS = CREATIVE_MODE_TABS.register("symbols_tab", () -> CreativeModeTab.builder()
+            .icon(() -> new ItemStack(RegBlocksSymbols.EX_PO.get()))
             .title(Component.translatable("creative_tab.symbols"))
             .displayItems((parameters, output) -> {
-                output.accept(RegBlocksSymbols.ex_po.get());
+                output.accept(RegBlocksSymbols.EX_PO.get());
                 RegBlocksSymbols.BLOCKS_SYMBOLS.getEntries().forEach(block ->
                         output.accept(block.get())
                 );
@@ -76,7 +65,7 @@ public class RegTabs extends CreativeModeTab {
             .build()
     );
 
-    public static final RegistryObject<CreativeModeTab> TAB_ITEMS = CREATIVE_MODE_TABS.register("items", () -> CreativeModeTab.builder()
+    public static final RegistryObject<CreativeModeTab> TAB_ITEMS = CREATIVE_MODE_TABS.register("items_tab", () -> CreativeModeTab.builder()
             .icon(() -> new ItemStack(RegItems.ARMATURE.get()))
             .title(Component.translatable("creative_tab.items"))
             .displayItems((parameters, output) -> {

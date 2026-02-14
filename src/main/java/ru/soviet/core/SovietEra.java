@@ -24,14 +24,16 @@ public class SovietEra {
     public SovietEra() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        RegItems.ITEMS.register(modEventBus);
-        RegBlocks.BLOCKS.register(modEventBus);
+        RegTabs.CREATIVE_MODE_TABS.register(modEventBus);
+        //RegBlocks.BLOCKS.register(modEventBus);
         RegBlocksInner.BLOCKS_INNER.register(modEventBus);
         RegBlocksOuter.BLOCKS_OUTER.register(modEventBus);
         RegBlocksMain.BLOCKS_MAIN.register(modEventBus);
         RegBlocksSymbols.BLOCKS_SYMBOLS.register(modEventBus);
-        RegFluids.FLUIDS.register(modEventBus);
-        RegTabs.CREATIVE_MODE_TABS.register(modEventBus);
+        RegBlockEntities.BLOCK_ENTITIES.register(modEventBus);
+        RegMenuTypes.MENUS.register(modEventBus);
+        //RegFluids.FLUIDS.register(modEventBus);
+        RegItems.ITEMS.register(modEventBus);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 

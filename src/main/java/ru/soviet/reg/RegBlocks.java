@@ -274,13 +274,6 @@ public class RegBlocks {
     public static final RegistryObject<Block> COULOMETRIC_INTEGRATOR2 = registerBlockWithModel("innerdeco/devices/phys/coulometric_integrator2", () -> new PhysDevices(1F));
     public static final RegistryObject<Block> WELDING_MACHINE = registerBlockWithModel("innerdeco/devices/welding_machine", () -> new PhysDevices(1F));
     public static final RegistryObject<Block> WAVEMETER = registerBlockWithModel("innerdeco/devices/phys/wavemeter", () -> new PhysDevices(1F));
-    public static final RegistryObject<Block> ACCELERATOR_RINGS = registerBlockWithModel("innerdeco/accelerator/accl_rings", () -> new Accelerator(1F ));
-    public static final RegistryObject<Block> ACCELERATOR_RINGS_CORNER_LEFT = registerBlockWithModel("innerdeco/accelerator/accl_rings_corner_left", () -> new Accelerator( 1F));
-    public static final RegistryObject<Block> ACCELERATOR_RINGS_CORNER_RIGHT = registerBlockWithModel("innerdeco/accelerator/accl_rings_corner_right", () -> new Accelerator( 1F));
-    public static final RegistryObject<Block> ACCELERATOR_STAND = registerBlockWithModel("innerdeco/accelerator/accelerator_stand", () -> new Accelerator( 1F));
-    public static final RegistryObject<Block> ACCELERATOR = registerBlockWithModel("innerdeco/accelerator/accelerator", () -> new Accelerator( 0.6F));
-    public static final RegistryObject<Block> ACCELERATOR_CALC_BLOCK = registerBlockWithModel("innerdeco/accelerator/accl_calc_block", () -> new Accelerator( 0.6F));
-    public static final RegistryObject<Block> ACCELERATOR_RINGS_END = registerBlockWithModel("innerdeco/accelerator/accl_rings_end", () -> new Accelerator( 0.6F));
     public static final RegistryObject<Block> CONTROL_PANEL_UP = registerBlockWithModel("innerdeco/control_panel/cp_up", () -> new ControlTable(getP(Material.IRON, 1.3f,2.8f, ToolType.PICKAXE, 1, SoundType.METAL, true, true)));
     public static final RegistryObject<Block> CONTROL_PANEL_DOWN = registerBlockWithModel("innerdeco/control_panel/cp_down", () -> new ControlTable(getP(Material.IRON, 1.3f,2.8f, ToolType.PICKAXE, 1, SoundType.METAL, true, true)));
     public static final RegistryObject<Block> CLOCK_ELECTRONICA = registerBlockWithModel("innerdeco/devices/clock_electronika", () -> new ElectronicaClock(getP(Material.WOOD, 0.4f,1.1f,ToolType.AXE, 0, SoundType.METAL, true, true)));
