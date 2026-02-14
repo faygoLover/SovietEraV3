@@ -6,9 +6,9 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import ru.soviet.blocks.drawers.DrawerStorageScreen;
-import ru.soviet.blocks.safe.SafeStorageScreen;
-import ru.soviet.blocks.dsp.DspStorageScreen;
+import ru.soviet.blocks.container.drawers.DrawerStorageScreen;
+import ru.soviet.blocks.container.safe.SafeStorageScreen;
+import ru.soviet.blocks.container.dsp.DspStorageScreen;
 import ru.soviet.reg.RegMenuTypes;
 
 @Mod.EventBusSubscriber(modid = SovietEra.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)

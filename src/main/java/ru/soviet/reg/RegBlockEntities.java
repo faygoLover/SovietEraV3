@@ -4,10 +4,10 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import ru.soviet.blocks.dsp.DspStorageBlockEntity;
-import ru.soviet.blocks.safe.SafeStorageBlockEntity;
+import ru.soviet.blocks.container.dsp.DspStorageBlockEntity;
+import ru.soviet.blocks.container.safe.SafeStorageBlockEntity;
 import ru.soviet.core.SovietEra;
-import ru.soviet.blocks.drawers.DrawerStorageBlockEntity;
+import ru.soviet.blocks.container.drawers.DrawerStorageBlockEntity;
 
 public class RegBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =

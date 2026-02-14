@@ -1,11 +1,11 @@
-package ru.soviet.blocks.safe;
+package ru.soviet.blocks.container.safe;
 
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.SlotItemHandler;
-import ru.soviet.blocks.baseblock.BaseStorageMenu;
+import ru.soviet.blocks.container.BaseStorageMenu;
 import ru.soviet.reg.RegMenuTypes;
 
 public class SafeStorageMenu extends BaseStorageMenu {

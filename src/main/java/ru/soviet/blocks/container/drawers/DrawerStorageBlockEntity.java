@@ -1,11 +1,11 @@
-package ru.soviet.blocks.drawers;
+package ru.soviet.blocks.container.drawers;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.block.state.BlockState;
-import ru.soviet.blocks.baseblock.BaseStorageBlockEntity;
+import ru.soviet.blocks.container.BaseStorageBlockEntity;
 import ru.soviet.reg.RegBlockEntities;
 
 public class DrawerStorageBlockEntity extends BaseStorageBlockEntity<DrawerStorageMenu> {

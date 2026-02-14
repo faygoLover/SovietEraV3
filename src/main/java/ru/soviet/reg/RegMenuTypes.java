@@ -5,10 +5,10 @@ import net.minecraftforge.common.extensions.IForgeMenuType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import ru.soviet.blocks.dsp.DspStorageMenu;
-import ru.soviet.blocks.safe.SafeStorageMenu;
+import ru.soviet.blocks.container.dsp.DspStorageMenu;
+import ru.soviet.blocks.container.safe.SafeStorageMenu;
 import ru.soviet.core.SovietEra;
-import ru.soviet.blocks.drawers.DrawerStorageMenu;
+import ru.soviet.blocks.container.drawers.DrawerStorageMenu;
 
 public class RegMenuTypes {
     public static final DeferredRegister<MenuType<?>> MENUS = DeferredRegister.create(ForgeRegistries.MENU_TYPES, SovietEra.MODID);

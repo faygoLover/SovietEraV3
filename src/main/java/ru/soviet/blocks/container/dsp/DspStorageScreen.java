@@ -1,9 +1,9 @@
-package ru.soviet.blocks.dsp;
+package ru.soviet.blocks.container.dsp;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
-import ru.soviet.blocks.baseblock.BaseStorageScreen;
+import ru.soviet.blocks.container.BaseStorageScreen;
 import ru.soviet.core.SovietEra;
 
 public class DspStorageScreen extends BaseStorageScreen<DspStorageMenu> {

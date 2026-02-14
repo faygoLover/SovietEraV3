@@ -1,4 +1,4 @@
-package ru.soviet.blocks.baseblock;
+package ru.soviet.blocks.container;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.GuiGraphics;

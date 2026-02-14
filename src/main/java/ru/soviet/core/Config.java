@@ -1,6 +1,5 @@
-package ru.soviet.core;
-
 /*
+package ru.soviet.core;
 // An example config class. This is not required, but it's a good idea to have one to keep your config organized.
 // Demonstrates how to use Forge's config APIs
 @Mod.EventBusSubscriber(modid = SovietEra.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)

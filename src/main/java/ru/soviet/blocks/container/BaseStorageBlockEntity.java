@@ -1,4 +1,4 @@
-package ru.soviet.blocks.baseblock;
+package ru.soviet.blocks.container;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

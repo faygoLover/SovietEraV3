@@ -7,7 +7,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.items.IItemHandler;
-import ru.soviet.blocks.baseblock.BaseStorageBlockEntity;
+import ru.soviet.blocks.container.BaseStorageBlockEntity;
 
 public class BlockEntityDrop {
     public static void dropContents(Level level, BlockPos pos, BlockEntity blockEntity) {
@@ -32,7 +32,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.items.IItemHandler;
-import ru.soviet.blocks.baseblock.BaseStorageBlockEntity;
+import ru.soviet.blocks.container.BaseStorageBlockEntity;
 
 import java.util.Random;
 

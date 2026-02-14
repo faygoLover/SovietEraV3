@@ -10,13 +10,13 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import ru.soviet.blocks.baseblock.HorizontalConnectingModelBlock;
-import ru.soviet.blocks.drawers.DrawerStorage;
+import ru.soviet.blocks.container.drawers.DrawerStorage;
 import ru.soviet.blocks.decorative.innerdeco.devices.ModelDeviceEnable;
 import ru.soviet.blocks.decorative.innerdeco.devices.ModelDevice;
 import ru.soviet.blocks.decorative.innerdeco.devices.ModelDeviceToggle;
-import ru.soviet.blocks.dsp.DspStorage;
-import ru.soviet.blocks.dsp.DspStorageTable;
-import ru.soviet.blocks.safe.SafeStorage;
+import ru.soviet.blocks.container.dsp.DspStorage;
+import ru.soviet.blocks.container.dsp.DspStorageTable;
+import ru.soviet.blocks.container.safe.SafeStorage;
 import ru.soviet.core.SovietEra;
 
 import java.util.function.Supplier;

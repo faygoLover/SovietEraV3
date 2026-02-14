@@ -1,4 +1,6 @@
+/*
 package ru.soviet.core;
+
 
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
@@ -14,8 +16,6 @@ import net.minecraftforge.registries.RegistryObject;
 public class idunno {
 
 
-
-/*
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
@@ -53,8 +53,8 @@ public class idunno {
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
     }
 
-*/
 }
+ */
 
 
 

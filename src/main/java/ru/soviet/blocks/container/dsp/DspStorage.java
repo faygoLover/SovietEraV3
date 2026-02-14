@@ -1,4 +1,4 @@
-package ru.soviet.blocks.dsp;
+package ru.soviet.blocks.container.dsp;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
@@ -12,33 +12,25 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
-import ru.soviet.blocks.baseblock.HorizontalConnectingModelBlock;
+import ru.soviet.blocks.baseblock.HorizontalDirectionalModelBlock;
 import ru.soviet.utils.BlockEntityDrop;
 
-public class DspStorageTable extends HorizontalConnectingModelBlock implements EntityBlock {
+public class DspStorage extends HorizontalDirectionalModelBlock implements EntityBlock {
 
-    public DspStorageTable(Properties properties, String hoverTextKey, VoxelShape noneShape, VoxelShape leftShape, VoxelShape rightShape, VoxelShape centerShape) {
-        super(properties, hoverTextKey, noneShape, leftShape, rightShape, centerShape);
+    public DspStorage(Properties properties, String hoverTextKey, VoxelShape shape) {
+        super(properties, hoverTextKey, shape);
     }
 
-    public DspStorageTable(Properties properties, VoxelShape noneShape, VoxelShape leftShape, VoxelShape rightShape, VoxelShape centerShape) {
-        super(properties, null, noneShape, leftShape, rightShape, centerShape);
+    public DspStorage(Properties properties, String hoverTextKey) {
+        super(properties, hoverTextKey, null);
     }
 
-    public DspStorageTable(Properties properties, String hoverTextKey, VoxelShape shape) {
-        super(properties, hoverTextKey, shape, shape, shape, shape);
+    public DspStorage(Properties properties, VoxelShape shape) {
+        super(properties, null, shape);
     }
 
-    public DspStorageTable(Properties properties, String hoverTextKey) {
-        super(properties, hoverTextKey, null, null, null, null);
-    }
-
-    public DspStorageTable(Properties properties, VoxelShape shape) {
-        super(properties, null, shape, shape, shape, shape);
-    }
-
-    public DspStorageTable(Properties properties) {
-        super(properties, null, null, null, null, null);
+    public DspStorage(Properties properties) {
+        super(properties, null, null);
     }
 
     @Override
