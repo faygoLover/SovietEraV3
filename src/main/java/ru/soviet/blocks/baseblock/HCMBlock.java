@@ -19,7 +19,9 @@ import ru.soviet.utils.YShapeRotator;
 import java.util.EnumMap;
 import java.util.Map;
 
-public class HorizontalConnectingModelBlock extends HorizontalDirectionalModelBlock {
+
+//HCMBlock = HorizontalConnectingModelBlock
+public class HCMBlock extends HDMBlock {
     public static final EnumProperty<ConnectionType> CONNECTION = EnumProperty.create("connection", ConnectionType.class);
 
     public enum ConnectionType implements StringRepresentable {
@@ -46,7 +48,7 @@ public class HorizontalConnectingModelBlock extends HorizontalDirectionalModelBl
 
     private final Map<ConnectionType, VoxelShape> shapesByConnection;
 
-    public HorizontalConnectingModelBlock(Properties properties, String hoverTextKey, VoxelShape noneShape, VoxelShape leftShape, VoxelShape rightShape, VoxelShape centerShape) {
+    public HCMBlock(Properties properties, String hoverTextKey, VoxelShape noneShape, VoxelShape leftShape, VoxelShape rightShape, VoxelShape centerShape) {
         super(properties, hoverTextKey, null); // shape не используется, передаём null
         this.shapesByConnection = new EnumMap<>(ConnectionType.class);
         shapesByConnection.put(ConnectionType.NONE, noneShape != null ? noneShape : Shapes.block());
@@ -58,23 +60,23 @@ public class HorizontalConnectingModelBlock extends HorizontalDirectionalModelBl
                 .setValue(CONNECTION, ConnectionType.NONE));
     }
 
-    public HorizontalConnectingModelBlock(Properties properties, VoxelShape noneShape, VoxelShape leftShape, VoxelShape rightShape, VoxelShape centerShape) {
+    public HCMBlock(Properties properties, VoxelShape noneShape, VoxelShape leftShape, VoxelShape rightShape, VoxelShape centerShape) {
         this(properties, "info.connectable", noneShape, leftShape, rightShape, centerShape);
     }
 
-    public HorizontalConnectingModelBlock(Properties properties, String hoverTextKey, VoxelShape shape) {
+    public HCMBlock(Properties properties, String hoverTextKey, VoxelShape shape) {
         this(properties, hoverTextKey, shape, shape, shape, shape);
     }
 
-    public HorizontalConnectingModelBlock(Properties properties, String hoverTextKey) {
+    public HCMBlock(Properties properties, String hoverTextKey) {
         this(properties, hoverTextKey, null, null, null, null);
     }
 
-    public HorizontalConnectingModelBlock(Properties properties, VoxelShape shape) {
+    public HCMBlock(Properties properties, VoxelShape shape) {
         this(properties, "info.connectable", shape, shape, shape, shape);
     }
 
-    public HorizontalConnectingModelBlock(Properties properties) {
+    public HCMBlock(Properties properties) {
         this(properties, "info.connectable", null, null, null, null);
     }
 
@@ -94,7 +96,7 @@ public class HorizontalConnectingModelBlock extends HorizontalDirectionalModelBl
     }
 
     @Override
-    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
+    public @NotNull BlockState updateShape(BlockState state, @NotNull Direction direction, @NotNull BlockState neighborState, @NotNull LevelAccessor level, @NotNull BlockPos pos, @NotNull BlockPos neighborPos) {
         Direction facing = state.getValue(FACING);
         ConnectionType newConnection = getConnectionType(level, pos, facing);
         if (newConnection != state.getValue(CONNECTION)) {
@@ -134,12 +136,12 @@ public class HorizontalConnectingModelBlock extends HorizontalDirectionalModelBl
     }
 
     @Override
-    public @NotNull VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+    public @NotNull VoxelShape getShape(@NotNull BlockState state, @NotNull BlockGetter world, @NotNull BlockPos pos, @NotNull CollisionContext context) {
         return YShapeRotator.rotateShape(shapesByConnection.get(state.getValue(CONNECTION)), state.getValue(FACING));
     }
 
     @Override
-    public @NotNull VoxelShape getCollisionShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+    public @NotNull VoxelShape getCollisionShape(@NotNull BlockState state, @NotNull BlockGetter world, @NotNull BlockPos pos, @NotNull CollisionContext context) {
         return YShapeRotator.rotateShape(shapesByConnection.get(state.getValue(CONNECTION)), state.getValue(FACING));
     }
 }

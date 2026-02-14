@@ -7,6 +7,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -21,11 +22,13 @@ public class BaseBlock extends Block {
         this.hoverTextKey = hoverTextKey;
     }
 
-    public BaseBlock(Properties properties) {this(properties, null);}
+    public BaseBlock(Properties properties) {
+        this(properties, null);
+    }
 
     @Override
     @OnlyIn(Dist.CLIENT)
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter level, List<Component> tooltip, TooltipFlag flag) {
+    public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter level, @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
         if (hoverTextKey != null) {
             tooltip.add(Component.translatable(hoverTextKey));
         }

@@ -9,7 +9,8 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import ru.soviet.blocks.baseblock.HorizontalConnectingModelBlock;
+import ru.soviet.blocks.baseblock.HCMBlock;
+import ru.soviet.blocks.baseblock.HDMVBlock;
 import ru.soviet.blocks.container.drawers.DrawerStorage;
 import ru.soviet.blocks.decorative.innerdeco.devices.ModelDeviceEnable;
 import ru.soviet.blocks.decorative.innerdeco.devices.ModelDevice;
@@ -30,7 +31,7 @@ public class RegBlocksInner {
                             1, 1, 0.75)
             )
     );
-    public static final RegistryObject<Block> BIOLAB_TABLE_UP = registerBlock("innerdeco/biolab_table_up", () -> new HorizontalConnectingModelBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion(),
+    public static final RegistryObject<Block> BIOLAB_TABLE_UP = registerBlock("innerdeco/biolab_table_up", () -> new HCMBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion(),
             Shapes.or(
                     Shapes.box(
                             0, 0, 0.0625,
@@ -76,7 +77,7 @@ public class RegBlocksInner {
                             1, 0.9375, 0.0625) //задняя
             ))
     );
-    public static final RegistryObject<Block> BIOLAB_TABLE2 = registerBlock("innerdeco/biolab_table2", () -> new HorizontalConnectingModelBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion(),
+    public static final RegistryObject<Block> BIOLAB_TABLE2 = registerBlock("innerdeco/biolab_table2", () -> new HCMBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion(),
             Shapes.or(
                     Shapes.box(
                             0.03125, 0, 0.03125,
@@ -122,7 +123,7 @@ public class RegBlocksInner {
                             1, 0.875, 0.96875) //средняя
             ))
     );
-    public static final RegistryObject<Block> BIOLAB_TABLE3 = registerBlock("innerdeco/biolab_table3", () -> new HorizontalConnectingModelBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion(),
+    public static final RegistryObject<Block> BIOLAB_TABLE3 = registerBlock("innerdeco/biolab_table3", () -> new HCMBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion(),
             Shapes.or(
                     Shapes.box(
                             0.03125, 0, 0.03125,
@@ -233,7 +234,7 @@ public class RegBlocksInner {
                             1, 1, 1), //верхняя
                     Shapes.box(
                             0.6875, 0.75, 0.09375,
-                            0.975, 0.9375, 0.90625) //средняя
+                            1, 0.9375, 0.90625) //средняя
             ),
             Shapes.or(
                     Shapes.box(
@@ -245,7 +246,7 @@ public class RegBlocksInner {
             ))
     );
 
-    public static final RegistryObject<Block> CHEMLAB_TABLE_UP = registerBlock("innerdeco/chemlab_table_up", () -> new HorizontalConnectingModelBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion(),
+    public static final RegistryObject<Block> CHEMLAB_TABLE_UP = registerBlock("innerdeco/chemlab_table_up", () -> new HCMBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion(),
             Shapes.or(
                     Shapes.box(
                             0, 0, 0,
@@ -289,6 +290,65 @@ public class RegBlocksInner {
                     Shapes.box(
                             0, 0, 0.125,
                             1, 0.9375, 0.1875) //задняя
+            ))
+    );
+
+    public static final RegistryObject<Block> DSP_TABLE_NON_CLOTH = registerBlock("innerdeco/furniture/dsp_table_non_cloth", () -> new HCMBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_WOOD).noOcclusion(),
+            Shapes.or(
+                    Shapes.box(
+                            0.03125, 0.125, 0.0625,
+                            0.125, 0.9375, 0.9375), //левая
+                    Shapes.box(
+                            0, 0.9375, 0,
+                            1, 1, 1), //верхняя
+                    Shapes.box(
+                            0.875, 0.125, 0.0625,
+                            0.96875, 0.9375, 0.9375), //правая
+                    Shapes.box(
+                            0.125, 0.25, 0.09375,
+                            0.875, 0.75, 0.15625), //задняя
+                    Shapes.box(
+                            0.125, 0.75, 0.09375,
+                            0.875, 0.9375, 0.90625) //средняя
+            ),
+            Shapes.or(
+                    Shapes.box(
+                            0, 0.9375, 0,
+                            1, 1, 1), //верхняя
+                    Shapes.box(
+                            0.875, 0.125, 0.0625,
+                            0.96875, 0.9375, 0.9375), //правая
+                    Shapes.box(
+                            0, 0.25, 0.09375,
+                            0.875, 0.75, 0.15625), //задняя
+                    Shapes.box(
+                            0, 0.75, 0.09375,
+                            0.875, 0.9375, 0.90625) //средняя
+            ),
+            Shapes.or(
+                    Shapes.box(
+                            0.03125, 0.125, 0.0625,
+                            0.125, 0.9375, 0.9375), //левая
+                    Shapes.box(
+                            0, 0.9375, 0,
+                            1, 1, 1), //верхняя
+                    Shapes.box(
+                            0.125, 0.25, 0.09375,
+                            1, 0.75, 0.15625), //задняя
+                    Shapes.box(
+                            0.125, 0.75, 0.09375,
+                            1, 0.9375, 0.90625) //средняя
+            ),
+            Shapes.or(
+                    Shapes.box(
+                            0, 0.9375, 0,
+                            1, 1, 1), //верхняя
+                    Shapes.box(
+                            0, 0.25, 0.09375,
+                            1, 0.75, 0.15625), //задняя
+                    Shapes.box(
+                            0, 0.75, 0.09375,
+                            1, 0.9375, 0.90625) //средняя
             ))
     );
 
@@ -379,6 +439,11 @@ public class RegBlocksInner {
                             1, 1, 0.1875)
             )
     );
+    public static final RegistryObject<Block> GAS_STOVE = registerBlock("innerdeco/furniture/gas_stove", () -> new HDMVBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK),
+            Shapes.box(
+                    0, 0, 0,
+                    1, 0.96875, 0.875)
+    ));
 
     private static <T extends Block> RegistryObject<T> registerBlock(final String name, final Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS_INNER.register(name, block);

@@ -11,25 +11,26 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.NotNull;
 import ru.soviet.utils.YShapeRotator;
 
-public abstract class HorizontalDirectionalModelBlock extends ModelBlock {
-    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+public abstract class SixDirectionalModelBlock extends ModelBlock {
+    public static final DirectionProperty FACING = BlockStateProperties.FACING;
 
-    public HorizontalDirectionalModelBlock(Properties properties, String hoverTextKey, VoxelShape shape) {
+    public SixDirectionalModelBlock(Properties properties, String hoverTextKey, VoxelShape shape) {
         super(properties, hoverTextKey, shape);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
     }
 
-    public HorizontalDirectionalModelBlock(Properties properties, String hoverTextKey) {
+    public SixDirectionalModelBlock(Properties properties, String hoverTextKey) {
         this(properties, hoverTextKey, null);
     }
 
-    public HorizontalDirectionalModelBlock(Properties properties, VoxelShape shape) {
+    public SixDirectionalModelBlock(Properties properties, VoxelShape shape) {
         this(properties, null, shape);
     }
 
-    public HorizontalDirectionalModelBlock(Properties properties) {
+    public SixDirectionalModelBlock(Properties properties) {
         this(properties, null, null);
     }
 
@@ -44,12 +45,12 @@ public abstract class HorizontalDirectionalModelBlock extends ModelBlock {
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+    public @NotNull VoxelShape getShape(@NotNull BlockState state, @NotNull BlockGetter world, @NotNull BlockPos pos, @NotNull CollisionContext context) {
         return YShapeRotator.rotateShape(shape, state.getValue(FACING));
     }
 
     @Override
-    public VoxelShape getCollisionShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+    public @NotNull VoxelShape getCollisionShape(@NotNull BlockState state, @NotNull BlockGetter world, @NotNull BlockPos pos, @NotNull CollisionContext context) {
         return YShapeRotator.rotateShape(shape, state.getValue(FACING));
     }
 }

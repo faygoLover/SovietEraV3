@@ -10,9 +10,10 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import ru.soviet.blocks.baseblock.HorizontalDirectionalModelBlock;
+import org.jetbrains.annotations.NotNull;
+import ru.soviet.blocks.baseblock.HDMBlock;
 
-public class ModelDeviceEnable extends HorizontalDirectionalModelBlock {
+public class ModelDeviceEnable extends HDMBlock {
     public static final BooleanProperty ENABLED = BooleanProperty.create("enabled");
 
     public ModelDeviceEnable() {
@@ -36,7 +37,7 @@ public class ModelDeviceEnable extends HorizontalDirectionalModelBlock {
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level level, BlockPos pos, Block block, BlockPos fromPos, boolean isMoving) {
+    public void neighborChanged(@NotNull BlockState state, Level level, @NotNull BlockPos pos, @NotNull Block block, @NotNull BlockPos fromPos, boolean isMoving) {
         if (!level.isClientSide) {
 
             if (state.getValue(ENABLED) != level.hasNeighborSignal(pos)) {
@@ -46,7 +47,7 @@ public class ModelDeviceEnable extends HorizontalDirectionalModelBlock {
     }
 
     @Override
-    public void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean isMoving) {
+    public void onPlace(@NotNull BlockState state, Level level, @NotNull BlockPos pos, @NotNull BlockState oldState, boolean isMoving) {
         if (!level.isClientSide && !oldState.is(state.getBlock())) {
             if (level.hasNeighborSignal(pos) != state.getValue(ENABLED)) {
                 level.setBlock(pos, state.setValue(ENABLED, level.hasNeighborSignal(pos)), 3);

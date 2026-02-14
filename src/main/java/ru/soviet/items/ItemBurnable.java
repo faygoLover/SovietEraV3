@@ -5,11 +5,11 @@ import net.minecraft.world.item.crafting.RecipeType;
 import org.jetbrains.annotations.Nullable;
 
 
-public class ItemBurnable extends ItemInfo {
+public class ItemBurnable extends BaseItem {
     private final int burnTime;
 
-    public ItemBurnable(ItemInfo.Properties properties, int burnTime, String info) {
-        super(properties, info);
+    public ItemBurnable(BaseItem.Properties properties, int burnTime, String hoverTextKey) {
+        super(properties, hoverTextKey);
         this.burnTime = burnTime;
     }
 

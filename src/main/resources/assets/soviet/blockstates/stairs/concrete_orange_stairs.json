@@ -1,209 +1,421 @@
 {
   "variants": {
-    "facing=north,half=top,shape=straight": {
+    "facing=north,damaged=false,half=top,shape=straight": {
       "model": "soviet:block/stairs/concrete_orange_stairs",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
-    "facing=south,half=top,shape=straight": {
+    "facing=south,damaged=false,half=top,shape=straight": {
       "model": "soviet:block/stairs/concrete_orange_stairs",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
-    "facing=west,half=top,shape=straight": {
+    "facing=west,damaged=false,half=top,shape=straight": {
       "model": "soviet:block/stairs/concrete_orange_stairs",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
-    "facing=east,half=top,shape=straight": {
+    "facing=east,damaged=false,half=top,shape=straight": {
       "model": "soviet:block/stairs/concrete_orange_stairs",
       "x": 180,
       "uvlock": true
     },
-    "facing=north,half=bottom,shape=straight": {
+    "facing=north,damaged=false,half=bottom,shape=straight": {
       "model": "soviet:block/stairs/concrete_orange_stairs",
       "y": 270,
       "uvlock": true
     },
-    "facing=south,half=bottom,shape=straight": {
+    "facing=south,damaged=false,half=bottom,shape=straight": {
       "model": "soviet:block/stairs/concrete_orange_stairs",
       "y": 90,
       "uvlock": true
     },
-    "facing=west,half=bottom,shape=straight": {
+    "facing=west,damaged=false,half=bottom,shape=straight": {
       "model": "soviet:block/stairs/concrete_orange_stairs",
       "y": 180,
       "uvlock": true
     },
-    "facing=east,half=bottom,shape=straight": {
+    "facing=east,damaged=false,half=bottom,shape=straight": {
       "model": "soviet:block/stairs/concrete_orange_stairs"
     },
-    "facing=north,half=top,shape=inner_left": {
+    "facing=north,damaged=false,half=top,shape=inner_left": {
       "model": "soviet:block/stairs/concrete_orange_stairs_inner",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
-    "facing=south,half=top,shape=inner_left": {
+    "facing=south,damaged=false,half=top,shape=inner_left": {
       "model": "soviet:block/stairs/concrete_orange_stairs_inner",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
-    "facing=west,half=top,shape=inner_left": {
+    "facing=west,damaged=false,half=top,shape=inner_left": {
       "model": "soviet:block/stairs/concrete_orange_stairs_inner",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
-    "facing=east,half=top,shape=inner_left": {
+    "facing=east,damaged=false,half=top,shape=inner_left": {
       "model": "soviet:block/stairs/concrete_orange_stairs_inner",
       "x": 180,
       "uvlock": true
     },
-    "facing=north,half=bottom,shape=inner_left": {
+    "facing=north,damaged=false,half=bottom,shape=inner_left": {
       "model": "soviet:block/stairs/concrete_orange_stairs_inner",
       "y": 180,
       "uvlock": true
     },
-    "facing=south,half=bottom,shape=inner_left": {
+    "facing=south,damaged=false,half=bottom,shape=inner_left": {
       "model": "soviet:block/stairs/concrete_orange_stairs_inner"
     },
-    "facing=west,half=bottom,shape=inner_left": {
+    "facing=west,damaged=false,half=bottom,shape=inner_left": {
       "model": "soviet:block/stairs/concrete_orange_stairs_inner",
       "y": 90,
       "uvlock": true
     },
-    "facing=east,half=bottom,shape=inner_left": {
+    "facing=east,damaged=false,half=bottom,shape=inner_left": {
       "model": "soviet:block/stairs/concrete_orange_stairs_inner",
       "y": 270,
       "uvlock": true
     },
-    "facing=north,half=top,shape=inner_right": {
+    "facing=north,damaged=false,half=top,shape=inner_right": {
       "model": "soviet:block/stairs/concrete_orange_stairs_inner",
       "x": 180,
       "uvlock": true
     },
-    "facing=south,half=top,shape=inner_right": {
+    "facing=south,damaged=false,half=top,shape=inner_right": {
       "model": "soviet:block/stairs/concrete_orange_stairs_inner",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
-    "facing=west,half=top,shape=inner_right": {
+    "facing=west,damaged=false,half=top,shape=inner_right": {
       "model": "soviet:block/stairs/concrete_orange_stairs_inner",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
-    "facing=east,half=top,shape=inner_right": {
+    "facing=east,damaged=false,half=top,shape=inner_right": {
       "model": "soviet:block/stairs/concrete_orange_stairs_inner",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
-    "facing=north,half=bottom,shape=inner_right": {
+    "facing=north,damaged=false,half=bottom,shape=inner_right": {
       "model": "soviet:block/stairs/concrete_orange_stairs_inner",
       "y": 270,
       "uvlock": true
     },
-    "facing=south,half=bottom,shape=inner_right": {
+    "facing=south,damaged=false,half=bottom,shape=inner_right": {
       "model": "soviet:block/stairs/concrete_orange_stairs_inner",
       "y": 90,
       "uvlock": true
     },
-    "facing=west,half=bottom,shape=inner_right": {
+    "facing=west,damaged=false,half=bottom,shape=inner_right": {
       "model": "soviet:block/stairs/concrete_orange_stairs_inner",
       "y": 180,
       "uvlock": true
     },
-    "facing=east,half=bottom,shape=inner_right": {
+    "facing=east,damaged=false,half=bottom,shape=inner_right": {
       "model": "soviet:block/stairs/concrete_orange_stairs_inner"
     },
-    "facing=north,half=top,shape=outer_left": {
+    "facing=north,damaged=false,half=top,shape=outer_left": {
       "model": "soviet:block/stairs/concrete_orange_stairs_outer",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
-    "facing=south,half=top,shape=outer_left": {
+    "facing=south,damaged=false,half=top,shape=outer_left": {
       "model": "soviet:block/stairs/concrete_orange_stairs_outer",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
-    "facing=west,half=top,shape=outer_left": {
+    "facing=west,damaged=false,half=top,shape=outer_left": {
       "model": "soviet:block/stairs/concrete_orange_stairs_outer",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
-    "facing=east,half=top,shape=outer_left": {
+    "facing=east,damaged=false,half=top,shape=outer_left": {
       "model": "soviet:block/stairs/concrete_orange_stairs_outer",
       "x": 180,
       "uvlock": true
     },
-    "facing=north,half=bottom,shape=outer_left": {
+    "facing=north,damaged=false,half=bottom,shape=outer_left": {
       "model": "soviet:block/stairs/concrete_orange_stairs_outer",
       "y": 180,
       "uvlock": true
     },
-    "facing=south,half=bottom,shape=outer_left": {
+    "facing=south,damaged=false,half=bottom,shape=outer_left": {
       "model": "soviet:block/stairs/concrete_orange_stairs_outer"
     },
-    "facing=west,half=bottom,shape=outer_left": {
+    "facing=west,damaged=false,half=bottom,shape=outer_left": {
       "model": "soviet:block/stairs/concrete_orange_stairs_outer",
       "y": 90,
       "uvlock": true
     },
-    "facing=east,half=bottom,shape=outer_left": {
+    "facing=east,damaged=false,half=bottom,shape=outer_left": {
       "model": "soviet:block/stairs/concrete_orange_stairs_outer",
       "y": 270,
       "uvlock": true
     },
-    "facing=north,half=top,shape=outer_right": {
+    "facing=north,damaged=false,half=top,shape=outer_right": {
       "model": "soviet:block/stairs/concrete_orange_stairs_outer",
       "x": 180,
       "uvlock": true
     },
-    "facing=south,half=top,shape=outer_right": {
+    "facing=south,damaged=false,half=top,shape=outer_right": {
       "model": "soviet:block/stairs/concrete_orange_stairs_outer",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
-    "facing=west,half=top,shape=outer_right": {
+    "facing=west,damaged=false,half=top,shape=outer_right": {
       "model": "soviet:block/stairs/concrete_orange_stairs_outer",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
-    "facing=east,half=top,shape=outer_right": {
+    "facing=east,damaged=false,half=top,shape=outer_right": {
       "model": "soviet:block/stairs/concrete_orange_stairs_outer",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
-    "facing=north,half=bottom,shape=outer_right": {
+    "facing=north,damaged=false,half=bottom,shape=outer_right": {
       "model": "soviet:block/stairs/concrete_orange_stairs_outer",
       "y": 270,
       "uvlock": true
     },
-    "facing=south,half=bottom,shape=outer_right": {
+    "facing=south,damaged=false,half=bottom,shape=outer_right": {
       "model": "soviet:block/stairs/concrete_orange_stairs_outer",
       "y": 90,
       "uvlock": true
     },
-    "facing=west,half=bottom,shape=outer_right": {
+    "facing=west,damaged=false,half=bottom,shape=outer_right": {
       "model": "soviet:block/stairs/concrete_orange_stairs_outer",
       "y": 180,
       "uvlock": true
     },
-    "facing=east,half=bottom,shape=outer_right": {
+    "facing=east,damaged=false,half=bottom,shape=outer_right": {
       "model": "soviet:block/stairs/concrete_orange_stairs_outer"
+    },
+	
+	
+	
+	
+	
+	
+	
+    "facing=north,damaged=true,half=top,shape=straight": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_br",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south,damaged=true,half=top,shape=straight": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_br",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=west,damaged=true,half=top,shape=straight": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_br",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=east,damaged=true,half=top,shape=straight": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_br",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=north,damaged=true,half=bottom,shape=straight": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_br",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south,damaged=true,half=bottom,shape=straight": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_br",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=west,damaged=true,half=bottom,shape=straight": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_br",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=east,damaged=true,half=bottom,shape=straight": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_br"
+    },
+    "facing=north,damaged=true,half=top,shape=inner_left": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_inner_br",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south,damaged=true,half=top,shape=inner_left": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_inner_br",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=west,damaged=true,half=top,shape=inner_left": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_inner_br",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=east,damaged=true,half=top,shape=inner_left": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_inner_br",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=north,damaged=true,half=bottom,shape=inner_left": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_inner_br",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,damaged=true,half=bottom,shape=inner_left": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_inner_br"
+    },
+    "facing=west,damaged=true,half=bottom,shape=inner_left": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_inner_br",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=east,damaged=true,half=bottom,shape=inner_left": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_inner_br",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,damaged=true,half=top,shape=inner_right": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_inner_br",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=south,damaged=true,half=top,shape=inner_right": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_inner_br",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,damaged=true,half=top,shape=inner_right": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_inner_br",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,damaged=true,half=top,shape=inner_right": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_inner_br",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,damaged=true,half=bottom,shape=inner_right": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_inner_br",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south,damaged=true,half=bottom,shape=inner_right": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_inner_br",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=west,damaged=true,half=bottom,shape=inner_right": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_inner_br",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=east,damaged=true,half=bottom,shape=inner_right": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_inner_br"
+    },
+    "facing=north,damaged=true,half=top,shape=outer_left": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_outer_br",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south,damaged=true,half=top,shape=outer_left": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_outer_br",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=west,damaged=true,half=top,shape=outer_left": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_outer_br",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=east,damaged=true,half=top,shape=outer_left": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_outer_br",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=north,damaged=true,half=bottom,shape=outer_left": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_outer_br",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,damaged=true,half=bottom,shape=outer_left": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_outer_br"
+    },
+    "facing=west,damaged=true,half=bottom,shape=outer_left": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_outer_br",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=east,damaged=true,half=bottom,shape=outer_left": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_outer_br",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,damaged=true,half=top,shape=outer_right": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_outer_br",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=south,damaged=true,half=top,shape=outer_right": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_outer_br",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,damaged=true,half=top,shape=outer_right": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_outer_br",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,damaged=true,half=top,shape=outer_right": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_outer_br",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,damaged=true,half=bottom,shape=outer_right": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_outer_br",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south,damaged=true,half=bottom,shape=outer_right": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_outer_br",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=west,damaged=true,half=bottom,shape=outer_right": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_outer_br",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=east,damaged=true,half=bottom,shape=outer_right": {
+      "model": "soviet:block/stairs/concrete_orange_stairs_outer_br"
     }
   }
 }

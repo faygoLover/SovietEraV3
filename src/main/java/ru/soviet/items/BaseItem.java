@@ -10,20 +10,22 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class ItemInfo extends Item {
-    protected String info;
+public class BaseItem extends Item {
+    protected String hoverTextKey;
 
-    public ItemInfo(Properties properties, String info) {
+    public BaseItem(Properties properties, String hoverTextKey) {
         super(properties);
-        this.info = info;
+        this.hoverTextKey = hoverTextKey;
     }
 
-    public ItemInfo(Properties properties) {
-        super(properties);
+    public BaseItem(Properties properties) {
+        this(properties, null);
     }
 
     @Override
     public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
-        tooltip.add(Component.translatable(info));
+        if (hoverTextKey != null) {
+            tooltip.add(Component.translatable(hoverTextKey));
+        }
     }
 }

@@ -10,7 +10,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import ru.soviet.blocks.baseblock.BaseBlock;
 import ru.soviet.blocks.baseblock.subtypes.*;
-import ru.soviet.blocks.decorative.stairs.BaseStairs;
+import ru.soviet.blocks.decorative.outerdeco.BaseSlab;
+import ru.soviet.blocks.decorative.outerdeco.BaseStairs;
 import ru.soviet.core.SovietEra;
 
 import java.util.function.Supplier;
@@ -39,25 +40,36 @@ public class RegBlocksMain {
     public static final RegistryObject<Block> CONCRETE_BEIGE2_BR = registerBlock("concrete/concrete_beige2_br", () -> new FerroconcreteBlockDmg("info.beige2"));
 
     //stairs
-    public static final RegistryObject<Block> CONCRETE_STAIRS_GRAY = registerBlock("stairs/concrete_gray_stairs", () -> new BaseStairs(CONCRETE_GREEN.get().defaultBlockState(), "info.gray"));
-    public static final RegistryObject<Block> CONCRETE_STAIRS_GREEN = registerBlock("stairs/concrete_green_stairs", () -> new BaseStairs(CONCRETE_GREEN.get().defaultBlockState(),  "info.green"));
-    public static final RegistryObject<Block> CONCRETE_STAIRS_BLUE = registerBlock("stairs/concrete_blue_stairs", () -> new BaseStairs(CONCRETE_BLUE.get().defaultBlockState(), "info.blue"));
-    public static final RegistryObject<Block> CONCRETE_STAIRS_BEIGE = registerBlock("stairs/concrete_beige_stairs", () -> new BaseStairs(CONCRETE_BEIGE.get().defaultBlockState(),  "info.beige"));
-    public static final RegistryObject<Block> CONCRETE_STAIRS_BEIGE2 = registerBlock("stairs/concrete_beige2_stairs", () -> new BaseStairs(CONCRETE_BEIGE2.get().defaultBlockState(),  "info.beige2"));
-    public static final RegistryObject<Block> CONCRETE_STAIRS_RED = registerBlock("stairs/concrete_red_stairs", () -> new BaseStairs(CONCRETE_RED.get().defaultBlockState(),  "info.red"));
-    public static final RegistryObject<Block> CONCRETE_STAIRS_ORANGE = registerBlock("stairs/concrete_orange_stairs", () -> new BaseStairs(CONCRETE_ORANGE.get().defaultBlockState(),  "info.orange"));
-    public static final RegistryObject<Block> CONCRETE_STAIRS_YELLOW = registerBlock("stairs/concrete_yellow_stairs", () -> new BaseStairs(CONCRETE_YELLOW.get().defaultBlockState(),  "info.yellow"));
-    public static final RegistryObject<Block> CONCRETE_STAIRS_WHITE = registerBlock("stairs/concrete_white_stairs", () -> new BaseStairs(CONCRETE_WHITE.get().defaultBlockState(), "info.white"));
+    public static final RegistryObject<Block> CONCRETE_STAIRS_GRAY = registerBlock("stairs/concrete_gray_stairs", () -> new BaseStairs(CONCRETE_GREEN.get().defaultBlockState(), "info.gray_var"));
+    public static final RegistryObject<Block> CONCRETE_STAIRS_GREEN = registerBlock("stairs/concrete_green_stairs", () -> new BaseStairs(CONCRETE_GREEN.get().defaultBlockState(),  "info.green_var"));
+    public static final RegistryObject<Block> CONCRETE_STAIRS_BLUE = registerBlock("stairs/concrete_blue_stairs", () -> new BaseStairs(CONCRETE_BLUE.get().defaultBlockState(), "info.blue_var"));
+    public static final RegistryObject<Block> CONCRETE_STAIRS_BEIGE = registerBlock("stairs/concrete_beige_stairs", () -> new BaseStairs(CONCRETE_BEIGE.get().defaultBlockState(),  "info.beige_var"));
+    public static final RegistryObject<Block> CONCRETE_STAIRS_BEIGE2 = registerBlock("stairs/concrete_beige2_stairs", () -> new BaseStairs(CONCRETE_BEIGE2.get().defaultBlockState(),  "info.beige2_var"));
+    public static final RegistryObject<Block> CONCRETE_STAIRS_RED = registerBlock("stairs/concrete_red_stairs", () -> new BaseStairs(CONCRETE_RED.get().defaultBlockState(),  "info.red_var"));
+    public static final RegistryObject<Block> CONCRETE_STAIRS_ORANGE = registerBlock("stairs/concrete_orange_stairs", () -> new BaseStairs(CONCRETE_ORANGE.get().defaultBlockState(),  "info.orange_var"));
+    public static final RegistryObject<Block> CONCRETE_STAIRS_YELLOW = registerBlock("stairs/concrete_yellow_stairs", () -> new BaseStairs(CONCRETE_YELLOW.get().defaultBlockState(),  "info.yellow_var"));
+    public static final RegistryObject<Block> CONCRETE_STAIRS_WHITE = registerBlock("stairs/concrete_white_stairs", () -> new BaseStairs(CONCRETE_WHITE.get().defaultBlockState(), "info.white_var"));
 
-    public static final RegistryObject<Block> CONCRETE_STAIRS_GRAY_FULL = registerBlock("stairs/concrete_gray_stairs_full", () -> new BaseStairs(CONCRETE_GREEN.get().defaultBlockState(), "info.gray"));
-    public static final RegistryObject<Block> CONCRETE_STAIRS_GREEN_FULL = registerBlock("stairs/concrete_green_stairs_full", () -> new BaseStairs(CONCRETE_GREEN.get().defaultBlockState(),  "info.green"));
-    public static final RegistryObject<Block> CONCRETE_STAIRS_BLUE_FULL = registerBlock("stairs/concrete_blue_stairs_full", () -> new BaseStairs(CONCRETE_BLUE.get().defaultBlockState(), "info.blue"));
-    public static final RegistryObject<Block> CONCRETE_STAIRS_BEIGE_FULL = registerBlock("stairs/concrete_beige_stairs_full", () -> new BaseStairs(CONCRETE_BEIGE.get().defaultBlockState(),  "info.beige"));
-    public static final RegistryObject<Block> CONCRETE_STAIRS_BEIGE2_FULL = registerBlock("stairs/concrete_beige2_stairs_full", () -> new BaseStairs(CONCRETE_BEIGE2.get().defaultBlockState(),  "info.beige2"));
-    public static final RegistryObject<Block> CONCRETE_STAIRS_RED_FULL = registerBlock("stairs/concrete_red_stairs_full", () -> new BaseStairs(CONCRETE_RED.get().defaultBlockState(),  "info.red"));
-    public static final RegistryObject<Block> CONCRETE_STAIRS_ORANGE_FULL = registerBlock("stairs/concrete_orange_stairs_full", () -> new BaseStairs(CONCRETE_ORANGE.get().defaultBlockState(),  "info.orange"));
-    public static final RegistryObject<Block> CONCRETE_STAIRS_YELLOW_FULL = registerBlock("stairs/concrete_yellow_stairs_full", () -> new BaseStairs(CONCRETE_YELLOW.get().defaultBlockState(),  "info.yellow"));
-    public static final RegistryObject<Block> CONCRETE_STAIRS_WHITE_FULL = registerBlock("stairs/concrete_white_stairs_full", () -> new BaseStairs(CONCRETE_WHITE.get().defaultBlockState(), "info.white"));
+    public static final RegistryObject<Block> CONCRETE_STAIRS_GRAY_FULL = registerBlock("stairs/concrete_gray_stairs_full", () -> new BaseStairs(CONCRETE_GREEN.get().defaultBlockState(), "info.gray_var"));
+    public static final RegistryObject<Block> CONCRETE_STAIRS_GREEN_FULL = registerBlock("stairs/concrete_green_stairs_full", () -> new BaseStairs(CONCRETE_GREEN.get().defaultBlockState(),  "info.green_var"));
+    public static final RegistryObject<Block> CONCRETE_STAIRS_BLUE_FULL = registerBlock("stairs/concrete_blue_stairs_full", () -> new BaseStairs(CONCRETE_BLUE.get().defaultBlockState(), "info.blue_var"));
+    public static final RegistryObject<Block> CONCRETE_STAIRS_BEIGE_FULL = registerBlock("stairs/concrete_beige_stairs_full", () -> new BaseStairs(CONCRETE_BEIGE.get().defaultBlockState(),  "info.beige_var"));
+    public static final RegistryObject<Block> CONCRETE_STAIRS_BEIGE2_FULL = registerBlock("stairs/concrete_beige2_stairs_full", () -> new BaseStairs(CONCRETE_BEIGE2.get().defaultBlockState(),  "info.beige2_var"));
+    public static final RegistryObject<Block> CONCRETE_STAIRS_RED_FULL = registerBlock("stairs/concrete_red_stairs_full", () -> new BaseStairs(CONCRETE_RED.get().defaultBlockState(),  "info.red_var"));
+    public static final RegistryObject<Block> CONCRETE_STAIRS_ORANGE_FULL = registerBlock("stairs/concrete_orange_stairs_full", () -> new BaseStairs(CONCRETE_ORANGE.get().defaultBlockState(),  "info.orange_var"));
+    public static final RegistryObject<Block> CONCRETE_STAIRS_YELLOW_FULL = registerBlock("stairs/concrete_yellow_stairs_full", () -> new BaseStairs(CONCRETE_YELLOW.get().defaultBlockState(),  "info.yellow_var"));
+    public static final RegistryObject<Block> CONCRETE_STAIRS_WHITE_FULL = registerBlock("stairs/concrete_white_stairs_full", () -> new BaseStairs(CONCRETE_WHITE.get().defaultBlockState(), "info.white_var"));
+
+    //slabs
+    public static final RegistryObject<Block> CONCRETE_SLAB_GRAY = registerBlock("slabs/concrete_slab_gray", () -> new BaseSlab(BlockBehaviour.Properties.copy(CONCRETE_GRAY.get()), "info.gray_var"));
+    public static final RegistryObject<Block> CONCRETE_SLAB_GREEN = registerBlock("slabs/concrete_slab_green", () -> new BaseSlab(BlockBehaviour.Properties.copy(CONCRETE_GREEN.get()), "info.green_var"));
+    public static final RegistryObject<Block> CONCRETE_SLAB_BLUE = registerBlock("slabs/concrete_slab_blue", () -> new BaseSlab(BlockBehaviour.Properties.copy(CONCRETE_BLUE.get()), "info.blue_var"));
+    public static final RegistryObject<Block> CONCRETE_SLAB_BEIGE = registerBlock("slabs/concrete_slab_beige", () -> new BaseSlab(BlockBehaviour.Properties.copy(CONCRETE_BEIGE.get()), "info.beige_var"));
+    public static final RegistryObject<Block> CONCRETE_SLAB_BEIGE2 = registerBlock("slabs/concrete_slab_beige2", () -> new BaseSlab(BlockBehaviour.Properties.copy(CONCRETE_BEIGE2.get()), "info.beige2_var"));
+    public static final RegistryObject<Block> CONCRETE_SLAB_RED = registerBlock("slabs/concrete_slab_red", () -> new BaseSlab(BlockBehaviour.Properties.copy(CONCRETE_RED.get()), "info.red_var"));
+    public static final RegistryObject<Block> CONCRETE_SLAB_ORANGE = registerBlock("slabs/concrete_slab_orange", () -> new BaseSlab(BlockBehaviour.Properties.copy(CONCRETE_ORANGE.get()), "info.orange_var"));
+    public static final RegistryObject<Block> CONCRETE_SLAB_YELLOW = registerBlock("slabs/concrete_slab_yellow", () -> new BaseSlab(BlockBehaviour.Properties.copy(CONCRETE_YELLOW.get()), "info.yellow_var"));
+    public static final RegistryObject<Block> CONCRETE_SLAB_WHITE = registerBlock("slabs/concrete_slab_white", () -> new BaseSlab(BlockBehaviour.Properties.copy(CONCRETE_WHITE.get()), "info.white_var"));
 
     //panels
     public static final RegistryObject<Block> PANEL_CONCRETE_YELLOW = registerBlock("structural/panel_concrete_yellow", () -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(3f, 8f).requiresCorrectToolForDrops()));

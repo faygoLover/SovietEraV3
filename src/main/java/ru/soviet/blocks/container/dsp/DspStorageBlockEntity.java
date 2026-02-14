@@ -5,6 +5,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.block.state.BlockState;
+import org.jetbrains.annotations.NotNull;
 import ru.soviet.blocks.container.BaseStorageBlockEntity;
 import ru.soviet.reg.RegBlockEntities;
 
@@ -14,7 +15,7 @@ public class DspStorageBlockEntity extends BaseStorageBlockEntity<DspStorageMenu
     }
 
     @Override
-    public DspStorageMenu createMenu(int id, Inventory inventory, Player player) {
+    public DspStorageMenu createMenu(int id, @NotNull Inventory inventory, @NotNull Player player) {
         return new DspStorageMenu(id, inventory, this.itemHandler);
     }
 }

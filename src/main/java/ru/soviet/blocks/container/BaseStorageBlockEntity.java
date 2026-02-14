@@ -41,16 +41,16 @@ public abstract class BaseStorageBlockEntity<T extends AbstractContainerMenu> ex
     }
 
     @Override
-    public Component getDisplayName() {
+    public @NotNull Component getDisplayName() {
         return displayName;
     }
 
     @Nullable
     @Override
-    public abstract T createMenu(int id, Inventory inventory, Player player);
+    public abstract T createMenu(int id, @NotNull Inventory inventory, @NotNull Player player);
 
     @Override
-    public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
+    public @NotNull <t> LazyOptional<t> getCapability(@NotNull Capability<t> cap, @Nullable Direction side) {
         if (cap == ForgeCapabilities.ITEM_HANDLER) {
             return lazyItemHandler.cast();
         }
@@ -76,7 +76,7 @@ public abstract class BaseStorageBlockEntity<T extends AbstractContainerMenu> ex
     }
 
     @Override
-    public void load(CompoundTag tag) {
+    public void load(@NotNull CompoundTag tag) {
         super.load(tag);
         itemHandler.deserializeNBT(tag.getCompound("inventory"));
     }

@@ -11,11 +11,12 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import ru.soviet.blocks.baseblock.HorizontalDirectionalModelBlock;
+import ru.soviet.blocks.baseblock.HDMBlock;
 import ru.soviet.utils.BlockEntityDrop;
 
-public class SafeStorage extends HorizontalDirectionalModelBlock implements EntityBlock {
+public class SafeStorage extends HDMBlock implements EntityBlock {
 
     public SafeStorage(Properties properties, String hoverTextKey, VoxelShape shape) {
         super(properties, hoverTextKey, shape);
@@ -34,7 +35,7 @@ public class SafeStorage extends HorizontalDirectionalModelBlock implements Enti
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    public @NotNull InteractionResult use(@NotNull BlockState state, Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
         if (!level.isClientSide) {
             BlockEntity blockEntity = level.getBlockEntity(pos);
             // Если блочная сущность по какой-то причине отсутствует (например, ошибка регистрации), создаём её вручную
@@ -51,18 +52,18 @@ public class SafeStorage extends HorizontalDirectionalModelBlock implements Enti
 
     @Nullable
     @Override
-    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+    public BlockEntity newBlockEntity(@NotNull BlockPos pos, @NotNull BlockState state) {
         return new SafeStorageBlockEntity(pos, state);
     }
 
     @Override
-    public MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos) {
+    public MenuProvider getMenuProvider(@NotNull BlockState state, Level level, @NotNull BlockPos pos) {
         BlockEntity blockEntity = level.getBlockEntity(pos);
         return blockEntity instanceof MenuProvider ? (MenuProvider) blockEntity : null;
     }
 
     @Override
-    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
+    public void onRemove(BlockState state, @NotNull Level level, @NotNull BlockPos pos, BlockState newState, boolean isMoving) {
         if (!state.is(newState.getBlock())) {
             BlockEntity blockEntity = level.getBlockEntity(pos);
             BlockEntityDrop.dropContents(level, pos, blockEntity);

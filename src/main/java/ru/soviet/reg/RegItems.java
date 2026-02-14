@@ -9,7 +9,7 @@ import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 import ru.soviet.core.SovietEra;
 import ru.soviet.items.ItemBurnable;
-import ru.soviet.items.ItemInfo;
+import ru.soviet.items.BaseItem;
 //import ru.soviet.items.protection_suit.Suit;
 
 public class RegItems {
@@ -35,27 +35,27 @@ public class RegItems {
 
 
     //tiles
-    public static final RegistryObject<Item> FRAME_BIG_TILE= ITEMS.register("frame_big_tile", () -> new ItemInfo(new Item.Properties(), "info.frame_big_tile"));
-    public static final RegistryObject<Item> FRAME_QUAD_TILE = ITEMS.register("frame_quad_tile", () -> new ItemInfo(new Item.Properties(), "info.frame_quad_tile"));
-    public static final RegistryObject<Item> FRAME_REST_TILE = ITEMS.register("frame_rest_tile", () -> new ItemInfo(new Item.Properties(), "info.frame_rest_tile"));
-    public static final RegistryObject<Item> FRAME_SMALL_TILE = ITEMS.register("frame_small_tile", () -> new ItemInfo(new Item.Properties(), "info.frame_small_tile"));
-    public static final RegistryObject<Item> QUAD_TILE = ITEMS.register("quad_tile", () -> new ItemInfo(new Item.Properties(), "info.quad_tile"));
-    public static final RegistryObject<Item> BIG_TILE = ITEMS.register("big_tile", () -> new ItemInfo(new Item.Properties(), "info.big_tile"));
-    public static final RegistryObject<Item> REST_TILE = ITEMS.register("rest_tile", () -> new ItemInfo(new Item.Properties(), "info.rest_tile"));
-    public static final RegistryObject<Item> SMALL_TILE = ITEMS.register("small_tile", () -> new ItemInfo(new Item.Properties(), "info.small_tile"));
-    public static final RegistryObject<Item> QUAD_TILE_NEW = ITEMS.register("quad_tile_new", () -> new ItemInfo(new Item.Properties(), "info.quad_tile"));
-    public static final RegistryObject<Item> BIG_TILE_NEW = ITEMS.register("big_tile_new", () -> new ItemInfo(new Item.Properties(), "info.big_tile"));
-    public static final RegistryObject<Item> REST_TILE_NEW = ITEMS.register("rest_tile_new", () -> new ItemInfo(new Item.Properties(), "info.rest_tile"));
-    public static final RegistryObject<Item> SMALL_TILE_NEW = ITEMS.register("small_tile_new", () -> new ItemInfo(new Item.Properties(), "info.small_tile"));
+    public static final RegistryObject<Item> FRAME_BIG_TILE= ITEMS.register("frame_big_tile", () -> new BaseItem(new Item.Properties(), "info.frame_big_tile"));
+    public static final RegistryObject<Item> FRAME_QUAD_TILE = ITEMS.register("frame_quad_tile", () -> new BaseItem(new Item.Properties(), "info.frame_quad_tile"));
+    public static final RegistryObject<Item> FRAME_REST_TILE = ITEMS.register("frame_rest_tile", () -> new BaseItem(new Item.Properties(), "info.frame_rest_tile"));
+    public static final RegistryObject<Item> FRAME_SMALL_TILE = ITEMS.register("frame_small_tile", () -> new BaseItem(new Item.Properties(), "info.frame_small_tile"));
+    public static final RegistryObject<Item> QUAD_TILE = ITEMS.register("quad_tile", () -> new BaseItem(new Item.Properties(), "info.quad_tile"));
+    public static final RegistryObject<Item> BIG_TILE = ITEMS.register("big_tile", () -> new BaseItem(new Item.Properties(), "info.big_tile"));
+    public static final RegistryObject<Item> REST_TILE = ITEMS.register("rest_tile", () -> new BaseItem(new Item.Properties(), "info.rest_tile"));
+    public static final RegistryObject<Item> SMALL_TILE = ITEMS.register("small_tile", () -> new BaseItem(new Item.Properties(), "info.small_tile"));
+    public static final RegistryObject<Item> QUAD_TILE_NEW = ITEMS.register("quad_tile_new", () -> new BaseItem(new Item.Properties(), "info.quad_tile"));
+    public static final RegistryObject<Item> BIG_TILE_NEW = ITEMS.register("big_tile_new", () -> new BaseItem(new Item.Properties(), "info.big_tile"));
+    public static final RegistryObject<Item> REST_TILE_NEW = ITEMS.register("rest_tile_new", () -> new BaseItem(new Item.Properties(), "info.rest_tile"));
+    public static final RegistryObject<Item> SMALL_TILE_NEW = ITEMS.register("small_tile_new", () -> new BaseItem(new Item.Properties(), "info.small_tile"));
 
     //scrap
-    public static final RegistryObject<Item> LEAD_SCRAP = ITEMS.register("lead_scrap", () -> new ItemInfo(new Item.Properties(), "info.restore"));
-    public static final RegistryObject<Item> CONCRETE_SCRAP = ITEMS.register("concrete_scrap", () -> new ItemInfo(new Item.Properties(), "info.restore"));
-    public static final RegistryObject<Item> RUSTY_SCRAP = ITEMS.register("rusty_scrap", () -> new ItemInfo(new Item.Properties(), "info.restore"));
-    public static final RegistryObject<Item> CERAMIC_SHARD = ITEMS.register("ceramic_shard", () -> new ItemInfo(new Item.Properties(), "info.restore"));
-    public static final RegistryObject<Item> ARMATURE = ITEMS.register("armature", () -> new ItemInfo(new Item.Properties(), "info.restore"));
-    public static final RegistryObject<Item> COPPER_SCRAP = ITEMS.register("copper_scrap", () -> new ItemInfo(new Item.Properties(), "info.restore"));
-    public static final RegistryObject<Item> ALUMINUM_SCRAP = ITEMS.register("aluminum_scrap", () -> new ItemInfo(new Item.Properties(), "info.restore"));
+    public static final RegistryObject<Item> LEAD_SCRAP = ITEMS.register("lead_scrap", () -> new BaseItem(new Item.Properties(), "info.restore"));
+    public static final RegistryObject<Item> CONCRETE_SCRAP = ITEMS.register("concrete_scrap", () -> new BaseItem(new Item.Properties(), "info.restore"));
+    public static final RegistryObject<Item> RUSTY_SCRAP = ITEMS.register("rusty_scrap", () -> new BaseItem(new Item.Properties(), "info.restore"));
+    public static final RegistryObject<Item> CERAMIC_SHARD = ITEMS.register("ceramic_shard", () -> new BaseItem(new Item.Properties(), "info.restore"));
+    public static final RegistryObject<Item> ARMATURE = ITEMS.register("armature", () -> new BaseItem(new Item.Properties(), "info.restore"));
+    public static final RegistryObject<Item> COPPER_SCRAP = ITEMS.register("copper_scrap", () -> new BaseItem(new Item.Properties(), "info.restore"));
+    public static final RegistryObject<Item> ALUMINUM_SCRAP = ITEMS.register("aluminum_scrap", () -> new BaseItem(new Item.Properties(), "info.restore"));
     public static final RegistryObject<Item> WOOD_SCRAP = ITEMS.register("wood_scrap", () -> new ItemBurnable(new Item.Properties(), 250, "info.wood_scrap"));
 
     //brick
@@ -79,10 +79,10 @@ public class RegItems {
     public static final RegistryObject<Item> PLATOL_PICKAXE = ITEMS.register("platol_pickaxe", () -> new PickaxeItem(SovietItemTier.PLATOL, 2, -2.8F, (new Item.Properties())));
     public static final RegistryObject<Item> PLATOL_SHOVEL = ITEMS.register("platol_shovel", () -> new ShovelItem(SovietItemTier.PLATOL, 2, -3F, (new Item.Properties())));
     public static final RegistryObject<Item> PLATOL_SWORD = ITEMS.register("platol_sword", () -> new SwordItem(SovietItemTier.PLATOL, 5, -1F, (new Item.Properties())));
-    public static final RegistryObject<Item> PULLER = ITEMS.register("puller", () -> new ItemInfo(new Item.Properties().stacksTo(1).durability(180).setNoRepair(), "info.puller"));
+    public static final RegistryObject<Item> PULLER = ITEMS.register("puller", () -> new BaseItem(new Item.Properties().stacksTo(1).durability(180).setNoRepair(), "info.puller"));
     public static final RegistryObject<Item> SANDSPRAY_DUST = ITEMS.register("sandspray_dust", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> VARIANT_ITEM = ITEMS.register("variant_item", () -> new ItemInfo(new Item.Properties(), "info.variant_item"));
-    public static final RegistryObject<Item> WRENCH = ITEMS.register("wrench", () -> new ItemInfo(new Item.Properties(), "wrench.info"));
+    public static final RegistryObject<Item> VARIANT_ITEM = ITEMS.register("variant_item", () -> new BaseItem(new Item.Properties(), "info.variant_item"));
+    public static final RegistryObject<Item> WRENCH = ITEMS.register("wrench", () -> new BaseItem(new Item.Properties(), "wrench.info"));
 
     //ingots
     public static final RegistryObject<Item> ALUMINUM_INGOT = ITEMS.register("aluminum_ingot", () -> new Item(new Item.Properties()));
@@ -118,7 +118,7 @@ public class RegItems {
     public static final RegistryObject<Item> PALLADIUM_DUST = ITEMS.register("palladium_dust", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PLATINUM_DUST = ITEMS.register("platinum_dust", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PLATINUM_INGOT = ITEMS.register("platinum_ingot", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> PLATOL_DUST = ITEMS.register("platol_dust", () -> new ItemInfo(new Item.Properties(), "platol.platol_dust"));
+    public static final RegistryObject<Item> PLATOL_DUST = ITEMS.register("platol_dust", () -> new BaseItem(new Item.Properties(), "platol.platol_dust"));
     public static final RegistryObject<Item> RED_CONDENSER_DUST  = ITEMS.register("detail_scrap/red_condenser_dust", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SILVER_DUST = ITEMS.register("silver_dust", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SMALL_LEAD_DUST = ITEMS.register("small_lead_dust", () -> new Item(new Item.Properties()));
@@ -126,32 +126,32 @@ public class RegItems {
     public static final RegistryObject<Item> YELLOW_JACK_DUST  = ITEMS.register("detail_scrap/yellow_jack_dust", () -> new Item(new Item.Properties()));
 
     //details
-    public static final RegistryObject<Item> BLACK_MICRO = ITEMS.register("circuits/black_micro", () -> new ItemInfo(new Item.Properties(), "circ.black_micro"));
-    public static final RegistryObject<Item> BLUE_CONDENSER = ITEMS.register("circuits/blue_condenser", () -> new ItemInfo(new Item.Properties(), "circ.blue_condenser"));
-    public static final RegistryObject<Item> BLUE_JACK = ITEMS.register("circuits/blue_jack", () -> new ItemInfo(new Item.Properties(), "circ.blue_jack"));
-    public static final RegistryObject<Item> DARK_BLUE_MICRO = ITEMS.register("circuits/dark_blue_micro", () -> new ItemInfo(new Item.Properties(), "circ.dark_blue_micro"));
-    public static final RegistryObject<Item> DARK_GRAY_TRANSISTOR = ITEMS.register("circuits/dark_gray_transistor", () -> new ItemInfo(new Item.Properties(), "circ.dark_gray_transistor"));
-    public static final RegistryObject<Item> DARK_RED_MICRO = ITEMS.register("circuits/dark_red_micro", () -> new ItemInfo(new Item.Properties(), "circ.dark_red_micro"));
-    public static final RegistryObject<Item> DARK_YELLOW_MICRO = ITEMS.register("circuits/dark_yellow_micro", () -> new ItemInfo(new Item.Properties(), "circ.dark_yellow_micro"));
-    public static final RegistryObject<Item> DARK_YELLOW_TRANSISTOR = ITEMS.register("circuits/dark_yellow_transistor", () -> new ItemInfo(new Item.Properties(), "circ.dark_yellow_transistor"));
-    public static final RegistryObject<Item> DIODE_BLACK = ITEMS.register("circuits/diode_black", () -> new ItemInfo(new Item.Properties(), "circ.diode_black"));
-    public static final RegistryObject<Item> DIODE_GRAY = ITEMS.register("circuits/diode_gray", () -> new ItemInfo(new Item.Properties(), "circ.diode_gray"));
-    public static final RegistryObject<Item> GREEN_CONDENSER = ITEMS.register("circuits/green_condenser", () -> new ItemInfo(new Item.Properties(), "circ.green_condenser"));
-    public static final RegistryObject<Item> GREEN_JACK = ITEMS.register("circuits/green_jack", () -> new ItemInfo(new Item.Properties(), "circ.green_jack"));
+    public static final RegistryObject<Item> BLACK_MICRO = ITEMS.register("circuits/black_micro", () -> new BaseItem(new Item.Properties(), "circ.black_micro"));
+    public static final RegistryObject<Item> BLUE_CONDENSER = ITEMS.register("circuits/blue_condenser", () -> new BaseItem(new Item.Properties(), "circ.blue_condenser"));
+    public static final RegistryObject<Item> BLUE_JACK = ITEMS.register("circuits/blue_jack", () -> new BaseItem(new Item.Properties(), "circ.blue_jack"));
+    public static final RegistryObject<Item> DARK_BLUE_MICRO = ITEMS.register("circuits/dark_blue_micro", () -> new BaseItem(new Item.Properties(), "circ.dark_blue_micro"));
+    public static final RegistryObject<Item> DARK_GRAY_TRANSISTOR = ITEMS.register("circuits/dark_gray_transistor", () -> new BaseItem(new Item.Properties(), "circ.dark_gray_transistor"));
+    public static final RegistryObject<Item> DARK_RED_MICRO = ITEMS.register("circuits/dark_red_micro", () -> new BaseItem(new Item.Properties(), "circ.dark_red_micro"));
+    public static final RegistryObject<Item> DARK_YELLOW_MICRO = ITEMS.register("circuits/dark_yellow_micro", () -> new BaseItem(new Item.Properties(), "circ.dark_yellow_micro"));
+    public static final RegistryObject<Item> DARK_YELLOW_TRANSISTOR = ITEMS.register("circuits/dark_yellow_transistor", () -> new BaseItem(new Item.Properties(), "circ.dark_yellow_transistor"));
+    public static final RegistryObject<Item> DIODE_BLACK = ITEMS.register("circuits/diode_black", () -> new BaseItem(new Item.Properties(), "circ.diode_black"));
+    public static final RegistryObject<Item> DIODE_GRAY = ITEMS.register("circuits/diode_gray", () -> new BaseItem(new Item.Properties(), "circ.diode_gray"));
+    public static final RegistryObject<Item> GREEN_CONDENSER = ITEMS.register("circuits/green_condenser", () -> new BaseItem(new Item.Properties(), "circ.green_condenser"));
+    public static final RegistryObject<Item> GREEN_JACK = ITEMS.register("circuits/green_jack", () -> new BaseItem(new Item.Properties(), "circ.green_jack"));
     public static final RegistryObject<Item> LEADCERAMIC_TILE = ITEMS.register("leadceramic_tile", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> ORANGE_CONDENSER = ITEMS.register("circuits/orange_condenser", () -> new ItemInfo(new Item.Properties(), "circ.orange_condenser"));
-    public static final RegistryObject<Item> RED_CONDENSER = ITEMS.register("circuits/red_condenser", () -> new ItemInfo(new Item.Properties(), "circ.red_condenser"));
-    public static final RegistryObject<Item> REOCHORD = ITEMS.register("circuits/reochord", () -> new ItemInfo(new Item.Properties(), "circ.reochord"));
-    public static final RegistryObject<Item> YELLOW_CONDENSER = ITEMS.register("circuits/yellow_condenser", () -> new ItemInfo(new Item.Properties(), "circ.yellow_condenser"));
-    public static final RegistryObject<Item> YELLOW_JACK = ITEMS.register("circuits/yellow_jack", () -> new ItemInfo(new Item.Properties(), "circ.yellow_jack"));
+    public static final RegistryObject<Item> ORANGE_CONDENSER = ITEMS.register("circuits/orange_condenser", () -> new BaseItem(new Item.Properties(), "circ.orange_condenser"));
+    public static final RegistryObject<Item> RED_CONDENSER = ITEMS.register("circuits/red_condenser", () -> new BaseItem(new Item.Properties(), "circ.red_condenser"));
+    public static final RegistryObject<Item> REOCHORD = ITEMS.register("circuits/reochord", () -> new BaseItem(new Item.Properties(), "circ.reochord"));
+    public static final RegistryObject<Item> YELLOW_CONDENSER = ITEMS.register("circuits/yellow_condenser", () -> new BaseItem(new Item.Properties(), "circ.yellow_condenser"));
+    public static final RegistryObject<Item> YELLOW_JACK = ITEMS.register("circuits/yellow_jack", () -> new BaseItem(new Item.Properties(), "circ.yellow_jack"));
 
     //other items
-    public static final RegistryObject<Item> KEY_DOOR = ITEMS.register("key_door", () -> new ItemInfo(new Item.Properties(), "key.key_door"));
+    public static final RegistryObject<Item> KEY_DOOR = ITEMS.register("key_door", () -> new BaseItem(new Item.Properties(), "key.key_door"));
     public static final RegistryObject<Item> LINO = ITEMS.register("lino", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> FLUOLAMP = ITEMS.register("fluolamp", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> FUEL_CANISTER = ITEMS.register("fuel_canister", () -> new ItemInfo(new Item.Properties().stacksTo(1), "info.fuel_canister"));
-    public static final RegistryObject<Item> SUGAR = ITEMS.register("sugar", () -> new ItemInfo(new Item.Properties().stacksTo(1), "info.sugar"));
-    public static final RegistryObject<Item> CONDENSED_MILK = ITEMS.register("condensed_milk", () -> new ItemInfo(new Item.Properties().stacksTo(1), "info.condensed_milk"));
+    public static final RegistryObject<Item> FUEL_CANISTER = ITEMS.register("fuel_canister", () -> new BaseItem(new Item.Properties().stacksTo(1), "info.fuel_canister"));
+    public static final RegistryObject<Item> SUGAR = ITEMS.register("sugar", () -> new BaseItem(new Item.Properties().stacksTo(1), "info.sugar"));
+    public static final RegistryObject<Item> CONDENSED_MILK = ITEMS.register("condensed_milk", () -> new BaseItem(new Item.Properties().stacksTo(1), "info.condensed_milk"));
 
 
     public enum SovietItemTier implements Tier {

@@ -11,11 +11,12 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import ru.soviet.blocks.baseblock.HorizontalDirectionalModelBlock;
+import ru.soviet.blocks.baseblock.HDMBlock;
 import ru.soviet.utils.BlockEntityDrop;
 
-public class DspStorage extends HorizontalDirectionalModelBlock implements EntityBlock {
+public class DspStorage extends HDMBlock implements EntityBlock {
 
     public DspStorage(Properties properties, String hoverTextKey, VoxelShape shape) {
         super(properties, hoverTextKey, shape);
@@ -34,7 +35,7 @@ public class DspStorage extends HorizontalDirectionalModelBlock implements Entit
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    public @NotNull InteractionResult use(@NotNull BlockState state, Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
         if (!level.isClientSide) {
             BlockEntity blockEntity = level.getBlockEntity(pos);
             // Если блочная сущность по какой-то причине отсутствует (например, ошибка регистрации), создаём её вручную
