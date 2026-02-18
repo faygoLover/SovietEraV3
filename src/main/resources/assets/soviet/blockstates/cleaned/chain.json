@@ -1,8 +1,8 @@
 {
     "variants": {
-        "part=default":  { "model": "soviet:block/cleaned/chain"},
-        "part=down":  { "model": "soviet:block/cleaned/chain_down"},
-        "part=mid":  { "model": "soviet:block/cleaned/chain_mid"},
-        "part=up":  { "model": "soviet:block/cleaned/chain_up"}
+        "connection=none":  { "model": "soviet:block/cleaned/chain"},
+        "connection=bottom":  { "model": "soviet:block/cleaned/chain_down"},
+        "connection=center":  { "model": "soviet:block/cleaned/chain_mid"},
+        "connection=top":  { "model": "soviet:block/cleaned/chain_up"}
  }
 }

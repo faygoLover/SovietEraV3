@@ -7,9 +7,9 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import ru.soviet.blocks.baseblock.HDMBlock;
+import ru.soviet.blocks.baseblock.Directional4MBlock;
 
-public class ModelDeviceToggle extends HDMBlock {
+public class ModelDeviceToggle extends Directional4MBlock {
     public static final BooleanProperty OPEN = BooleanProperty.create("open");
 
     public ModelDeviceToggle() {

@@ -13,10 +13,10 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import ru.soviet.blocks.baseblock.HCMBlock;
+import ru.soviet.blocks.baseblock.Linear4MBlock;
 import ru.soviet.utils.BlockEntityDrop;
 
-public class DrawerStorage extends HCMBlock implements EntityBlock {
+public class DrawerStorage extends Linear4MBlock implements EntityBlock {
 
     public DrawerStorage(Properties properties, String hoverTextKey, VoxelShape noneShape, VoxelShape leftShape, VoxelShape rightShape, VoxelShape centerShape) {
         super(properties, hoverTextKey, noneShape, leftShape, rightShape, centerShape);

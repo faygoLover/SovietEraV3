@@ -13,10 +13,10 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import ru.soviet.blocks.baseblock.HDMBlock;
+import ru.soviet.blocks.baseblock.Directional4MBlock;
 import ru.soviet.utils.BlockEntityDrop;
 
-public class SafeStorage extends HDMBlock implements EntityBlock {
+public class SafeStorage extends Directional4MBlock implements EntityBlock {
 
     public SafeStorage(Properties properties, String hoverTextKey, VoxelShape shape) {
         super(properties, hoverTextKey, shape);

@@ -19,37 +19,27 @@ import ru.soviet.utils.YShapeRotator;
 import java.util.EnumMap;
 import java.util.Map;
 
-
-//HCMBlock = HorizontalConnectingModelBlock
-public class HCMBlock extends HDMBlock {
+public class Linear4MBlock extends Directional4MBlock {
     public static final EnumProperty<ConnectionType> CONNECTION = EnumProperty.create("connection", ConnectionType.class);
 
     public enum ConnectionType implements StringRepresentable {
-        NONE("none"),
-        LEFT("left"),
-        RIGHT("right"),
-        CENTER("center");
+        NONE("none"), LEFT("left"), RIGHT("right"), CENTER("center");
 
         private final String name;
 
-        ConnectionType(String name) {
-            this.name = name;
-        }
+        ConnectionType(String name) { this.name = name; }
 
         @Override
-        public @NotNull String getSerializedName() {
-            return name;
-        }
+        public @NotNull String getSerializedName() { return name; }
     }
 
-    private enum Side {
-        SLEFT, SRIGHT
-    }
+    private enum Side { LEFT, RIGHT }
 
     private final Map<ConnectionType, VoxelShape> shapesByConnection;
 
-    public HCMBlock(Properties properties, String hoverTextKey, VoxelShape noneShape, VoxelShape leftShape, VoxelShape rightShape, VoxelShape centerShape) {
-        super(properties, hoverTextKey, null); // shape не используется, передаём null
+    public Linear4MBlock(Properties properties, String hoverTextKey,
+                         VoxelShape noneShape, VoxelShape leftShape, VoxelShape rightShape, VoxelShape centerShape) {
+        super(properties, hoverTextKey, null);
         this.shapesByConnection = new EnumMap<>(ConnectionType.class);
         shapesByConnection.put(ConnectionType.NONE, noneShape != null ? noneShape : Shapes.block());
         shapesByConnection.put(ConnectionType.LEFT, leftShape != null ? leftShape : Shapes.block());
@@ -60,24 +50,24 @@ public class HCMBlock extends HDMBlock {
                 .setValue(CONNECTION, ConnectionType.NONE));
     }
 
-    public HCMBlock(Properties properties, VoxelShape noneShape, VoxelShape leftShape, VoxelShape rightShape, VoxelShape centerShape) {
+    public Linear4MBlock(Properties properties, VoxelShape noneShape, VoxelShape leftShape, VoxelShape rightShape, VoxelShape centerShape) {
         this(properties, "info.connectable", noneShape, leftShape, rightShape, centerShape);
     }
 
-    public HCMBlock(Properties properties, String hoverTextKey, VoxelShape shape) {
+    public Linear4MBlock(Properties properties, String hoverTextKey, VoxelShape shape) {
         this(properties, hoverTextKey, shape, shape, shape, shape);
     }
 
-    public HCMBlock(Properties properties, String hoverTextKey) {
-        this(properties, hoverTextKey, null, null, null, null);
+    public Linear4MBlock(Properties properties, String hoverTextKey) {
+        this(properties, hoverTextKey, Shapes.block(), Shapes.block(), Shapes.block(), Shapes.block());
     }
 
-    public HCMBlock(Properties properties, VoxelShape shape) {
+    public Linear4MBlock(Properties properties, VoxelShape shape) {
         this(properties, "info.connectable", shape, shape, shape, shape);
     }
 
-    public HCMBlock(Properties properties) {
-        this(properties, "info.connectable", null, null, null, null);
+    public Linear4MBlock(Properties properties) {
+        this(properties, "info.connectable", Shapes.block(), Shapes.block(), Shapes.block(), Shapes.block());
     }
 
     @Override
@@ -96,7 +86,8 @@ public class HCMBlock extends HDMBlock {
     }
 
     @Override
-    public @NotNull BlockState updateShape(BlockState state, @NotNull Direction direction, @NotNull BlockState neighborState, @NotNull LevelAccessor level, @NotNull BlockPos pos, @NotNull BlockPos neighborPos) {
+    public @NotNull BlockState updateShape(BlockState state, @NotNull Direction direction, @NotNull BlockState neighborState,
+                                           @NotNull LevelAccessor level, @NotNull BlockPos pos, @NotNull BlockPos neighborPos) {
         Direction facing = state.getValue(FACING);
         ConnectionType newConnection = getConnectionType(level, pos, facing);
         if (newConnection != state.getValue(CONNECTION)) {
@@ -106,31 +97,27 @@ public class HCMBlock extends HDMBlock {
     }
 
     private ConnectionType getConnectionType(BlockGetter level, BlockPos pos, Direction facing) {
-        boolean leftConnected = hasNeighbour(level, pos, facing, Side.SLEFT);
-        boolean rightConnected = hasNeighbour(level, pos, facing, Side.SRIGHT);
+        boolean left = hasNeighbour(level, pos, facing, Side.LEFT);
+        boolean right = hasNeighbour(level, pos, facing, Side.RIGHT);
 
-        if (leftConnected && rightConnected) {
-            return ConnectionType.CENTER;
-        } else if (rightConnected) {
-            return ConnectionType.RIGHT;
-        } else if (leftConnected) {
-            return ConnectionType.LEFT;
-        } else {
-            return ConnectionType.NONE;
-        }
+        if (left && right) return ConnectionType.CENTER;
+        if (right) return ConnectionType.RIGHT;
+        if (left) return ConnectionType.LEFT;
+        return ConnectionType.NONE;
     }
 
     private boolean hasNeighbour(BlockGetter level, BlockPos pos, Direction facing, Side side) {
-        BlockState neighbourState = level.getBlockState(getOffsetPos(facing, side).offset(pos));
-        return neighbourState.is(this) && neighbourState.getValue(FACING) == facing;
+        BlockPos offset = getOffsetPos(facing, side);
+        BlockState neighbour = level.getBlockState(pos.offset(offset));
+        return neighbour.is(this) && neighbour.getValue(FACING) == facing;
     }
 
     private BlockPos getOffsetPos(Direction facing, Side side) {
         return switch (facing) {
-            case NORTH -> side == Side.SLEFT ? new BlockPos(-1, 0, 0) : new BlockPos(1, 0, 0);
-            case SOUTH -> side == Side.SLEFT ? new BlockPos(1, 0, 0) : new BlockPos(-1, 0, 0);
-            case EAST -> side == Side.SLEFT ? new BlockPos(0, 0, -1) : new BlockPos(0, 0, 1);
-            case WEST -> side == Side.SLEFT ? new BlockPos(0, 0, 1) : new BlockPos(0, 0, -1);
+            case NORTH -> side == Side.LEFT ? new BlockPos(-1, 0, 0) : new BlockPos(1, 0, 0);
+            case SOUTH -> side == Side.LEFT ? new BlockPos(1, 0, 0) : new BlockPos(-1, 0, 0);
+            case EAST  -> side == Side.LEFT ? new BlockPos(0, 0, -1) : new BlockPos(0, 0, 1);
+            case WEST  -> side == Side.LEFT ? new BlockPos(0, 0, 1) : new BlockPos(0, 0, -1);
             default -> BlockPos.ZERO;
         };
     }
@@ -142,6 +129,6 @@ public class HCMBlock extends HDMBlock {
 
     @Override
     public @NotNull VoxelShape getCollisionShape(@NotNull BlockState state, @NotNull BlockGetter world, @NotNull BlockPos pos, @NotNull CollisionContext context) {
-        return YShapeRotator.rotateShape(shapesByConnection.get(state.getValue(CONNECTION)), state.getValue(FACING));
+        return getShape(state, world, pos, context);
     }
 }

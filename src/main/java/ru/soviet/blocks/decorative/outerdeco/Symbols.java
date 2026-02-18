@@ -4,9 +4,9 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
-import ru.soviet.blocks.baseblock.HDMBlock;
+import ru.soviet.blocks.baseblock.Directional4MBlock;
 
-public class Symbols extends HDMBlock {
+public class Symbols extends Directional4MBlock {
     private static final VoxelShape DEFAULT_SHAPE  = Shapes.or(
             Shapes.box(
                     0.125, 0, 0.8125,

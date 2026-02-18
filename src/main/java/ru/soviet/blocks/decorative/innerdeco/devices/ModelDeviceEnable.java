@@ -11,9 +11,9 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
-import ru.soviet.blocks.baseblock.HDMBlock;
+import ru.soviet.blocks.baseblock.Directional4MBlock;
 
-public class ModelDeviceEnable extends HDMBlock {
+public class ModelDeviceEnable extends Directional4MBlock {
     public static final BooleanProperty ENABLED = BooleanProperty.create("enabled");
 
     public ModelDeviceEnable() {

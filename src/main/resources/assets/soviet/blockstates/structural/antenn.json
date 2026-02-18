@@ -1,8 +1,8 @@
 {
     "variants": {
-        "part=default":  { "model": "soviet:block/structural/antenn"},
-        "part=down":  { "model": "soviet:block/structural/antenn_down"},
-        "part=mid":  { "model": "soviet:block/structural/antenn"},
-        "part=up":  { "model": "soviet:block/structural/antenn_top"}
+        "connection=none":  { "model": "soviet:block/structural/antenn"},
+        "connection=bottom":  { "model": "soviet:block/structural/antenn_down"},
+        "connection=center":  { "model": "soviet:block/structural/antenn"},
+        "connection=top":  { "model": "soviet:block/structural/antenn_top"}
  }
 }

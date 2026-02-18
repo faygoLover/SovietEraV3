@@ -9,8 +9,10 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import ru.soviet.blocks.baseblock.HCMBlock;
-import ru.soviet.blocks.baseblock.HDMVBlock;
+import ru.soviet.blocks.baseblock.Linear4MBlock;
+import ru.soviet.blocks.baseblock.Variants4MBlock;
+import ru.soviet.blocks.baseblock.Vertical2MBlock;
+import ru.soviet.blocks.baseblock.Vertical4MBlock;
 import ru.soviet.blocks.container.drawers.DrawerStorage;
 import ru.soviet.blocks.decorative.innerdeco.devices.ModelDeviceEnable;
 import ru.soviet.blocks.decorative.innerdeco.devices.ModelDevice;
@@ -31,7 +33,7 @@ public class RegBlocksInner {
                             1, 1, 0.75)
             )
     );
-    public static final RegistryObject<Block> BIOLAB_TABLE_UP = registerBlock("innerdeco/biolab_table_up", () -> new HCMBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion(),
+    public static final RegistryObject<Block> BIOLAB_TABLE_UP = registerBlock("innerdeco/biolab_table_up", () -> new Linear4MBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion(),
             Shapes.or(
                     Shapes.box(
                             0, 0, 0.0625,
@@ -77,7 +79,7 @@ public class RegBlocksInner {
                             1, 0.9375, 0.0625) //задняя
             ))
     );
-    public static final RegistryObject<Block> BIOLAB_TABLE2 = registerBlock("innerdeco/biolab_table2", () -> new HCMBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion(),
+    public static final RegistryObject<Block> BIOLAB_TABLE2 = registerBlock("innerdeco/biolab_table2", () -> new Linear4MBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion(),
             Shapes.or(
                     Shapes.box(
                             0.03125, 0, 0.03125,
@@ -123,7 +125,7 @@ public class RegBlocksInner {
                             1, 0.875, 0.96875) //средняя
             ))
     );
-    public static final RegistryObject<Block> BIOLAB_TABLE3 = registerBlock("innerdeco/biolab_table3", () -> new HCMBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion(),
+    public static final RegistryObject<Block> BIOLAB_TABLE3 = registerBlock("innerdeco/biolab_table3", () -> new Linear4MBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion(),
             Shapes.or(
                     Shapes.box(
                             0.03125, 0, 0.03125,
@@ -246,7 +248,7 @@ public class RegBlocksInner {
             ))
     );
 
-    public static final RegistryObject<Block> CHEMLAB_TABLE_UP = registerBlock("innerdeco/chemlab_table_up", () -> new HCMBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion(),
+    public static final RegistryObject<Block> CHEMLAB_TABLE_UP = registerBlock("innerdeco/chemlab_table_up", () -> new Linear4MBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion(),
             Shapes.or(
                     Shapes.box(
                             0, 0, 0,
@@ -293,7 +295,7 @@ public class RegBlocksInner {
             ))
     );
 
-    public static final RegistryObject<Block> DSP_TABLE_NON_CLOTH = registerBlock("innerdeco/furniture/dsp_table_non_cloth", () -> new HCMBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_WOOD).noOcclusion(),
+    public static final RegistryObject<Block> DSP_TABLE_NON_CLOTH = registerBlock("innerdeco/furniture/dsp_table_non_cloth", () -> new Linear4MBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_WOOD),
             Shapes.or(
                     Shapes.box(
                             0.03125, 0.125, 0.0625,
@@ -427,23 +429,88 @@ public class RegBlocksInner {
                             0.9375, 1, 0.8125)
             ))
     );
-    public static final RegistryObject<Block> RADIATOR = registerBlock("innerdeco/radiator", () -> new ModelDevice(
-                    Shapes.box(
-                            0, 0, 0,
-                            1, 1, 0.3125)
+    public static final RegistryObject<Block> RADIATOR = registerBlock("innerdeco/radiator", () -> new Linear4MBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK),
+            Shapes.box(
+                    0, 0, 0,
+                    1, 1, 0.3125)
+            )
+    );
+    public static final RegistryObject<Block> LAB_STOVE = registerBlock("innerdeco/devices/lab_stove", () -> new ModelDevice(
+            Shapes.box(
+                    0.15625, 0, 0.15625,
+                    0.84375, 0.1875, 0.84375)
+            )
+    );
+    public static final RegistryObject<Block> MIXER = registerBlock("innerdeco/devices/mixer", () -> new ModelDevice(
+            Shapes.box(
+                    0.0625, 0, 0.25,
+                    0.9375, 0.4375, 0.75)
+            )
+    );
+    public static final RegistryObject<Block> MAGNET_MIXER = registerBlock("innerdeco/devices/magnet_mixer", () -> new ModelDevice(
+            Shapes.box(
+                    0.15625, 0, 0.21875,
+                    0.84375, 0.1875, 0.78128)
             )
     );
     public static final RegistryObject<Block> ELECTRICAL_PANEL = registerBlock("innerdeco/devices/electrical_panel", () -> new ModelDeviceToggle(
-                    Shapes.box(
-                            0, 0, 0,
-                            1, 1, 0.1875)
-            )
-    );
-    public static final RegistryObject<Block> GAS_STOVE = registerBlock("innerdeco/furniture/gas_stove", () -> new HDMVBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK),
             Shapes.box(
                     0, 0, 0,
-                    1, 0.96875, 0.875)
+                    1, 1, 0.1875)
+            )
+    );
+    public static final RegistryObject<Block> GAS_STOVE = registerBlock("innerdeco/furniture/gas_stove", () -> new Variants4MBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK),
+            Shapes.box(
+                    0, 0, 0,
+                    1, 0.9375, 0.875)
     ));
+    public static final RegistryObject<Block> SMALL_SINK = registerBlock("innerdeco/furniture/small_sink", () -> new ModelDevice(
+            Shapes.box(
+                    0.1875, 0.625, 0,
+                    0.8125, 0.9375, 0.625)
+            )
+    );
+
+    public static final RegistryObject<Block> BIO_STILLAGE = registerBlock("innerdeco/bio_stillage", () -> new Vertical2MBlock(BlockBehaviour.Properties.copy(Blocks.GLASS),
+            Shapes.or(
+                    Shapes.box(
+                            0, 0, 0,
+                            1, 1, 1),
+                    Shapes.box(
+                            0, 0, 0,
+                            0.03125, 1, 0.15625),
+                    Shapes.box(
+                            0.96875, 0, 0,
+                            1, 1, 0.15625),
+                    Shapes.box(
+                            0, 0.96875, 0,
+                            1, 1, 0.15625)
+            ))
+    );
+
+    public static final RegistryObject<Block> ALUM_FRAME_EMPTY = registerBlock("innerdeco/windows/alum_frame_empty", () -> new Vertical4MBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK),
+            Shapes.or(
+                    Shapes.box(
+                            0, 0, 0,
+                            1, 0.03125, 0.15625),
+                    Shapes.box(
+                            0, 0, 0,
+                            0.03125, 1, 0.15625),
+                    Shapes.box(
+                            0.96875, 0, 0,
+                            1, 1, 0.15625),
+                    Shapes.box(
+                            0, 0.96875, 0,
+                            1, 1, 0.15625)
+            ))
+    );
+
+    public static final RegistryObject<Block> ALUM_FRAME = registerBlock("innerdeco/windows/alum_frame", () -> new Vertical4MBlock(BlockBehaviour.Properties.copy(Blocks.GLASS),
+            Shapes.box(
+                    0, 0, 0,
+                    1, 1, 0.15625)
+            )
+    );
 
     private static <T extends Block> RegistryObject<T> registerBlock(final String name, final Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS_INNER.register(name, block);

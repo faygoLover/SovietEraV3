@@ -1,6 +1,7 @@
 {
 	"credit": "Made special for SovietLab",
 	"parent": "block/cube_all",
+	"render_type": "minecraft:translucent",
 	"textures": {
 		"0": "soviet:block/structural/aluminum",
 		"1": "soviet:block/structural/glass",

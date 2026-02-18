@@ -1,5 +1,6 @@
 {
 	"credit": "Made special for SovietLab",
+	"render_type": "minecraft:translucent",
 	"textures": {
 		"1": "soviet:block/structural/glass",
 		"particle": "soviet:block/structural/aluminum"

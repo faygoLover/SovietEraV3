@@ -9,15 +9,16 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
 public abstract class ModelBlock extends BaseBlock {
-    protected VoxelShape shape;
+    protected static final VoxelShape FULL_BLOCK = Shapes.block();
+    protected final VoxelShape shape;
 
     public ModelBlock(Properties properties, String hoverTextKey, VoxelShape shape) {
         super(properties.noOcclusion(), hoverTextKey);
-        this.shape = shape != null ? shape : Shapes.block();
+        this.shape = shape != null ? shape : FULL_BLOCK;
     }
 
     public ModelBlock(Properties properties, String hoverTextKey) {
-        this(properties, hoverTextKey, Shapes.block());
+        this(properties, hoverTextKey, FULL_BLOCK);
     }
 
     public ModelBlock(Properties properties, VoxelShape shape) {
@@ -25,7 +26,7 @@ public abstract class ModelBlock extends BaseBlock {
     }
 
     public ModelBlock(Properties properties) {
-        this(properties, null, Shapes.block());
+        this(properties, null, FULL_BLOCK);
     }
 
     @Override
