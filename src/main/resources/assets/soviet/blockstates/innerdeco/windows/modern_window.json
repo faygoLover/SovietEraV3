@@ -1,20 +1,20 @@
 {
     "variants": {
-   	"facing=west,connection=none":  { "model": "soviet:block/innerdeco/windows/modern_window", "y": 270},
-        "facing=east,connection=none":  { "model": "soviet:block/innerdeco/windows/modern_window", "y": 90},
-        "facing=north,connection=none": { "model": "soviet:block/innerdeco/windows/modern_window", "y": 0 },
+   	"facing=west,connection=none":  { "model": "soviet:block/innerdeco/windows/modern_window", "y": 270 },
+        "facing=east,connection=none":  { "model": "soviet:block/innerdeco/windows/modern_window", "y": 90  },
+        "facing=north,connection=none": { "model": "soviet:block/innerdeco/windows/modern_window", "y": 0   },
         "facing=south,connection=none": { "model": "soviet:block/innerdeco/windows/modern_window", "y": 180 },
-        "facing=west,connection=top":  { "model": "soviet:block/innerdeco/windows/modern_window_up", "y": 270},
-        "facing=east,connection=top":  { "model": "soviet:block/innerdeco/windows/modern_window_up", "y": 90},
-        "facing=north,connection=top": { "model": "soviet:block/innerdeco/windows/modern_window_up", "y": 0 },
+        "facing=west,connection=top":  { "model": "soviet:block/innerdeco/windows/modern_window_up", "y": 270 },
+        "facing=east,connection=top":  { "model": "soviet:block/innerdeco/windows/modern_window_up", "y": 90  },
+        "facing=north,connection=top": { "model": "soviet:block/innerdeco/windows/modern_window_up", "y": 0   },
         "facing=south,connection=top": { "model": "soviet:block/innerdeco/windows/modern_window_up", "y": 180 },
-        "facing=west,connection=bottom":  { "model": "soviet:block/innerdeco/windows/modern_window_down", "y": 270},
-        "facing=east,connection=bottom":  { "model": "soviet:block/innerdeco/windows/modern_window_down", "y": 90},
-        "facing=north,connection=bottom": { "model": "soviet:block/innerdeco/windows/modern_window_down", "y": 0 },
+        "facing=west,connection=bottom":  { "model": "soviet:block/innerdeco/windows/modern_window_down", "y": 270 },
+        "facing=east,connection=bottom":  { "model": "soviet:block/innerdeco/windows/modern_window_down", "y": 90  },
+        "facing=north,connection=bottom": { "model": "soviet:block/innerdeco/windows/modern_window_down", "y": 0   },
         "facing=south,connection=bottom": { "model": "soviet:block/innerdeco/windows/modern_window_down", "y": 180 },
-        "facing=west,connection=center":  { "model": "soviet:block/innerdeco/windows/modern_window_double", "y": 270},
-        "facing=east,connection=center":  { "model": "soviet:block/innerdeco/windows/modern_window_double", "y": 90},
-        "facing=north,connection=center": { "model": "soviet:block/innerdeco/windows/modern_window_double", "y": 0 },
+        "facing=west,connection=center":  { "model": "soviet:block/innerdeco/windows/modern_window_double", "y": 270 },
+        "facing=east,connection=center":  { "model": "soviet:block/innerdeco/windows/modern_window_double", "y": 90  },
+        "facing=north,connection=center": { "model": "soviet:block/innerdeco/windows/modern_window_double", "y": 0   },
         "facing=south,connection=center": { "model": "soviet:block/innerdeco/windows/modern_window_double", "y": 180 }
     }
 }

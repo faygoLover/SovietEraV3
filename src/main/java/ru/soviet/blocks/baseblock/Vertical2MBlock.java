@@ -14,7 +14,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
-import ru.soviet.utils.YShapeRotator;
+import ru.soviet.utils.ShapeRotator;
 
 import java.util.EnumMap;
 import java.util.Map;
@@ -110,7 +110,7 @@ public class Vertical2MBlock extends Directional2MBlock {
     @Override
     public @NotNull VoxelShape getShape(@NotNull BlockState state, @NotNull BlockGetter world, @NotNull BlockPos pos, @NotNull CollisionContext context) {
         Direction dir = getFacing(state); // из Directional2MBlock: EAST для оси X, иначе NORTH
-        return YShapeRotator.rotateShape(shapesByConnection.get(state.getValue(CONNECTION)), dir);
+        return ShapeRotator.rotateShape(shapesByConnection.get(state.getValue(CONNECTION)), dir);
     }
 
     @Override

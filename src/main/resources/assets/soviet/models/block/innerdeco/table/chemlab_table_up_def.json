@@ -1,5 +1,6 @@
 {
 	"credit": "Made special for SovietLab",
+	"render_type": "minecraft:translucent",
 	"textures": {
 		"0": "soviet:block/structural/lampsteel",
 		"1": "soviet:block/structural/glass_muddy_gray",

@@ -4,10 +4,10 @@
             "apply": { "model": "soviet:block/outerdeco/fences/electro_fence_double" }
         },
         {   "when": { "north": "true" },
-            "apply": { "model": "soviet:block/outerdeco/fences/electro_fence_double_side", "y": 0 }
+            "apply": { "model": "soviet:block/outerdeco/fences/electro_fence_double_side", "y": 0   }
         },
         {   "when": { "east": "true" },
-            "apply": { "model": "soviet:block/outerdeco/fences/electro_fence_double_side", "y": 90 }
+            "apply": { "model": "soviet:block/outerdeco/fences/electro_fence_double_side", "y": 90  }
         },
         {   "when": { "south": "true" },
             "apply": { "model": "soviet:block/outerdeco/fences/electro_fence_double_side", "y": 180 }

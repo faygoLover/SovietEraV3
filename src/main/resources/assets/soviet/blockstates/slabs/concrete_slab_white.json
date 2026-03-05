@@ -2,49 +2,39 @@
   "variants": {
     "facing=east,damaged=false": {
       "model": "soviet:block/slabs/concrete_slab_white",
-      "y": 270
-    },
+      "y": 270 },
     "facing=west,damaged=false": {
       "model": "soviet:block/slabs/concrete_slab_white",
-      "y": 90
-    },
+      "y": 90  },
     "facing=south,damaged=false": {
       "model": "soviet:block/slabs/concrete_slab_white"
     },
     "facing=north,damaged=false": {
       "model": "soviet:block/slabs/concrete_slab_white",
-      "y": 180
-    },
+      "y": 180 },
     "facing=up,damaged=false": {
       "model": "soviet:block/slabs/concrete_slab_white",
-      "x": 90
-    },
+      "x": 90  },
     "facing=down,damaged=false": {
       "model": "soviet:block/slabs/concrete_slab_white",
-      "x": 270
-    },
+      "x": 270 },
     "facing=east,damaged=true": {
       "model": "soviet:block/slabs/concrete_slab_white_br",
-      "y": 270
-    },
+      "y": 270 },
     "facing=west,damaged=true": {
       "model": "soviet:block/slabs/concrete_slab_white_br",
-      "y": 90
-    },
+      "y": 90  },
     "facing=south,damaged=true": {
       "model": "soviet:block/slabs/concrete_slab_white_br"
     },
     "facing=north,damaged=true": {
       "model": "soviet:block/slabs/concrete_slab_white_br",
-      "y": 180
-    },
+      "y": 180 },
     "facing=up,damaged=true": {
       "model": "soviet:block/slabs/concrete_slab_white_br",
-      "x": 90
-    },
+      "x": 90  },
     "facing=down,damaged=true": {
       "model": "soviet:block/slabs/concrete_slab_white_br",
-      "x": 270
-    }
+      "x": 270 }
   }
 }

@@ -1,7 +1,7 @@
 {
     "variants": {
-        "connection=bottom":  { "model": "soviet:block/innerdeco/stillage"},
-        "connection=center":  { "model": "soviet:block/innerdeco/stillage_mid"},
-        "connection=top":  { "model": "soviet:block/innerdeco/stillage_up"}
+        "connection=bottom":  { "model": "soviet:block/innerdeco/stillage"  },
+        "connection=center":  { "model": "soviet:block/innerdeco/stillage_mid"  },
+        "connection=top":  { "model": "soviet:block/innerdeco/stillage_up"  }
     }
 }

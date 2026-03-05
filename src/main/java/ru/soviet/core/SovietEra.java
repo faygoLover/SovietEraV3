@@ -32,6 +32,7 @@ public class SovietEra {
         RegBlocksSymbols.BLOCKS_SYMBOLS.register(modEventBus);
         RegBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         RegMenuTypes.MENUS.register(modEventBus);
+        RegSounds.SOUND_EVENTS.register(modEventBus);
         //RegFluids.FLUIDS.register(modEventBus);
         RegItems.ITEMS.register(modEventBus);
         // Register ourselves for server and other game events we are interested in

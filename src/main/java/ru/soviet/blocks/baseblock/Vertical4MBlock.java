@@ -14,7 +14,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
-import ru.soviet.utils.YShapeRotator;
+import ru.soviet.utils.ShapeRotator;
 
 import java.util.EnumMap;
 import java.util.Map;
@@ -35,8 +35,7 @@ public class Vertical4MBlock extends Directional4MBlock {
 
     private final Map<ConnectionType, VoxelShape> shapesByConnection;
 
-    public Vertical4MBlock(Properties properties, String hoverTextKey,
-                           VoxelShape noneShape, VoxelShape topShape, VoxelShape bottomShape, VoxelShape centerShape) {
+    public Vertical4MBlock(Properties properties, String hoverTextKey, VoxelShape noneShape, VoxelShape topShape, VoxelShape bottomShape, VoxelShape centerShape) {
         super(properties, hoverTextKey, null);
         this.shapesByConnection = new EnumMap<>(ConnectionType.class);
         shapesByConnection.put(ConnectionType.NONE, noneShape != null ? noneShape : Shapes.block());
@@ -84,8 +83,7 @@ public class Vertical4MBlock extends Directional4MBlock {
     }
 
     @Override
-    public @NotNull BlockState updateShape(BlockState state, @NotNull Direction direction, @NotNull BlockState neighborState,
-                                           @NotNull LevelAccessor level, @NotNull BlockPos pos, @NotNull BlockPos neighborPos) {
+    public @NotNull BlockState updateShape(BlockState state, @NotNull Direction direction, @NotNull BlockState neighborState, @NotNull LevelAccessor level, @NotNull BlockPos pos, @NotNull BlockPos neighborPos) {
         ConnectionType newConnection = getConnectionType(level, pos, state.getValue(FACING));
         if (newConnection != state.getValue(CONNECTION)) {
             return state.setValue(CONNECTION, newConnection);
@@ -103,14 +101,14 @@ public class Vertical4MBlock extends Directional4MBlock {
         return ConnectionType.NONE;
     }
 
-    private boolean hasNeighbour(BlockGetter level, BlockPos pos, Direction dir, Direction facing) {
+    protected boolean hasNeighbour(BlockGetter level, BlockPos pos, Direction dir, Direction facing) {
         BlockState neighbour = level.getBlockState(pos.relative(dir));
         return neighbour.is(this) && neighbour.getValue(FACING) == facing;
     }
 
     @Override
     public @NotNull VoxelShape getShape(@NotNull BlockState state, @NotNull BlockGetter world, @NotNull BlockPos pos, @NotNull CollisionContext context) {
-        return YShapeRotator.rotateShape(shapesByConnection.get(state.getValue(CONNECTION)), state.getValue(FACING));
+        return ShapeRotator.rotateShape(shapesByConnection.get(state.getValue(CONNECTION)), state.getValue(FACING));
     }
 
     @Override

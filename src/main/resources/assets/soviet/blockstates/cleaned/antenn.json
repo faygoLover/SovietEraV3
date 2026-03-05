@@ -1,8 +1,8 @@
 {
     "variants": {
-        "connection=none":  { "model": "soviet:block/cleaned/antenn"},
-        "connection=bottom":  { "model": "soviet:block/cleaned/antenn_down"},
-        "connection=center":  { "model": "soviet:block/cleaned/antenn"},
-        "connection=top":  { "model": "soviet:block/cleaned/antenn_top"}
+        "connection=none":  { "model": "soviet:block/cleaned/antenn"  },
+        "connection=bottom":  { "model": "soviet:block/cleaned/antenn_down"  },
+        "connection=center":  { "model": "soviet:block/cleaned/antenn"  },
+        "connection=top":  { "model": "soviet:block/cleaned/antenn_top"  }
  }
 }

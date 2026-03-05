@@ -10,7 +10,7 @@
     },
     {
       "when": { "facing": "east" },
-      "apply": { "model": "soviet:block/innerdeco/redstone_wire/switch", "y": 90 }
+      "apply": { "model": "soviet:block/innerdeco/redstone_wire/switch", "y": 90  }
     },
     {
       "when": { "facing": "west" },
@@ -26,7 +26,7 @@
     },
     {
       "when": { "facing": "east", "up": "true" },
-      "apply": { "model": "soviet:block/innerdeco/redstone_wire/switch_up", "y": 90 }
+      "apply": { "model": "soviet:block/innerdeco/redstone_wire/switch_up", "y": 90  }
     },
     {
       "when": { "facing": "west", "up": "true" },
@@ -42,7 +42,7 @@
     },
     {
       "when": { "facing": "east", "down": "true" },
-      "apply": { "model": "soviet:block/innerdeco/redstone_wire/switch_down", "y": 90 }
+      "apply": { "model": "soviet:block/innerdeco/redstone_wire/switch_down", "y": 90  }
     },
     {
       "when": { "facing": "west", "down": "true" },

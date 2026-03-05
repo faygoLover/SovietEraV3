@@ -16,7 +16,7 @@
             "apply": { "model": "soviet:block/innerdeco/pipes/ventpipe_east", "uvlock": true }
         },
         {   "when": { "south": "true" },
-            "apply": { "model": "soviet:block/innerdeco/pipes/ventpipe_south","uvlock": true }
+            "apply": { "model": "soviet:block/innerdeco/pipes/ventpipe_south", "uvlock": true }
         },
         {   "when": { "west": "true" },
             "apply": { "model": "soviet:block/innerdeco/pipes/ventpipe_west", "uvlock": true }

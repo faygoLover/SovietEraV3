@@ -2,19 +2,15 @@
   "variants": {
     "facing=east": {
       "model": "soviet:block/mech/diesel_tank",
-      "y": 180
-    },
+      "y": 180 },
     "facing=west": {
       "model": "soviet:block/mech/diesel_tank",
-      "y": 0
-    },
+      "y": 0   },
     "facing=north": {
        "model": "soviet:block/mech/diesel_tank",
-       "y": 90
-    },
+       "y": 90  },
     "facing=south": {
        "model": "soviet:block/mech/diesel_tank",
-       "y": 270
-    }
+       "y": 270 }
   }
 }

@@ -1,5 +1,6 @@
 {
 	"credit": "Autor Tesmio special for SovietEra 2019",
+	"render_type": "minecraft:cutout",
 	"textures": {
 		"0": "soviet:block/structural/moss",
 		"particle": "soviet:block/structural/moss"

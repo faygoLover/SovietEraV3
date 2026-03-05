@@ -23,7 +23,7 @@ public class DrawerStorage extends Linear4MBlock implements EntityBlock {
     }
 
     public DrawerStorage(Properties properties, VoxelShape noneShape, VoxelShape leftShape, VoxelShape rightShape, VoxelShape centerShape) {
-        super(properties, null, noneShape, leftShape, rightShape, centerShape);
+        super(properties, "info.storage.connectable", noneShape, leftShape, rightShape, centerShape);
     }
 
     public DrawerStorage(Properties properties, String hoverTextKey, VoxelShape shape) {
@@ -35,11 +35,11 @@ public class DrawerStorage extends Linear4MBlock implements EntityBlock {
     }
 
     public DrawerStorage(Properties properties, VoxelShape shape) {
-        super(properties, null, shape, shape, shape, shape);
+        super(properties, "info.storage.connectable", shape, shape, shape, shape);
     }
 
     public DrawerStorage(Properties properties) {
-        super(properties, null, null, null, null, null);
+        super(properties, "info.storage.connectable", null, null, null, null);
     }
 
     @Override

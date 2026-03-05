@@ -27,11 +27,11 @@ public class SafeStorage extends Directional4MBlock implements EntityBlock {
     }
 
     public SafeStorage(Properties properties, VoxelShape shape) {
-        super(properties, null, shape);
+        super(properties, "info.storage", shape);
     }
 
     public SafeStorage(Properties properties) {
-        super(properties, null, null);
+        super(properties, "info.storage", null);
     }
 
     @Override

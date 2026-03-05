@@ -4,6 +4,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import ru.soviet.blocks.holder.HolderBlockEntity;
 import ru.soviet.blocks.container.dsp.DspStorageBlockEntity;
 import ru.soviet.blocks.container.safe.SafeStorageBlockEntity;
 import ru.soviet.core.SovietEra;
@@ -36,5 +37,13 @@ public class RegBlockEntities {
                             DspStorageBlockEntity::new,
                             RegBlocksInner.DSP_TUMB.get(),
                             RegBlocksInner.DSP_TABLE.get()
+                    ).build(null));
+
+    public static final RegistryObject<BlockEntityType<HolderBlockEntity>> HOLDER =
+            BLOCK_ENTITIES.register("holder_block",
+                    () -> BlockEntityType.Builder.of(
+                            HolderBlockEntity::new,
+                            RegBlocksInner.CHEMLAB_TABLE_UP.get(),
+                            RegBlocksInner.BIOLAB_TABLE_UP.get()
                     ).build(null));
 }

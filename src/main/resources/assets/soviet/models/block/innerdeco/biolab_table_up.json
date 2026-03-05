@@ -1,13 +1,13 @@
 {
-	"parent": "block/cube_all",
 	"credit": "Made special for SovietLab",
 	"render_type": "minecraft:translucent",
+	"parent": "block/cube_all",
 	"textures": {
 		"5": "soviet:block/structural/beige_metal",
 		"6": "soviet:block/structural/aluminum_light",
 		"7": "soviet:block/structural/glass_muddy",
 		"8": "soviet:block/structural/rusty_ralling",
-		"particle": "soviet:block/structural/d_blue_metal"
+		"particle": "soviet:block/structural/beige_metal"
 	},
 	"elements": [
 		{

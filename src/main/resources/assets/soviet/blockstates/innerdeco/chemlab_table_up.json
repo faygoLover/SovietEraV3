@@ -1,20 +1,20 @@
 {
     "variants": {
-        "facing=east,connection=none":  { "model": "soviet:block/innerdeco/table/chemlab_table_up_def", "y": 270},
-        "facing=west,connection=none":  { "model": "soviet:block/innerdeco/table/chemlab_table_up_def", "y": 90},
-        "facing=south,connection=none": { "model": "soviet:block/innerdeco/table/chemlab_table_up_def", "y": 0 },
+        "facing=east,connection=none":  { "model": "soviet:block/innerdeco/table/chemlab_table_up_def", "y": 270 },
+        "facing=west,connection=none":  { "model": "soviet:block/innerdeco/table/chemlab_table_up_def", "y": 90  },
+        "facing=south,connection=none": { "model": "soviet:block/innerdeco/table/chemlab_table_up_def", "y": 0   },
         "facing=north,connection=none": { "model": "soviet:block/innerdeco/table/chemlab_table_up_def", "y": 180 },
-        "facing=east,connection=left":  { "model": "soviet:block/innerdeco/table/chemlab_table_up_right", "y": 270},
-        "facing=west,connection=left":  { "model": "soviet:block/innerdeco/table/chemlab_table_up_right", "y": 90},
-        "facing=south,connection=left": { "model": "soviet:block/innerdeco/table/chemlab_table_up_right", "y": 0 },
+        "facing=east,connection=left":  { "model": "soviet:block/innerdeco/table/chemlab_table_up_right", "y": 270 },
+        "facing=west,connection=left":  { "model": "soviet:block/innerdeco/table/chemlab_table_up_right", "y": 90  },
+        "facing=south,connection=left": { "model": "soviet:block/innerdeco/table/chemlab_table_up_right", "y": 0   },
         "facing=north,connection=left": { "model": "soviet:block/innerdeco/table/chemlab_table_up_right", "y": 180 },
-        "facing=east,connection=right":  { "model": "soviet:block/innerdeco/table/chemlab_table_up_left", "y": 270},
-        "facing=west,connection=right":  { "model": "soviet:block/innerdeco/table/chemlab_table_up_left", "y": 90},
-        "facing=south,connection=right": { "model": "soviet:block/innerdeco/table/chemlab_table_up_left", "y": 0 },
+        "facing=east,connection=right":  { "model": "soviet:block/innerdeco/table/chemlab_table_up_left", "y": 270 },
+        "facing=west,connection=right":  { "model": "soviet:block/innerdeco/table/chemlab_table_up_left", "y": 90  },
+        "facing=south,connection=right": { "model": "soviet:block/innerdeco/table/chemlab_table_up_left", "y": 0   },
         "facing=north,connection=right": { "model": "soviet:block/innerdeco/table/chemlab_table_up_left", "y": 180 },
-        "facing=east,connection=center":  { "model": "soviet:block/innerdeco/table/chemlab_table_up_mid", "y": 270},
-        "facing=west,connection=center":  { "model": "soviet:block/innerdeco/table/chemlab_table_up_mid", "y": 90},
-        "facing=south,connection=center": { "model": "soviet:block/innerdeco/table/chemlab_table_up_mid", "y": 0 },
+        "facing=east,connection=center":  { "model": "soviet:block/innerdeco/table/chemlab_table_up_mid", "y": 270 },
+        "facing=west,connection=center":  { "model": "soviet:block/innerdeco/table/chemlab_table_up_mid", "y": 90  },
+        "facing=south,connection=center": { "model": "soviet:block/innerdeco/table/chemlab_table_up_mid", "y": 0   },
         "facing=north,connection=center": { "model": "soviet:block/innerdeco/table/chemlab_table_up_mid", "y": 180 }
     }
 }

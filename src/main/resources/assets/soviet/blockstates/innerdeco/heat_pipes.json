@@ -6,7 +6,7 @@
         },
         {
             "when": { "axis": "x" },
-            "apply": { "model": "soviet:block/innerdeco/pipes/heat_pipes", "y": 90 }
+            "apply": { "model": "soviet:block/innerdeco/pipes/heat_pipes", "y": 90  }
         },
         {
             "when": { "axis": "x", "front": "true" },
@@ -14,7 +14,7 @@
         },
         {
             "when": { "axis": "x", "back": "true" },
-            "apply": { "model": "soviet:block/innerdeco/pipes/heat_pipes_side", "y": 90 }
+            "apply": { "model": "soviet:block/innerdeco/pipes/heat_pipes_side", "y": 90  }
         },
         {
             "when": { "axis": "z", "front": "true" },
@@ -22,7 +22,7 @@
         },
         {
             "when": { "axis": "z", "back": "true" },
-            "apply": { "model": "soviet:block/innerdeco/pipes/heat_pipes_side", "y": 0 }
+            "apply": { "model": "soviet:block/innerdeco/pipes/heat_pipes_side", "y": 0   }
         }
     ]
 }

@@ -27,11 +27,11 @@ public class DspStorage extends Directional4MBlock implements EntityBlock {
     }
 
     public DspStorage(Properties properties, VoxelShape shape) {
-        super(properties, null, shape);
+        super(properties, "info.storage", shape);
     }
 
     public DspStorage(Properties properties) {
-        super(properties, null, null);
+        super(properties, "info.storage", null);
     }
 
     @Override

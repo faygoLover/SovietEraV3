@@ -3,7 +3,7 @@
         {   "when": { "axis": "z" },
             "apply": { "model": "soviet:block/structural/steel_pylon", "uvlock": true }
         },
-        {   "when": { "axis": "x"},
+        {   "when": { "axis": "x"  },
             "apply": { "model": "soviet:block/structural/steel_pylon", "y": 90, "uvlock": true }
         },
         {   "when": { "axis": "z", "west": "true" },
@@ -30,13 +30,13 @@
             "apply": { "model": "soviet:block/structural/steel_pylon_south", "y": 90, "uvlock": true }
         },
         {   "when": { "axis": "x", "east": "true" },
-            "apply": { "model": "soviet:block/structural/steel_pylon_north","y": 90, "uvlock": true }
+            "apply": { "model": "soviet:block/structural/steel_pylon_north", "y": 90, "uvlock": true }
         },
         {   "when": { "axis": "x", "north": "true" },
-            "apply": { "model": "soviet:block/structural/steel_pylon_west","y": 90, "uvlock": true }
+            "apply": { "model": "soviet:block/structural/steel_pylon_west", "y": 90, "uvlock": true }
         },
         {   "when": { "axis": "x", "south": "true" },
-            "apply": { "model": "soviet:block/structural/steel_pylon_east","y": 90, "uvlock": true }
+            "apply": { "model": "soviet:block/structural/steel_pylon_east", "y": 90, "uvlock": true }
         },
         {   "when": { "axis": "x", "up": "true" },
             "apply": { "model": "soviet:block/structural/steel_pylon_top", "y": 90, "uvlock": true }

@@ -1,4 +1,5 @@
 {
+	"format_version": "1.21.11",
 	"credit": "Autor Tesmio special for SovietEra 2023",
 	"parent": "block/cube_all",
 	"textures": {
@@ -8,9 +9,9 @@
 	},
 	"elements": [
 		{
-			"from": [0, 1.15, 13.4],
-			"to": [16, 2.4, 14.65],
-			"rotation": {"angle": 0, "axis": "y", "origin": [14, 0.15, 15.65]},
+			"from": [0, 1.125, 1.375],
+			"to": [16, 2.375, 2.625],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.25, 7.5, 1.3125]},
 			"faces": {
 				"north": {"uv": [0, 11, 16, 12], "texture": "#2"},
 				"east": {"uv": [0, 0, 1, 1], "texture": "#2"},
@@ -21,9 +22,9 @@
 			}
 		},
 		{
-			"from": [1.25, 0.75, 14],
-			"to": [1.75, 1.25, 16],
-			"rotation": {"angle": 0, "axis": "y", "origin": [1.25, 1.5, 15.5]},
+			"from": [2, 0.75, 0],
+			"to": [2.5, 1.25, 2.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.25, 7.5, 1.3125]},
 			"faces": {
 				"north": {"uv": [0.5, 0, 0, 0.5], "texture": "#0"},
 				"east": {"uv": [0.75, 0, 0, 0.5], "texture": "#0"},
@@ -34,9 +35,9 @@
 			}
 		},
 		{
-			"from": [14.25, 0.75, 14],
-			"to": [14.75, 1.25, 16],
-			"rotation": {"angle": 0, "axis": "y", "origin": [14.25, 1.5, 15.5]},
+			"from": [13.5, 0.75, 0],
+			"to": [14, 1.25, 2.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.25, 7.5, 1.3125]},
 			"faces": {
 				"north": {"uv": [0.5, 0, 0, 0.5], "texture": "#0"},
 				"east": {"uv": [0.75, 0, 0, 0.5], "texture": "#0"},
@@ -47,9 +48,9 @@
 			}
 		},
 		{
-			"from": [14.25, 13, 14],
-			"to": [14.75, 13.5, 16],
-			"rotation": {"angle": 0, "axis": "y", "origin": [14.25, 13.75, 15.5]},
+			"from": [13.5, 13, 0],
+			"to": [14, 13.5, 2.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.25, 7.5, 1.3125]},
 			"faces": {
 				"north": {"uv": [0.5, 0, 0, 0.5], "texture": "#0"},
 				"east": {"uv": [0.75, 0, 0, 0.5], "texture": "#0"},
@@ -60,9 +61,9 @@
 			}
 		},
 		{
-			"from": [0, 13.4, 13.4],
-			"to": [16, 14.65, 14.65],
-			"rotation": {"angle": 0, "axis": "y", "origin": [14, 12.4, 15.65]},
+			"from": [0, 13.375, 1.375],
+			"to": [16, 14.625, 2.625],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.25, 7.5, 1.3125]},
 			"faces": {
 				"north": {"uv": [0, 11, 16, 12], "texture": "#2"},
 				"east": {"uv": [0, 0, 1, 1], "texture": "#2"},
@@ -73,9 +74,9 @@
 			}
 		},
 		{
-			"from": [1.25, 13, 14],
-			"to": [1.75, 13.5, 16],
-			"rotation": {"angle": 0, "axis": "y", "origin": [1.25, 13.75, 15.5]},
+			"from": [2, 13, 0],
+			"to": [2.5, 13.5, 2.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.25, 7.5, 1.3125]},
 			"faces": {
 				"north": {"uv": [0.5, 0, 0, 0.5], "texture": "#0"},
 				"east": {"uv": [0.75, 0, 0, 0.5], "texture": "#0"},

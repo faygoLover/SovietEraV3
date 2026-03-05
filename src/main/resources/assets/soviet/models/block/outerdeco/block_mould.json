@@ -1,5 +1,6 @@
 {
 	"credit": "Autor Tesmio special for SovietEra 2023",
+	"render_type": "minecraft:cutout",
 	"textures": {
 		"0": "soviet:block/structural/mould",
 		"particle": "soviet:block/structural/mould"
