@@ -1,12 +1,22 @@
 {
     "variants": {
-        "facing=up_x":   { "model": "soviet:block/innerdeco/lamp/fluo_lamp3", "x": 0,   "y": 180 },
-        "facing=up_z":   { "model": "soviet:block/innerdeco/lamp/fluo_lamp3", "x": 0,   "y": 90  },
-        "facing=down_x": { "model": "soviet:block/innerdeco/lamp/fluo_lamp3", "x": 180, "y": 0   },
-        "facing=down_z": { "model": "soviet:block/innerdeco/lamp/fluo_lamp3", "x": 180, "y": 90  },
-        "facing=east":   { "model": "soviet:block/innerdeco/lamp/fluo_lamp3", "x": 90,  "y": 90  },
-        "facing=west":   { "model": "soviet:block/innerdeco/lamp/fluo_lamp3", "x": 90,  "y": 270 },
-        "facing=south" : { "model": "soviet:block/innerdeco/lamp/fluo_lamp3", "x": 90,  "y": 0   },
-        "facing=north" : { "model": "soviet:block/innerdeco/lamp/fluo_lamp3", "x": 90,  "y": 0   }
+		"facing=up_x,lamps=1"   : { "model": "soviet:block/innerdeco/lamp/fluo_lamp3"                             },
+        "facing=up_z,lamps=1"   : { "model": "soviet:block/innerdeco/lamp/fluo_lamp3",                   "y": 90  },
+        "facing=down_x,lamps=1" : { "model": "soviet:block/innerdeco/lamp/fluo_lamp3",         "x": 180           },
+        "facing=down_z,lamps=1" : { "model": "soviet:block/innerdeco/lamp/fluo_lamp3",         "x": 180, "y": 90  },
+        "facing=east,lamps=1"   : { "model": "soviet:block/innerdeco/lamp/fluo_lamp3",         "x": 90,  "y": 90  },
+        "facing=west,lamps=1"   : { "model": "soviet:block/innerdeco/lamp/fluo_lamp3",         "x": 90,  "y": 270 },
+        "facing=south,lamps=1"  : { "model": "soviet:block/innerdeco/lamp/fluo_lamp3",         "x": 90,  "y": 180 },
+        "facing=north,lamps=1"  : { "model": "soviet:block/innerdeco/lamp/fluo_lamp3",         "x": 90            },
+		
+
+        "facing=up_x,lamps=0"    : { "model": "soviet:block/innerdeco/lamp/fluo_lamp3_broken"                     },
+        "facing=up_z,lamps=0"    : { "model": "soviet:block/innerdeco/lamp/fluo_lamp3_broken",           "y": 90  },
+        "facing=down_x,lamps=0"  : { "model": "soviet:block/innerdeco/lamp/fluo_lamp3_broken", "x": 180           },
+        "facing=down_z,lamps=0"  : { "model": "soviet:block/innerdeco/lamp/fluo_lamp3_broken", "x": 180, "y": 90  },
+        "facing=east,lamps=0"    : { "model": "soviet:block/innerdeco/lamp/fluo_lamp3_broken", "x": 90,  "y": 90  },
+        "facing=west,lamps=0"    : { "model": "soviet:block/innerdeco/lamp/fluo_lamp3_broken", "x": 90,  "y": 270 },
+        "facing=south,lamps=0"   : { "model": "soviet:block/innerdeco/lamp/fluo_lamp3_broken", "x": 90,  "y": 180 },
+        "facing=north,lamps=0"   : { "model": "soviet:block/innerdeco/lamp/fluo_lamp3_broken", "x": 90            }
     }
 }

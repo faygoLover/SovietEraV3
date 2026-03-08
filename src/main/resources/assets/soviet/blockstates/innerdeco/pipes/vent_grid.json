@@ -1,12 +1,30 @@
 {
     "variants": {
-		"facing=west":   { "model": "soviet:block/innerdeco/pipes/vent_grid", "y": 270 },
-        "facing=east":   { "model": "soviet:block/innerdeco/pipes/vent_grid", "y": 90  },
-        "facing=south":  { "model": "soviet:block/innerdeco/pipes/vent_grid", "y": 180 },
-        "facing=north":  { "model": "soviet:block/innerdeco/pipes/vent_grid", "y": 0   },
-		"facing=up_x":   { "model": "soviet:block/innerdeco/pipes/vent_grid", "y": 90,  "x": 270  },
-		"facing=up_z":   { "model": "soviet:block/innerdeco/pipes/vent_grid", "y": 0, "x": 270  },
-        "facing=down_x": { "model": "soviet:block/innerdeco/pipes/vent_grid", "y": 90,  "x": 90 },
-        "facing=down_z": { "model": "soviet:block/innerdeco/pipes/vent_grid", "y": 0, "x": 90 }
+        "toggled=false,facing=north":      { "model": "soviet:block/innerdeco/pipes/vent_grid"                          },
+		"toggled=false,facing=south":      { "model": "soviet:block/innerdeco/pipes/vent_grid",                "y": 180 },
+		"toggled=false,facing=west":       { "model": "soviet:block/innerdeco/pipes/vent_grid",                "y": 270 },
+        "toggled=false,facing=east":       { "model": "soviet:block/innerdeco/pipes/vent_grid",                "y": 90  },
+        "toggled=false,facing=up_north":   { "model": "soviet:block/innerdeco/pipes/vent_grid",      "x": 270           },
+        "toggled=false,facing=up_south":   { "model": "soviet:block/innerdeco/pipes/vent_grid",      "x": 270, "y": 180 },
+        "toggled=false,facing=up_west":    { "model": "soviet:block/innerdeco/pipes/vent_grid",      "x": 270, "y": 270 },
+        "toggled=false,facing=up_east":    { "model": "soviet:block/innerdeco/pipes/vent_grid",      "x": 270, "y": 90  },
+        "toggled=false,facing=down_north": { "model": "soviet:block/innerdeco/pipes/vent_grid",      "x": 90,  "y": 180 },
+        "toggled=false,facing=down_south": { "model": "soviet:block/innerdeco/pipes/vent_grid",      "x": 90            },
+        "toggled=false,facing=down_west":  { "model": "soviet:block/innerdeco/pipes/vent_grid",      "x": 90,  "y": 270 },
+        "toggled=false,facing=down_east":  { "model": "soviet:block/innerdeco/pipes/vent_grid",      "x": 90,  "y": 90  },
+
+
+		"toggled=true,facing=north":       { "model": "soviet:block/innerdeco/pipes/vent_grid_open"                     },
+		"toggled=true,facing=south":       { "model": "soviet:block/innerdeco/pipes/vent_grid_open",           "y": 180 },
+		"toggled=true,facing=west":        { "model": "soviet:block/innerdeco/pipes/vent_grid_open",           "y": 270 },
+        "toggled=true,facing=east":        { "model": "soviet:block/innerdeco/pipes/vent_grid_open",           "y": 90  },
+        "toggled=true,facing=up_north":    { "model": "soviet:block/innerdeco/pipes/vent_grid_open", "x": 270           },
+        "toggled=true,facing=up_south":    { "model": "soviet:block/innerdeco/pipes/vent_grid_open", "x": 270, "y": 180 },
+        "toggled=true,facing=up_west":     { "model": "soviet:block/innerdeco/pipes/vent_grid_open", "x": 270, "y": 270 },
+        "toggled=true,facing=up_east":     { "model": "soviet:block/innerdeco/pipes/vent_grid_open", "x": 270, "y": 90  },
+        "toggled=true,facing=down_north":  { "model": "soviet:block/innerdeco/pipes/vent_grid_open", "x": 90,  "y": 180 },
+        "toggled=true,facing=down_south":  { "model": "soviet:block/innerdeco/pipes/vent_grid_open", "x": 90            },
+        "toggled=true,facing=down_west":   { "model": "soviet:block/innerdeco/pipes/vent_grid_open", "x": 90,  "y": 270 },
+        "toggled=true,facing=down_east":   { "model": "soviet:block/innerdeco/pipes/vent_grid_open", "x": 90,  "y": 90  }
     }
 }

@@ -698,6 +698,7 @@
   "storage.drawer": "Ящик стола",
   "storage.safe": "Сейф",
   "storage.dsp": "Тумбочка",
+  "storage.kitchen": "Ящик",
   "info.beige_var": "§7Имеет варианты, §6Светло-бежевый",
   "info.beige2_var": "§7Имеет варианты, §6Бежевый",
   "info.blue_var": "§7Имеет варианты, §9Синий",
@@ -714,5 +715,8 @@
   "info.holder.connectable": "§7Соединяется, Рамка",
   "info.enableable": "§7Можно включить",
   "info.toggleable": "§7Доступно взаимодействие",
-  "info.connectable_wire": "§77Соединяется, Проводит сигнал красного камня"
+  "info.connectable_wire": "§77Соединяется, Проводит сигнал красного камня",
+  "info.fluolamp": "§7Можно вставить лампы и плафон",
+  "info.fluolamp2": "§7Можно вставить лампы",
+  "info.fluolamp3": "§7Можно вставить лампу"
 }

@@ -711,8 +711,12 @@
   "storage.drawer": "Drawer",
   "storage.safe": "Safe",
   "storage.dsp": "Drawer",
+  "storage.kitchen": "Drawer",
   "info.variants": "§7Has variants",
   "info.enableable": "§7Can be enabled",
   "info.toggleable": "§7Can be toggled",
-  "info.connectable_wire": "§7Connectable, Redstone wire"
+  "info.connectable_wire": "§7Connectable, Redstone wire",
+  "info.fluolamp": "§7Lamps and cover could be attached",
+  "info.fluolamp2": "§7Lamps could be attached",
+  "info.fluolamp3": "§7A lamp could be attached"
 }

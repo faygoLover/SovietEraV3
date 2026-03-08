@@ -1,5 +1,6 @@
 {
 	"credit": "Autor Tesmio special for SovietEra 2023",
+	"render_type": "minecraft:translucent",
 	"parent": "block/cube_all",
 	"textures": {
 		"0": "soviet:block/structural/containment_block",

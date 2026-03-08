@@ -74,4 +74,13 @@ public class SmallTumbler extends WallAttachedBlock {
         return getSignal(state, level, pos, direction);
     }
 
+    @Override
+    public void onRemove(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull BlockState newState, boolean isMoving) {
+        if (!level.isClientSide) {
+            Direction facing = state.getValue(FACING);
+            level.updateNeighborsAt(pos, this);
+            level.updateNeighborsAt(pos.relative(facing), this);
+        }
+    }
+
 }

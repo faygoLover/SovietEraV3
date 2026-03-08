@@ -6,12 +6,14 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import ru.soviet.blocks.container.dsp.DspStorageMenu;
+import ru.soviet.blocks.container.kitchen.KitchenStorageMenu;
 import ru.soviet.blocks.container.safe.SafeStorageMenu;
 import ru.soviet.core.SovietEra;
 import ru.soviet.blocks.container.drawers.DrawerStorageMenu;
 
 public class RegMenuTypes {
-    public static final DeferredRegister<MenuType<?>> MENUS = DeferredRegister.create(ForgeRegistries.MENU_TYPES, SovietEra.MODID);
+    public static final DeferredRegister<MenuType<?>> MENUS =
+            DeferredRegister.create(ForgeRegistries.MENU_TYPES, SovietEra.MODID);
 
     public static final RegistryObject<MenuType<DrawerStorageMenu>> DRAWER_STORAGE =
             MENUS.register("drawer", () -> IForgeMenuType.create(DrawerStorageMenu::new));
@@ -21,4 +23,7 @@ public class RegMenuTypes {
 
     public static final RegistryObject<MenuType<DspStorageMenu>> DSP_STORAGE =
             MENUS.register("dsp", () -> IForgeMenuType.create(DspStorageMenu::new));
+
+    public static final RegistryObject<MenuType<KitchenStorageMenu>> KITCHEN_STORAGE =
+            MENUS.register("kitchen", () -> IForgeMenuType.create(KitchenStorageMenu::new));
 }

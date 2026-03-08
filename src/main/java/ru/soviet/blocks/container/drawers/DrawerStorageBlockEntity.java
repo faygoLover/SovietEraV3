@@ -11,7 +11,7 @@ import ru.soviet.reg.RegBlockEntities;
 
 public class DrawerStorageBlockEntity extends BaseStorageBlockEntity<DrawerStorageMenu> {
     public DrawerStorageBlockEntity(BlockPos pos, BlockState state) {
-        super(RegBlockEntities.DRAWER_STORAGE.get(), pos, state, Component.translatable("storage.drawer"));
+        super(RegBlockEntities.DRAWER_STORAGE.get(), pos, state, Component.translatable("storage.drawer"), 16);
     }
 
     @Override

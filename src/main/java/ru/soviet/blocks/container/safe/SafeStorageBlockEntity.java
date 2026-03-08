@@ -11,7 +11,7 @@ import ru.soviet.reg.RegBlockEntities;
 
 public class SafeStorageBlockEntity extends BaseStorageBlockEntity<SafeStorageMenu> {
     public SafeStorageBlockEntity(BlockPos pos, BlockState state) {
-        super(RegBlockEntities.SAFE_STORAGE.get(), pos, state, Component.translatable("storage.safe"));
+        super(RegBlockEntities.SAFE_STORAGE.get(), pos, state, Component.translatable("storage.safe"),8);
     }
 
     @Override

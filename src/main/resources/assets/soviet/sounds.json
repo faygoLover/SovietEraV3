@@ -48,7 +48,7 @@
     "subtitle": "containment_door",
     "sounds": [
       {
-        "name": "soviet:openhermodoor"
+        "name": "soviet:open_hermodoor"
       }
     ]
   },

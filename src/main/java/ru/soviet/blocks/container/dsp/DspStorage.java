@@ -1,73 +1,23 @@
 package ru.soviet.blocks.container.dsp;
 
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.MenuProvider;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.EntityBlock;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-import ru.soviet.blocks.baseblock.Directional4MBlock;
-import ru.soviet.utils.BlockEntityDrop;
+import ru.soviet.blocks.container.BaseDirectionalStorageBlock;
+import ru.soviet.reg.RegBlockEntities;
 
-public class DspStorage extends Directional4MBlock implements EntityBlock {
-
+public class DspStorage extends BaseDirectionalStorageBlock {
     public DspStorage(Properties properties, String hoverTextKey, VoxelShape shape) {
-        super(properties, hoverTextKey, shape);
+        super(properties, hoverTextKey, shape, () -> RegBlockEntities.DSP_STORAGE.get());
     }
 
     public DspStorage(Properties properties, String hoverTextKey) {
-        super(properties, hoverTextKey, null);
+        super(properties, hoverTextKey, () -> RegBlockEntities.DSP_STORAGE.get());
     }
 
     public DspStorage(Properties properties, VoxelShape shape) {
-        super(properties, "info.storage", shape);
+        super(properties, shape, () -> RegBlockEntities.DSP_STORAGE.get());
     }
 
     public DspStorage(Properties properties) {
-        super(properties, "info.storage", null);
-    }
-
-    @Override
-    public @NotNull InteractionResult use(@NotNull BlockState state, Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
-        if (!level.isClientSide) {
-            BlockEntity blockEntity = level.getBlockEntity(pos);
-            // Если блочная сущность по какой-то причине отсутствует (например, ошибка регистрации), создаём её вручную
-            if (blockEntity == null) {
-                blockEntity = new DspStorageBlockEntity(pos, state);
-                level.setBlockEntity(blockEntity);
-            }
-            if (blockEntity instanceof MenuProvider) {
-                player.openMenu((MenuProvider) blockEntity);
-            }
-        }
-        return InteractionResult.SUCCESS;
-    }
-
-    @Nullable
-    @Override
-    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new DspStorageBlockEntity(pos, state);
-    }
-
-    @Override
-    public MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos) {
-        BlockEntity blockEntity = level.getBlockEntity(pos);
-        return blockEntity instanceof MenuProvider ? (MenuProvider) blockEntity : null;
-    }
-
-    @Override
-    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
-        if (!state.is(newState.getBlock())) {
-            BlockEntity blockEntity = level.getBlockEntity(pos);
-            BlockEntityDrop.dropContents(level, pos, blockEntity);
-        }
-        super.onRemove(state, level, pos, newState, isMoving);
+        super(properties, () -> RegBlockEntities.DSP_STORAGE.get());
     }
 }

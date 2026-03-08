@@ -1,4 +1,4 @@
-package ru.soviet.blocks.baseblock;
+package ru.soviet.blocks.decorative.innerdeco.devices;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
@@ -8,6 +8,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
+import ru.soviet.blocks.baseblock.Directional4MBlock;
 
 public class Enableable4MBlock extends Directional4MBlock {
     public static final BooleanProperty POWERED = BooleanProperty.create("powered");

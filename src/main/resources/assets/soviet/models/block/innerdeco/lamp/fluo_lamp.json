@@ -1,6 +1,7 @@
 {
-"parent": "block/cube_all",
+	"format_version": "1.9.0",
 	"credit": "Made special for SovietLab",
+	"parent": "block/cube_all",
 	"textures": {
 		"0": "soviet:block/structural/aluminum",
 		"1": "soviet:block/structural/aluminum_light",
@@ -107,19 +108,7 @@
 			}
 		},
 		{
-			"from": [14.9375, 14.5, 6.25],
-			"to": [15.125, 15, 6.75],
-			"faces": {
-				"north": {"uv": [0, 0, 0.125, 0.5], "texture": "#3"},
-				"east": {"uv": [0, 0, 0.5, 0.5], "texture": "#3"},
-				"south": {"uv": [0, 0, 0.125, 0.5], "texture": "#3"},
-				"west": {"uv": [1, 2, 1.5, 2.5], "texture": "#3"},
-				"up": {"uv": [0, 0, 0.125, 0.5], "texture": "#3"},
-				"down": {"uv": [0, 0, 0.125, 0.5], "texture": "#3"}
-			}
-		},
-		{
-			"from": [14.9375, 14.5, 9.25],
+			"from": [0.875, 14.5, 9.25],
 			"to": [15.125, 15, 9.75],
 			"faces": {
 				"north": {"uv": [0, 0, 0.125, 0.5], "texture": "#3"},
@@ -131,20 +120,8 @@
 			}
 		},
 		{
-			"from": [0.875, 14.5, 9.25],
-			"to": [1.0625, 15, 9.75],
-			"faces": {
-				"north": {"uv": [0, 0, 0.125, 0.5], "texture": "#3"},
-				"east": {"uv": [0, 0, 0.5, 0.5], "texture": "#3"},
-				"south": {"uv": [0, 0, 0.125, 0.5], "texture": "#3"},
-				"west": {"uv": [5, 4, 5.5, 4.5], "texture": "#3"},
-				"up": {"uv": [0, 0, 0.125, 0.5], "texture": "#3"},
-				"down": {"uv": [0, 0, 0.125, 0.5], "texture": "#3"}
-			}
-		},
-		{
 			"from": [0.875, 14.5, 6.25],
-			"to": [1.0625, 15, 6.75],
+			"to": [15.125, 15, 6.75],
 			"faces": {
 				"north": {"uv": [0, 0, 0.125, 0.5], "texture": "#3"},
 				"east": {"uv": [0, 0, 0.5, 0.5], "texture": "#3"},

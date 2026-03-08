@@ -20,24 +20,19 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public abstract class BaseStorageBlockEntity<T extends AbstractContainerMenu> extends BlockEntity implements MenuProvider {
-
-    protected final ItemStackHandler itemHandler = new ItemStackHandler(16) {
-        @Override
-        protected void onContentsChanged(int slot) {
-            setChanged();
-        }
-    };
+    protected final ItemStackHandler itemHandler;
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
-
     private final Component displayName;
 
-    public IItemHandler getItemHandler() {
-        return itemHandler;
-    }
-
-    public BaseStorageBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state, Component displayName) {
+    public BaseStorageBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state, Component displayName, int inventorySize) {
         super(type, pos, state);
         this.displayName = displayName;
+        this.itemHandler = new ItemStackHandler(inventorySize) {
+            @Override
+            protected void onContentsChanged(int slot) {
+                setChanged();
+            }
+        };
     }
 
     @Override
@@ -50,7 +45,7 @@ public abstract class BaseStorageBlockEntity<T extends AbstractContainerMenu> ex
     public abstract T createMenu(int id, @NotNull Inventory inventory, @NotNull Player player);
 
     @Override
-    public @NotNull <t> LazyOptional<t> getCapability(@NotNull Capability<t> cap, @Nullable Direction side) {
+    public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
         if (cap == ForgeCapabilities.ITEM_HANDLER) {
             return lazyItemHandler.cast();
         }

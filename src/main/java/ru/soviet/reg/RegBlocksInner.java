@@ -11,18 +11,16 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import ru.soviet.blocks.baseblock.*;
 import ru.soviet.blocks.container.drawers.DrawerStorage;
+import ru.soviet.blocks.container.kitchen.KitchenStorage;
 import ru.soviet.blocks.decorative.innerdeco.Ladder;
-import ru.soviet.blocks.baseblock.Enableable4MBlock;
-import ru.soviet.blocks.decorative.innerdeco.devices.BigTumbler;
-import ru.soviet.blocks.decorative.innerdeco.devices.ModelDevice;
-import ru.soviet.blocks.decorative.innerdeco.devices.Toggleable4MBlock;
+import ru.soviet.blocks.decorative.innerdeco.VentGrid;
+import ru.soviet.blocks.decorative.innerdeco.devices.Enableable4MBlock;
+import ru.soviet.blocks.decorative.innerdeco.devices.*;
 import ru.soviet.blocks.container.dsp.DspStorage;
 import ru.soviet.blocks.container.dsp.DspStorageTable;
 import ru.soviet.blocks.container.safe.SafeStorage;
 import ru.soviet.blocks.decorative.innerdeco.HomePipes;
 import ru.soviet.blocks.decorative.innerdeco.WallWire;
-import ru.soviet.blocks.decorative.innerdeco.devices.PowerSocket;
-import ru.soviet.blocks.decorative.innerdeco.devices.SmallTumbler;
 import ru.soviet.blocks.holder.HolderTable;
 import ru.soviet.core.SovietEra;
 
@@ -31,6 +29,7 @@ import java.util.function.Supplier;
 public class RegBlocksInner {
     public static final DeferredRegister<Block> BLOCKS_INNER = DeferredRegister.create(ForgeRegistries.BLOCKS, SovietEra.MODID);
 
+    //мебель
     public static final RegistryObject<Block> SAFE = registerBlock("innerdeco/furniture/safe", () -> new SafeStorage(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion(), "info.safe",
                     Shapes.box(
                             0, 0, 0,
@@ -190,6 +189,16 @@ public class RegBlocksInner {
                             1, 0.9375, 0.0625) //задняя
             ))
     );
+    public static final RegistryObject<Block> CHEMLAB_TABLE = registerBlock("innerdeco/chemlab_table", () -> new DrawerStorage(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion(),
+            Shapes.or(
+                    Shapes.box(
+                            0, 0.935, 0,
+                            1, 1, 1),
+                    Shapes.box(
+                            0, 0.125, 0,
+                            1, 0.935, 0.96875)
+            )
+    ));
     public static final RegistryObject<Block> CHEMLAB_TABLE_UP = registerBlock("innerdeco/chemlab_table_up", () -> new HolderTable(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion().strength(2.0F, 2.0F),
             Shapes.or(
                     Shapes.box(
@@ -236,16 +245,7 @@ public class RegBlocksInner {
                             1, 0.9375, 0.1875) //задняя
             ))
     );
-    public static final RegistryObject<Block> CHEMLAB_TABLE = registerBlock("innerdeco/chemlab_table", () -> new DrawerStorage(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion(),
-            Shapes.or(
-                    Shapes.box(
-                            0, 0.935, 0,
-                            1, 1, 1),
-                    Shapes.box(
-                            0, 0.125, 0,
-                            1, 0.935, 0.96875)
-            )
-    ));
+    public static final RegistryObject<Block> LAB_SINK = registerBlock("innerdeco/lab_sink", () -> new Directional4MBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
     public static final RegistryObject<Block> DSP_TUMB = registerBlock("innerdeco/furniture/dsp_tumb", () -> new DspStorage(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_WOOD).noOcclusion(),
             Shapes.box(
                     0, 0.375, 0.21875,
@@ -355,7 +355,73 @@ public class RegBlocksInner {
                             1, 0.9375, 0.90625) //средняя
             ))
     );
+    public static final RegistryObject<Block> PURPLE_TABLE = registerBlock("innerdeco/furniture/purple_table", () -> new Linear4MBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_WOOD),
+            Shapes.or(
+                    Shapes.box(
+                            0.0625, 0.125, 0.0625,
+                            0.1875, 0.875, 0.9375), //левая
+                    Shapes.box(
+                            0, 0.875, 0,
+                            1, 0.984375, 1), //верхняя
+                    Shapes.box(
+                            0.8125, 0.125, 0.0625,
+                            0.9375, 0.875, 0.9375), //правая
+                    Shapes.box(
+                            0.1875, 0.125, 0.125,
+                            0.8125, 0.875, 0.1875) //задняя
+            ),
+            Shapes.or(
+                    Shapes.box(
+                            0, 0.875, 0,
+                            1, 0.984375, 1), //верхняя
+                    Shapes.box(
+                            0.8125, 0.125, 0.0625,
+                            0.9375, 0.875, 0.9375), //правая
+                    Shapes.box(
+                            0, 0.125, 0.125,
+                            0.8125, 0.875, 0.1875) //задняя
+            ),
+            Shapes.or(
+                    Shapes.box(
+                            0.0625, 0.125, 0.0625,
+                            0.1875, 0.875, 0.9375), //левая
+                    Shapes.box(
+                            0, 0.875, 0,
+                            1, 0.984375, 1), //верхняя
+                    Shapes.box(
+                            0.1875, 0.125, 0.125,
+                            1, 0.875, 0.1875) //задняя
+            ),
+            Shapes.or(
+                    Shapes.box(
+                            0, 0.875, 0,
+                            1, 0.984375, 1), //верхняя
+                    Shapes.box(
+                            0, 0.125, 0.125,
+                            1, 0.875, 0.1875) //задняя
+            )
+    ));
+    public static final RegistryObject<Block> KITCHEN_TABLE = registerBlock("innerdeco/furniture/kitchen_table", () -> new KitchenStorage(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_WOOD),
+            Shapes.or(
+                    Shapes.box(
+                            0, 0.9375, 0,
+                            1, 1, 0.8125), //верхняя
+                    Shapes.box(
+                            0, 0.125, 0,
+                            1, 0.9375, 0.75), //средняя
+                    Shapes.box(
+                            0, 0, 0,
+                            1, 0.125, 0.6875) //нижняя
+            )
+    ));
+    public static final RegistryObject<Block> KITCHEN_SINK = registerBlock("innerdeco/furniture/kitchen_sink", () -> new Directional4MBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK),
+            Shapes.box(
+                    0, 0, 0,
+                    1, 1, 0.875)
+    ));
 
+
+    //Девайсы
     public static final RegistryObject<Block> SMALL_COMPUTER = registerBlock("innerdeco/devices/small_computer", () -> new Enableable4MBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK),
             Shapes.or(
                     Shapes.box(
@@ -403,7 +469,6 @@ public class RegBlocksInner {
                             0.9375, 0.8125, 0.375)
             ))
     );
-    public static final RegistryObject<Block> LAB_SINK = registerBlock("innerdeco/lab_sink", () -> new Directional4MBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
     public static final RegistryObject<Block> AUTOCLAVE = registerBlock("innerdeco/autoclave", () -> new ModelDevice(
             Shapes.or(
                     Shapes.box(
@@ -529,6 +594,39 @@ public class RegBlocksInner {
                     1, 1, 0.15625)
             )
     );
+
+    //Кабели
+    public static final RegistryObject<Block> REDSTONE_WIRE = registerBlock("innerdeco/devices/redstone_wire", () -> new WallWire(BlockBehaviour.Properties.copy(Blocks.BLACK_WOOL),
+            Shapes.or(
+                    Shapes.box(
+                            0, 0, 0,
+                            1, 1, 0.1876)
+            ),
+            Shapes.or(
+                    Shapes.box(
+                            0, 0, 0,
+                            1, 1, 0.1876),
+                    Shapes.box(
+                            0, 0, 0.1876,
+                            0.1876, 1, 1)
+            ),
+            Shapes.or(
+                    Shapes.box(
+                            0, 0, 0,
+                            1, 1, 0.1876),
+                    Shapes.box(
+                            0.8125, 0, 0.1876,
+                            1, 1, 1)
+            ))
+    );
+    public static final RegistryObject<Block> SWITCH_REDSTONE_WIRE = registerBlock("innerdeco/devices/switch_redstone_wire", () -> new Directional4MBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK),
+                    Shapes.box(
+                            0, 0, 0,
+                            1, 1, 0.1876)
+            )
+    );
+
+    //Трубы
     public static final RegistryObject<Block> HOME_PIPES = registerBlock("innerdeco/pipes/home_pipes", () -> new HomePipes(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK),
             Shapes.or(
                     Shapes.box(
@@ -568,41 +666,12 @@ public class RegBlocksInner {
             ))
     );
     public static final RegistryObject<Block> HOME_PIPES_BATTERY = registerBlock("innerdeco/pipes/home_pipes_battery", () -> new Directional4MBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK),
-            Shapes.box(
-                    0, 0, 0,
-                    1, 1, 0.25)
+                    Shapes.box(
+                            0, 0, 0,
+                            1, 1, 0.25)
             )
     );
-    public static final RegistryObject<Block> REDSTONE_WIRE = registerBlock("innerdeco/devices/redstone_wire", () -> new WallWire(BlockBehaviour.Properties.copy(Blocks.BLACK_WOOL),
-            Shapes.or(
-                    Shapes.box(
-                            0, 0, 0,
-                            1, 1, 0.1876)
-            ),
-            Shapes.or(
-                    Shapes.box(
-                            0, 0, 0,
-                            1, 1, 0.1876),
-                    Shapes.box(
-                            0, 0, 0.1876,
-                            0.1876, 1, 1)
-            ),
-            Shapes.or(
-                    Shapes.box(
-                            0, 0, 0,
-                            1, 1, 0.1876),
-                    Shapes.box(
-                            0.8125, 0, 0.1876,
-                            1, 1, 1)
-            ))
-    );
-    public static final RegistryObject<Block> SWITCH_REDSTONE_WIRE = registerBlock("innerdeco/devices/switch_redstone_wire", () -> new Directional4MBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK),
-                    Shapes.box(
-                            0, 0, 0,
-                            1, 1, 0.1876)
-            )
-    );
-    public static final RegistryObject<Block> VENT_GRID_OPEN = registerBlock("innerdeco/pipes/vent_grid_open", () -> new Directional6MBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK),
+    public static final RegistryObject<Block> VENT_GRID = registerBlock("innerdeco/pipes/vent_grid", () -> new VentGrid(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK),
             Shapes.or(
                     Shapes.box(
                             0, 0, 0,
@@ -631,10 +700,7 @@ public class RegBlocksInner {
                     Shapes.box(
                             0, 0.9375, 0.75,
                             1, 1, 1)
-            ))
-    );
-
-    public static final RegistryObject<Block> VENT_GRID = registerBlock("innerdeco/pipes/vent_grid", () -> new Directional4H2x2VMBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK),
+            ),
             Shapes.or(
                     Shapes.box(
                             0, 0, 0,
@@ -663,6 +729,7 @@ public class RegBlocksInner {
             ))
     );
 
+    //Ускоритель
     public static final RegistryObject<Block> ACCL_STAND = registerBlock("innerdeco/accelerator/accl_stand", () -> new Directional4MBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
     public static final RegistryObject<Block> ACCL_CALC = registerBlock("innerdeco/accelerator/accl_calc", () -> new Directional4MBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
     public static final RegistryObject<Block> ACCL = registerBlock("innerdeco/accelerator/accl", () -> new Directional4MBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
@@ -671,11 +738,15 @@ public class RegBlocksInner {
     public static final RegistryObject<Block> ACCL_RINGS_CORNER_RIGHT = registerBlock("innerdeco/accelerator/accl_rings_corner_right", () -> new Directional4MBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
     public static final RegistryObject<Block> ACCL_RINGS_END = registerBlock("innerdeco/accelerator/accl_rings_end", () -> new Directional4MBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
+
     public static final RegistryObject<Block> BIO_POWER_SOCKET = registerBlock("innerdeco/furniture/bio_power_socket", () -> new PowerSocket(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD),
             Shapes.box(
                     0.375, 0.375, 0,
                     0.625, 0.625, 0.046875)
     ));
+
+
+    //тумблеры
     public static final RegistryObject<Block> BIO_TUMBLER = registerBlock("innerdeco/furniture/bio_tumbler", () -> new SmallTumbler(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD),
             Shapes.box(
                     0.375, 0.375, 0,
@@ -694,6 +765,36 @@ public class RegBlocksInner {
     public static final RegistryObject<Block> RUSTY_TUMBLER = registerBlock("innerdeco/rusty_tumbler", () -> new BigTumbler(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
     public static final RegistryObject<Block> RUSTY_TUMBLER2 = registerBlock("innerdeco/rusty_tumbler2", () -> new BigTumbler(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
+
+    //лампы
+    public static final RegistryObject<Block> FLUO_LAMP = registerBlock("innerdeco/lamp/fluo_lamp", () -> new FluoLamp(BlockBehaviour.Properties.copy(Blocks.GLASS),
+            Shapes.box(
+                    0, 0.3125, 0,
+                    1, 0.6875, 0.125)
+    ));
+    public static final RegistryObject<Block> FLUO_LAMP2 = registerBlock("innerdeco/lamp/fluo_lamp2", () -> new FluoLamp2(BlockBehaviour.Properties.copy(Blocks.GLASS),
+            Shapes.box(
+                    0, 0.3125, 0,
+                    1, 0.6875, 0.125)
+    ));
+    public static final RegistryObject<Block> FLUO_LAMP3 = registerBlock("innerdeco/lamp/fluo_lamp3", () -> new FluoLamp3(BlockBehaviour.Properties.copy(Blocks.GLASS),
+            Shapes.box(
+                    0, 0.3125, 0,
+                    1, 0.6875, 0.2)
+    ));
+    public static final RegistryObject<Block> INC_LAMP = registerBlock("innerdeco/lamp/inc_lamp", () -> new SmallLamp(BlockBehaviour.Properties.copy(Blocks.GLASS),
+            Shapes.box(
+                    0.3125, 0.3125, 0,
+                    0.6875, 0.6875, 0.5)
+    ));
+    public static final RegistryObject<Block> RED_LAMP = registerBlock("innerdeco/lamp/red_lamp", () -> new SmallLamp(BlockBehaviour.Properties.copy(Blocks.GLASS),
+            Shapes.box(
+                    0.3125, 0.3125, 0,
+                    0.6875, 0.6875, 0.5)
+    ));
+
+
+    //лестницы
     public static final RegistryObject<Block> LADDER_1 = registerBlock("innerdeco/ladder_1", () -> new Ladder(BlockBehaviour.Properties.copy(Blocks.LADDER),
             Shapes.box(
                     0.1876, 0, 0,
@@ -706,6 +807,28 @@ public class RegBlocksInner {
                     0.78125, 1, 0.1876)
             )
     );
+
+    //Всякое
+    public static final RegistryObject<Block> THIN_LEAD_WALL = registerBlock("innerdeco/thin_lead_wall", () -> new Directional4MBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK),
+                    Shapes.box(
+                            0, 0, 0,
+                            1, 1, 0.3125)
+            )
+    );
+    public static final RegistryObject<Block> LEAD_WALL = registerBlock("innerdeco/lead_wall", () -> new Directional4MBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK),
+                    Shapes.box(
+                            0, 0, 0,
+                            1, 1, 0.875)
+            )
+    );
+    public static final RegistryObject<Block> TUBING_HORIZONTAL = registerBlock("innerdeco/tubing_horizontal", () -> new Directional4H2x2VMBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> TUBING_VERTICAL = registerBlock("innerdeco/tubing_vertical", () -> new Directional4H2x2VMBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+
+
+
+
+
     private static <T extends Block> RegistryObject<T> registerBlock(final String name, final Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS_INNER.register(name, block);
         registerBlockItem(name, toReturn);

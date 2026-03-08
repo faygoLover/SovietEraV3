@@ -43,4 +43,9 @@ public abstract class ModelBlock extends BaseBlock {
     public @NotNull RenderShape getRenderShape(@NotNull BlockState state) {
         return RenderShape.MODEL;
     }
+
+    @Override
+    public boolean useShapeForLightOcclusion(@NotNull BlockState state) {
+        return true;
+    }
 }
