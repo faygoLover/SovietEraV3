@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "facing=east":  { "model": "soviet:block/innerdeco/devices/clock_electronika", "y": 270 },
+        "facing=west":  { "model": "soviet:block/innerdeco/devices/clock_electronika", "y": 90  },
+        "facing=south": { "model": "soviet:block/innerdeco/devices/clock_electronika"           },
+        "facing=north": { "model": "soviet:block/innerdeco/devices/clock_electronika", "y": 180 }
+    }
+}
+
