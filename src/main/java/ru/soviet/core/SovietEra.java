@@ -31,6 +31,7 @@ public class SovietEra {
         RegBlocksMain.BLOCKS_MAIN.register(modEventBus);
         RegBlocksSymbols.BLOCKS_SYMBOLS.register(modEventBus);
         RegBlockEntities.BLOCK_ENTITIES.register(modEventBus);
+        RegEntities.ENTITIES.register(modEventBus);
         RegMenuTypes.MENUS.register(modEventBus);
         RegSounds.SOUND_EVENTS.register(modEventBus);
         //RegFluids.FLUIDS.register(modEventBus);

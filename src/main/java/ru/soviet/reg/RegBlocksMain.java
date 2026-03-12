@@ -9,9 +9,9 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import ru.soviet.blocks.baseblock.BaseBlock;
-import ru.soviet.blocks.baseblock.subtypes.*;
 import ru.soviet.blocks.decorative.outerdeco.BaseSlab;
 import ru.soviet.blocks.decorative.outerdeco.BaseStairs;
+import ru.soviet.blocks.subtypes.*;
 import ru.soviet.core.SovietEra;
 
 import java.util.function.Supplier;

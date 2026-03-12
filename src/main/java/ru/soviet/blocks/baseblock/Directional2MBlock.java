@@ -8,7 +8,6 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import org.jetbrains.annotations.NotNull;
 
 public class Directional2MBlock extends RotatedBlock {
     public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
@@ -42,7 +41,7 @@ public class Directional2MBlock extends RotatedBlock {
 
     @Override
     protected Direction getFacing(BlockState state) {
-        // Для оси X используем EAST, для оси Z — NORTH (как в оригинале)
+        // Для оси X используем EAST, для оси Z — NORTH
         return state.getValue(AXIS) == Direction.Axis.X ? Direction.EAST : Direction.NORTH;
     }
 

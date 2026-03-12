@@ -7,29 +7,26 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class BlockEntityDrop {
-    private static final Random RANDOM = new Random();
-
     public static void dropContents(Level level, BlockPos pos, BlockEntity blockEntity) {
-        if (blockEntity == null) return;
+        if (level.isClientSide || blockEntity == null) return;
 
         blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
             for (int i = 0; i < handler.getSlots(); i++) {
                 ItemStack stack = handler.getStackInSlot(i);
                 if (!stack.isEmpty()) {
-                    // Центр блока
                     double x = pos.getX() + 0.5;
                     double y = pos.getY() + 0.5;
                     double z = pos.getZ() + 0.5;
 
                     ItemEntity itemEntity = new ItemEntity(level, x, y, z, stack.copy());
 
-                    // Случайное движение для эффекта разлёта
-                    double motionX = (RANDOM.nextDouble() - 0.5) * 0.8;
-                    double motionY = RANDOM.nextDouble() * 0.4 + 0.0;
-                    double motionZ = (RANDOM.nextDouble() - 0.5) * 0.8;
+                    var random = ThreadLocalRandom.current();
+                    double motionX = (random.nextDouble() - 0.5) * 0.8;
+                    double motionY = random.nextDouble() * 0.4;
+                    double motionZ = (random.nextDouble() - 0.5) * 0.8;
 
                     itemEntity.setDeltaMovement(motionX, motionY, motionZ);
                     itemEntity.setPickUpDelay(40);

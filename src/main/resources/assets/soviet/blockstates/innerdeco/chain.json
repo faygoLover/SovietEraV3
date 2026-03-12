@@ -1,8 +1,8 @@
 {
     "variants": {
-        "connection=none":  { "model": "soviet:block/innerdeco/chain"  },
+        "connection=none":    { "model": "soviet:block/innerdeco/chain"       },
         "connection=bottom":  { "model": "soviet:block/innerdeco/chain_down"  },
-        "connection=center":  { "model": "soviet:block/innerdeco/chain_mid"  },
-        "connection=top":  { "model": "soviet:block/innerdeco/chain_up"  }
+        "connection=center":  { "model": "soviet:block/innerdeco/chain_mid"   },
+        "connection=top":     { "model": "soviet:block/innerdeco/chain_up"    }
  }
 }

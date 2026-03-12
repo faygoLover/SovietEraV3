@@ -1,7 +1,7 @@
 {
     "multipart": [
         {   "when": { "default": "true" },
-            "apply": { "model": "soviet:block/innerdeco/pipes/ventpipe" }
+			"apply": { "model": "soviet:block/innerdeco/pipes/ventpipe" }
         },
      	{   "when": { "down": "true" },
             "apply": { "model": "soviet:block/innerdeco/pipes/ventpipe_down", "uvlock": true }

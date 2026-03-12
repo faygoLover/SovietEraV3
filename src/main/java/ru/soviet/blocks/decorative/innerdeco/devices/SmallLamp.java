@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
+import ru.soviet.blocks.baseblock.Toggleable6MBlock;
 import ru.soviet.reg.RegSounds;
 
 public class SmallLamp extends Toggleable6MBlock {

@@ -1,5 +1,6 @@
 {
 	"credit": "Autor Tesmio special for SovietEra 2023",
+	"render_type": "minecraft:translucent",
 	"textures": {
 		"0": "soviet:block/mech/dark_red_lamp",
 		"1": "soviet:block/structural/rusty_ralling",

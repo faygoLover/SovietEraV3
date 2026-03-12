@@ -54,51 +54,41 @@ public class FluoLamp extends Directional4H2x2VMBlock {
                                           @NotNull BlockHitResult hit) {
         var stack = player.getItemInHand(hand);
         var item = stack.getItem();
-
-        boolean closed = state.getValue(CLOSED);
         int lamps = state.getValue(LAMPS);
+        boolean closed = state.getValue(CLOSED);
         boolean toggled = state.getValue(TOGGLED);
-
-        // Определяем специальные действия
         boolean actionPullerClosed = closed && item == RegItems.PULLER.get();
         boolean actionPullerOpen = !closed && (lamps != 0) && item == RegItems.PULLER.get();
         boolean actionAddLamp = !closed && (lamps != 2) && item == RegItems.FLUOLAMP.get();
         boolean actionAddTile = !closed && item == RegItems.REST_TILE_NEW.get();
-
         boolean specialAction = actionPullerClosed || actionPullerOpen || actionAddLamp || actionAddTile;
 
-        // Клиентская сторона – решаем, отправлять ли пакет на сервер
         if (level.isClientSide) {
             return (specialAction || lamps != 0) ? InteractionResult.SUCCESS : InteractionResult.PASS;
         }
 
-        // Серверная логика
         if (specialAction) {
             if (actionPullerClosed) {
                 // Снять плитку
                 level.setBlock(pos, state.setValue(CLOSED, false), 3);
                 Block.popResource(level, pos, new ItemStack(RegItems.REST_TILE_NEW.get()));
                 level.playSound(null, pos, RegSounds.DEMONT.get(), SoundSource.BLOCKS, 0.5F, 1.0F);
-                // PULLER не расходуется
             } else if (actionPullerOpen) {
                 // Демонтировать лампу
                 int newLamps = lamps == 2 ? 1 : 0;
-                // Если ламп больше нет – принудительно выключаем
                 boolean newToggled = newLamps != 0 && toggled;
                 level.setBlock(pos, state.setValue(LAMPS, newLamps).setValue(TOGGLED, newToggled), 3);
                 Block.popResource(level, pos, new ItemStack(RegItems.FLUOLAMP.get()));
                 level.playSound(null, pos, RegSounds.DEMONT.get(), SoundSource.BLOCKS, 0.5F, 1.0F);
-                // PULLER не расходуется
             } else if (actionAddLamp) {
                 // Установить лампу
                 int newLamps = lamps == 0 ? 1 : 2;
                 level.setBlock(pos, state.setValue(LAMPS, newLamps), 3);
                 level.playSound(null, pos, RegSounds.SNAP.get(), SoundSource.BLOCKS, 0.2F, 1.0F);
-                // Расходуем предмет, если игрок не в креативе
                 if (!player.isCreative()) {
                     stack.shrink(1);
                 }
-            } else if (actionAddTile) {
+            } else {
                 // Закрыть плиткой
                 level.setBlock(pos, state.setValue(CLOSED, true), 3);
                 level.playSound(null, pos, RegSounds.SNAP.get(), SoundSource.BLOCKS, 0.2F, 1.0F);
@@ -109,12 +99,12 @@ public class FluoLamp extends Directional4H2x2VMBlock {
             level.updateNeighborsAt(pos, this);
             return InteractionResult.CONSUME;
         } else {
-            // Стандартное включение/выключение – только если есть лампы
+            // Включение/выключение
             if (lamps != 0) {
                 boolean newToggled = !toggled;
                 level.setBlock(pos, state.setValue(TOGGLED, newToggled), 3);
                 if (newToggled) {
-                    level.playSound(null, pos, RegSounds.SNAP.get(), SoundSource.BLOCKS, 0.2F, 1.0F);
+                    level.playSound(null, pos, RegSounds.SNAP.get(), SoundSource.BLOCKS, 0.1F, 1.0F);
                     level.playSound(null, pos, RegSounds.FLUO_LAMP.get(), SoundSource.BLOCKS, 0.5F, 1.0F);
                 } else {
                     level.playSound(null, pos, RegSounds.SNAP.get(), SoundSource.BLOCKS, 0.2F, 0.8F);
@@ -132,12 +122,10 @@ public class FluoLamp extends Directional4H2x2VMBlock {
             int lamps = state.getValue(LAMPS);
             boolean closed = state.getValue(CLOSED);
 
-            // Выпадают лампы (по одной за каждую единицу LAMPS)
             for (int i = 0; i < lamps; i++) {
                 Block.popResource(level, pos, new ItemStack(RegItems.FLUOLAMP.get()));
             }
 
-            // Выпадает плитка, если блок был закрыт
             if (closed) {
                 Block.popResource(level, pos, new ItemStack(RegItems.REST_TILE_NEW.get()));
             }

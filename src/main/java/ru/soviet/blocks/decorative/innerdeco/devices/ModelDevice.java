@@ -11,5 +11,10 @@ public class ModelDevice extends Directional4MBlock {
                         .strength(3F, 8F),
                 shape);
     }
+    public ModelDevice() {
+        super(Properties.copy(Blocks.IRON_BLOCK)
+                        .strength(3F, 8F),
+                null, null);
+    }
 
 }

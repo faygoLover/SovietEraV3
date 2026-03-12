@@ -446,6 +446,18 @@ public class RegBlocksOuter {
                             1, 1, 0.03125)
             )
     );
+    public static final RegistryObject<Block> FLOOR_GRID = registerBlock("innerdeco/floor_grid", () -> new Directional4H2x2VMBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK),
+                    Shapes.box(
+                            0, 0, 0,
+                            1, 1, 0.125)
+            )
+    );
+    public static final RegistryObject<Block> SLATE = registerBlock("innerdeco/slate", () -> new Directional4H2x2VMBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK),
+                    Shapes.box(
+                            0, 0, 0,
+                            1, 1, 0.09375)
+            )
+    );
     public static final RegistryObject<Block> MOSS = registerBlock("outerdeco/block_moss", () -> new Directional6MBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK),
                     Shapes.box(
                             0, 0, 0,
@@ -464,6 +476,21 @@ public class RegBlocksOuter {
                     1, 1, 0.03125)
             )
     );
+
+    public static final RegistryObject<Block> STREET_LAMP = registerBlock("innerdeco/lamp/street_lamp", () -> new Directional4MBlock(BlockBehaviour.Properties.copy(Blocks.ORANGE_CONCRETE),
+            Shapes.or(
+                    Shapes.box(
+                            0.3125, 0.125, 0,
+                            0.6875, 0.375, 0.0625),
+                    Shapes.box(
+                            0.4375, 0.6875, 0,
+                            0.5625, 0.8125, 0.125),
+                    Shapes.box(
+                            0.34375, 0.8125, 4375,
+                            0.65625, 1, 1)
+            )
+    ));
+
 
     //Поручни
     public static final RegistryObject<Block> HANDHOLD = registerBlock("innerdeco/handhold/street_handhold", () -> new DirectionalCornerBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK),
@@ -529,6 +556,136 @@ public class RegBlocksOuter {
                             1.015625, 1, 1.015625)
             ))
     );
+    public static final RegistryObject<Block> CONCRETE_RAILING_REG = registerBlock("structural/concrete_railing_red", () -> new Directional4H2x2VMBlock(BlockBehaviour.Properties.copy(Blocks.ORANGE_CONCRETE),
+                    Shapes.box(
+                            0, 0, 0,
+                            1, 1, 0.5)
+            )
+    );
+    public static final RegistryObject<Block> CONCRETE_RAILING_ORANGE = registerBlock("structural/concrete_railing_orange", () -> new Directional4H2x2VMBlock(BlockBehaviour.Properties.copy(Blocks.ORANGE_CONCRETE),
+                    Shapes.box(
+                            0, 0, 0,
+                            1, 1, 0.5)
+            )
+    );
+    public static final RegistryObject<Block> CONCRETE_RAILING_YELLOW = registerBlock("structural/concrete_railing_yellow", () -> new Directional4H2x2VMBlock(BlockBehaviour.Properties.copy(Blocks.ORANGE_CONCRETE),
+                    Shapes.box(
+                            0, 0, 0,
+                            1, 1, 0.5)
+            )
+    );
+    public static final RegistryObject<Block> CONCRETE_RAILING_GREEN = registerBlock("structural/concrete_railing_green", () -> new Directional4H2x2VMBlock(BlockBehaviour.Properties.copy(Blocks.ORANGE_CONCRETE),
+                    Shapes.box(
+                            0, 0, 0,
+                            1, 1, 0.5)
+            )
+    );
+    public static final RegistryObject<Block> CONCRETE_RAILING_BLUE = registerBlock("structural/concrete_railing_blue", () -> new Directional4H2x2VMBlock(BlockBehaviour.Properties.copy(Blocks.ORANGE_CONCRETE),
+                    Shapes.box(
+                            0, 0, 0,
+                            1, 1, 0.5)
+            )
+    );
+    public static final RegistryObject<Block> CONCRETE_RAILING_BEIGE = registerBlock("structural/concrete_railing_beige", () -> new Directional4H2x2VMBlock(BlockBehaviour.Properties.copy(Blocks.ORANGE_CONCRETE),
+                    Shapes.box(
+                            0, 0, 0,
+                            1, 1, 0.5)
+            )
+    );
+    public static final RegistryObject<Block> CONCRETE_RAILING_BEIGE2 = registerBlock("structural/concrete_railing_beige2", () -> new Directional4H2x2VMBlock(BlockBehaviour.Properties.copy(Blocks.ORANGE_CONCRETE),
+                    Shapes.box(
+                            0, 0, 0,
+                            1, 1, 0.5)
+            )
+    );
+    public static final RegistryObject<Block> CONCRETE_RAILING_WHITE = registerBlock("structural/concrete_railing_white", () -> new Directional4H2x2VMBlock(BlockBehaviour.Properties.copy(Blocks.ORANGE_CONCRETE),
+                    Shapes.box(
+                            0, 0, 0,
+                            1, 1, 0.5)
+            )
+    );
+
+    public static final RegistryObject<Block> WINDPROOF_BETON_RED = registerBlock("outerdeco/streetdeco/windproof_beton_red", () -> new Directional4MBlock(BlockBehaviour.Properties.copy(Blocks.ORANGE_CONCRETE),
+            Shapes.or(
+                    Shapes.box(
+                            0.25, 0, 0.25,
+                            0.75, 1, 1),
+                    Shapes.box(
+                            0.375, 0, 0,
+                            0.625, 1, 0.25)
+            )
+    ));
+    public static final RegistryObject<Block> WINDPROOF_BETON_ORANGE = registerBlock("outerdeco/streetdeco/windproof_beton_orange", () -> new Directional4MBlock(BlockBehaviour.Properties.copy(Blocks.ORANGE_CONCRETE),
+            Shapes.or(
+                    Shapes.box(
+                            0.25, 0, 0.25,
+                            0.75, 1, 1),
+                    Shapes.box(
+                            0.375, 0, 0,
+                            0.625, 1, 0.25)
+            )
+    ));
+    public static final RegistryObject<Block> WINDPROOF_BETON_YELLOW = registerBlock("outerdeco/streetdeco/windproof_beton_yellow", () -> new Directional4MBlock(BlockBehaviour.Properties.copy(Blocks.ORANGE_CONCRETE),
+            Shapes.or(
+                    Shapes.box(
+                            0.25, 0, 0.25,
+                            0.75, 1, 1),
+                    Shapes.box(
+                            0.375, 0, 0,
+                            0.625, 1, 0.25)
+            )
+    ));
+    public static final RegistryObject<Block> WINDPROOF_BETON_GREEN = registerBlock("outerdeco/streetdeco/windproof_beton_green", () -> new Directional4MBlock(BlockBehaviour.Properties.copy(Blocks.ORANGE_CONCRETE),
+            Shapes.or(
+                    Shapes.box(
+                            0.25, 0, 0.25,
+                            0.75, 1, 1),
+                    Shapes.box(
+                            0.375, 0, 0,
+                            0.625, 1, 0.25)
+            )
+    ));
+    public static final RegistryObject<Block> WINDPROOF_BETON_BLUE = registerBlock("outerdeco/streetdeco/windproof_beton_blue", () -> new Directional4MBlock(BlockBehaviour.Properties.copy(Blocks.ORANGE_CONCRETE),
+            Shapes.or(
+                    Shapes.box(
+                            0.25, 0, 0.25,
+                            0.75, 1, 1),
+                    Shapes.box(
+                            0.375, 0, 0,
+                            0.625, 1, 0.25)
+            )
+    ));
+    public static final RegistryObject<Block> WINDPROOF_BETON_BEIGE = registerBlock("outerdeco/streetdeco/windproof_beton_BEIGE", () -> new Directional4MBlock(BlockBehaviour.Properties.copy(Blocks.ORANGE_CONCRETE),
+            Shapes.or(
+                    Shapes.box(
+                            0.25, 0, 0.25,
+                            0.75, 1, 1),
+                    Shapes.box(
+                            0.375, 0, 0,
+                            0.625, 1, 0.25)
+            )
+    ));
+    public static final RegistryObject<Block> WINDPROOF_BETON_BEIGE2 = registerBlock("outerdeco/streetdeco/windproof_beton_beige2", () -> new Directional4MBlock(BlockBehaviour.Properties.copy(Blocks.ORANGE_CONCRETE),
+            Shapes.or(
+                    Shapes.box(
+                            0.25, 0, 0.25,
+                            0.75, 1, 1),
+                    Shapes.box(
+                            0.375, 0, 0,
+                            0.625, 1, 0.25)
+            )
+    ));
+
+
+
+    public static final RegistryObject<Block> ANTENN = registerBlock("structural/antenn", () -> new VerticalMBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK),
+            Shapes.box(
+                    0.375, 0, 0.375,
+                    0.625, 1, 0.625)
+    ));
+    public static final RegistryObject<Block> IRON_BEAM = registerBlock("structural/iron_beam", () -> new Directional4H2x2VMBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> IRON_BEAM_THIN = registerBlock("structural/iron_beam_thin", () -> new Directional4H2x2VMBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> IRON_BEAM_CONCRETE = registerBlock("structural/iron_beam_concrete", () -> new Directional4H2x2VMBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(final String name, final Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS_OUTER.register(name, block);

@@ -3,6 +3,8 @@
         "facing=east":  { "model": "soviet:block/innerdeco/furniture/dsp_panel", "y": 270 },
         "facing=west":  { "model": "soviet:block/innerdeco/furniture/dsp_panel", "y": 90  },
         "facing=south": { "model": "soviet:block/innerdeco/furniture/dsp_panel", "y": 0   },
-        "facing=north": { "model": "soviet:block/innerdeco/furniture/dsp_panel", "y": 180 }
+        "facing=north": { "model": "soviet:block/innerdeco/furniture/dsp_panel", "y": 180 },
+        "facing=up":    { "model": "soviet:block/innerdeco/furniture/dsp_panel", "x": 90  },
+        "facing=down":  { "model": "soviet:block/innerdeco/furniture/dsp_panel", "x": 270 }
  }
 }

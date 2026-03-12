@@ -48,34 +48,26 @@ public class FluoLamp3 extends Directional4H2x2VMBlock {
                                           @NotNull BlockHitResult hit) {
         var stack = player.getItemInHand(hand);
         var item = stack.getItem();
-
         int lamps = state.getValue(LAMPS);
         boolean toggled = state.getValue(TOGGLED);
-
-        // Определяем специальные действия
         boolean actionPullerOpen = (lamps == 1) && item == RegItems.PULLER.get();
         boolean actionAddLamp = (lamps == 0) && item == RegItems.FLUOLAMP.get();
-
         boolean specialAction = actionPullerOpen || actionAddLamp;
 
-        // Клиентская сторона – решаем, отправлять ли пакет на сервер
         if (level.isClientSide) {
             return (specialAction || lamps != 0) ? InteractionResult.SUCCESS : InteractionResult.PASS;
         }
 
-        // Серверная логика
         if (specialAction) {
             if (actionPullerOpen) {
                 // Демонтировать лампу
                 level.setBlock(pos, state.setValue(LAMPS, 0).setValue(TOGGLED, false), 3);
                 Block.popResource(level, pos, new ItemStack(RegItems.FLUOLAMP.get()));
                 level.playSound(null, pos, RegSounds.DEMONT.get(), SoundSource.BLOCKS, 0.5F, 1.0F);
-                // PULLER не расходуется
-            } else if (actionAddLamp) {
+            } else {
                 // Установить лампу
                 level.setBlock(pos, state.setValue(LAMPS, 1), 3);
                 level.playSound(null, pos, RegSounds.SNAP.get(), SoundSource.BLOCKS, 0.2F, 1.0F);
-                // Расходуем предмет, если игрок не в креативе
                 if (!player.isCreative()) {
                     stack.shrink(1);
                 }
@@ -83,12 +75,12 @@ public class FluoLamp3 extends Directional4H2x2VMBlock {
             level.updateNeighborsAt(pos, this);
             return InteractionResult.CONSUME;
         } else {
-            // Стандартное включение/выключение – только если есть лампы
+            // Включение/выключение
             if (lamps != 0) {
                 boolean newToggled = !toggled;
                 level.setBlock(pos, state.setValue(TOGGLED, newToggled), 3);
                 if (newToggled) {
-                    level.playSound(null, pos, RegSounds.SNAP.get(), SoundSource.BLOCKS, 0.2F, 1.0F);
+                    level.playSound(null, pos, RegSounds.SNAP.get(), SoundSource.BLOCKS, 0.1F, 1.0F);
                     level.playSound(null, pos, RegSounds.FLUO_LAMP.get(), SoundSource.BLOCKS, 0.5F, 1.0F);
                 } else {
                     level.playSound(null, pos, RegSounds.SNAP.get(), SoundSource.BLOCKS, 0.2F, 0.8F);
@@ -105,7 +97,6 @@ public class FluoLamp3 extends Directional4H2x2VMBlock {
         if (!level.isClientSide && !state.is(newState.getBlock())) {
             int lamps = state.getValue(LAMPS);
 
-            // Выпадает лампа
             if (lamps == 1) {
                 Block.popResource(level, pos, new ItemStack(RegItems.FLUOLAMP.get()));
             }
