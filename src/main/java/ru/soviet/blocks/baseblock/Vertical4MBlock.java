@@ -91,7 +91,7 @@ public class Vertical4MBlock extends Directional4MBlock {
         return state;
     }
 
-    private ConnectionType getConnectionType(BlockGetter level, BlockPos pos, Direction facing) {
+    protected ConnectionType getConnectionType(BlockGetter level, BlockPos pos, Direction facing) {
         boolean up = hasNeighbour(level, pos, Direction.UP, facing);
         boolean down = hasNeighbour(level, pos, Direction.DOWN, facing);
 

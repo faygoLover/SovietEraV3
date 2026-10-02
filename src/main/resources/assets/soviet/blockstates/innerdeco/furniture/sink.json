@@ -3,6 +3,6 @@
         "facing=east":  { "model": "soviet:block/innerdeco/furniture/sink", "y": 90  },
         "facing=west":  { "model": "soviet:block/innerdeco/furniture/sink", "y": 270 },
         "facing=south": { "model": "soviet:block/innerdeco/furniture/sink", "y": 180 },
-        "facing=north": { "model": "soviet:block/innerdeco/furniture/sink", "y": 0   }
+        "facing=north": { "model": "soviet:block/innerdeco/furniture/sink"           }
  }
 }

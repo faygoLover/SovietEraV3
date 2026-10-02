@@ -1,0 +1,61 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"texture_size": [8, 8],
+	"textures": {
+		"0": "soviet:item/misc/medkit",
+		"particle": "soviet:item/misc/medkit"
+	},
+	"elements": [
+		{
+			"from": [7, 6, 7],
+			"to": [9, 10, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 4, 8], "texture": "#0"},
+				"east": {"uv": [4, 0, 8, 8], "texture": "#0"},
+				"south": {"uv": [0, 8, 4, 16], "texture": "#0"},
+				"west": {"uv": [8, 0, 12, 8], "texture": "#0"},
+				"up": {"uv": [8, 12, 4, 8], "texture": "#0"},
+				"down": {"uv": [12, 8, 8, 12], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, 180, 0]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, 180, 0]
+		},
+		"firstperson_righthand": {
+			"translation": [0, 3.25, 0],
+			"scale": [2, 2, 2]
+		},
+		"firstperson_lefthand": {
+			"translation": [0, 3.25, 0],
+			"scale": [2, 2, 2]
+		},
+		"ground": {
+			"rotation": [90, 0, 90],
+			"translation": [0, -0.25, 1.25],
+			"scale": [1, 1.1, 1]
+		},
+		"gui": {
+			"rotation": [-3, 24, 30],
+			"scale": [3, 3, 3]
+		},
+		"head": {
+			"rotation": [0, -180, 90],
+			"translation": [0, -3.95, -6.5]
+		},
+		"fixed": {
+			"rotation": [0, 180, 0],
+			"translation": [0, 0, -3],
+			"scale": [4, 4, 4]
+		},
+		"on_shelf": {
+			"translation": [0.25, -15.5, -2.25]
+		}
+	}
+}

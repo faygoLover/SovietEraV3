@@ -1,7 +1,6 @@
 {
   "variants": {
-    "": {
-      "model": "soviet:block/quadtile/tile_quad_2"
+    "": { "model": "soviet:block/quadtile/tile_quad_2"
     }
   }
 }

@@ -1,0 +1,5 @@
+{
+  "loader": "forge:obj",
+  "model": "soviet:models/block/structural/objmodel/triangle_block.obj",
+  "flip-v": false
+}

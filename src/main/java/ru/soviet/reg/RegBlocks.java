@@ -25,8 +25,8 @@ public static final RegistryObject<Block> TOXIC_AIR = registerBlockWithModel("to
 public static final RegistryObject<Block> RUSTY_FRAME = registerBlockWithModel("rusty_frames", () -> new RustyFrameBlock(getP(Material.IRON, 0.4f,0.6f, null, 1, SoundType.METAL, false, true)));
 public static final RegistryObject<Block> DYE_BUCKET = registerOnlyCustomBlock("placeable/dye_bucket", () -> new BucketDye(getP(Material.IRON, 0.4f,0.6f, null, 1, SoundType.METAL, false, true), 1F));
 
-public static final RegistryObject<Block> STEEL_PYLON = registerBlockWithModel("structural/steel_pylon", () -> new PylonBlock(getP(Material.IRON, 0.4f,0.6f, null, 1, SoundType.METAL, false, true)));
-public static final RegistryObject<Block> HORIZONTAL_STEEL_PYLON = registerBlockWithModel("structural/steel_pylon_horizontal", () -> new PylonBlockH(getP(Material.IRON, 0.4f,0.6f, null, 1, SoundType.METAL, false, true)));
+public static final RegistryObject<Block> STEEL_PYLON = registerBlockWithModel("structural/steel_pylon", () -> new pPylonBlock(getP(Material.IRON, 0.4f,0.6f, null, 1, SoundType.METAL, false, true)));
+public static final RegistryObject<Block> HORIZONTAL_STEEL_PYLON = registerBlockWithModel("structural/steel_pylon_horizontal", () -> new pPylonBlockH(getP(Material.IRON, 0.4f,0.6f, null, 1, SoundType.METAL, false, true)));
 public static final RegistryObject<Block> ANTENNA = registerBlockWithModel("structural/antenna", () -> new Antenna(getP(Material.IRON, 0.4f,0.6f, null, 1, SoundType.METAL, false, true)));
 
 //cleaned metal blocks
@@ -37,7 +37,7 @@ public static final RegistryObject<Block> CLEAN_RAILING_BLOCK = registerBlockWit
 public static final RegistryObject<Block> CLEAN_RAILING_DOOR = registerOnlyCustomBlock("cleaned/railing_door", () -> new RailingDoorBlock(getP(Material.IRON, 0.95f,1.1f, ToolType.PICKAXE, 1, SoundType.METAL, true, true)));
 public static final RegistryObject<Block> CLEAN_RUSTY_BARS = registerBlockWithModel("cleaned/rusty_bars", () -> new RustyBars(getP(Material.IRON, 0.95f,1.1f, ToolType.PICKAXE, 1, SoundType.METAL, true, true)));
 public static final RegistryObject<Block> CLEANED_ANTENNA = registerBlockWithModel("cleaned/antenna", () -> new Antenna(getP(Material.IRON, 0.4f,0.6f, null, 1, SoundType.METAL, false, true)));
-public static final RegistryObject<Block> CLEANED_STEEL_PYLON = registerBlockWithModel("cleaned/steel_pylon", () -> new PylonBlock(getP(Material.IRON, 0.4f,0.6f, null, 1, SoundType.METAL, false, true)));
+public static final RegistryObject<Block> CLEANED_STEEL_PYLON = registerBlockWithModel("cleaned/steel_pylon", () -> new pPylonBlock(getP(Material.IRON, 0.4f,0.6f, null, 1, SoundType.METAL, false, true)));
 public static final RegistryObject<Block> CLEANED_HORIZONTAL_STEEL_PYLON = registerBlockWithModel("cleaned/steel_pylon_horizontal", () -> new PylonBlockH(getP(Material.IRON, 0.4f,0.6f, null, 1, SoundType.METAL, false, true)));
 public static final RegistryObject<Block> CLEANED_CONTAINMENT_TRAPDOOR = registerOnlyCustomBlock("cleaned/containment_trapdoor", () -> new ContainmentTrapdoor(getP(Material.ANVIL, 4.8f,12.0f, ToolType.PICKAXE, 1, SoundType.METAL, true, true)));
 public static final RegistryObject<Block> CLEANED_CONTAINMENT_DOOR = registerOnlyCustomBlock("cleaned/containment_door", () -> new ContainmentDoor(getP(Material.ANVIL, 4.8f,12.0f, ToolType.PICKAXE, 1, SoundType.METAL, true, true)));

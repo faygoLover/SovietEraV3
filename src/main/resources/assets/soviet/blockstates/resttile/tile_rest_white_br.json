@@ -1,7 +1,6 @@
 {
   "variants": {
-    "": {
-      "model": "soviet:block/resttile/tile_rest_white_br"
+    "": { "model": "soviet:block/resttile/tile_rest_white_br"
     }
   }
 }

@@ -1,7 +1,6 @@
 {
   "variants": {
-    "": {
-      "model": "soviet:block/cleaned/cleaned_containment_block"
+    "": { "model": "soviet:block/cleaned/cleaned_containment_block"
     }
   }
 }

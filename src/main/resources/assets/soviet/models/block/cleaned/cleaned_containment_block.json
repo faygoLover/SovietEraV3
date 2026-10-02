@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "soviet:block/cleaned/cleaned_containment_block"
-  }
-}

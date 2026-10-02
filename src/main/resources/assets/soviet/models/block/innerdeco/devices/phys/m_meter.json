@@ -1,6 +1,7 @@
 {
-    "parent": "block/cube_all",
+	"format_version": "1.9.0",
 	"credit": "Made special for SovietLab",
+	"parent": "block/cube_all",
 	"textures": {
 		"0": "soviet:block/mech/gas_disp_1",
 		"1": "soviet:block/structural/d_dark_metal",
@@ -156,7 +157,7 @@
 		},
 		{
 			"from": [1, 0, 3],
-			"to": [14.75, 4, 4],
+			"to": [15, 4, 4],
 			"rotation": {"angle": 0, "axis": "y", "origin": [2, 8, 10]},
 			"faces": {
 				"north": {"uv": [0, 0, 13.75, 4], "texture": "#3"},

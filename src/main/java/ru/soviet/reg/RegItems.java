@@ -8,11 +8,10 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 import ru.soviet.core.SovietEra;
-import ru.soviet.items.ItemBurnable;
-import ru.soviet.items.BaseItem;
-//import ru.soviet.items.protection_suit.Suit;
+import ru.soviet.items.*;
 
 public class RegItems {
+    public static final DeferredRegister<Item> BLOCK_ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, SovietEra.MODID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, SovietEra.MODID);
 
     //custom
@@ -54,6 +53,7 @@ public class RegItems {
     public static final RegistryObject<Item> RUSTY_SCRAP = ITEMS.register("rusty_scrap", () -> new BaseItem(new Item.Properties(), "info.restore"));
     public static final RegistryObject<Item> CERAMIC_SHARD = ITEMS.register("ceramic_shard", () -> new BaseItem(new Item.Properties(), "info.restore"));
     public static final RegistryObject<Item> ARMATURE = ITEMS.register("armature", () -> new BaseItem(new Item.Properties(), "info.restore"));
+    public static final RegistryObject<Item> ARMATURES = ITEMS.register("armatures", () -> new BaseItem(new Item.Properties(), "info.restore"));
     public static final RegistryObject<Item> COPPER_SCRAP = ITEMS.register("copper_scrap", () -> new BaseItem(new Item.Properties(), "info.restore"));
     public static final RegistryObject<Item> ALUMINUM_SCRAP = ITEMS.register("aluminum_scrap", () -> new BaseItem(new Item.Properties(), "info.restore"));
     public static final RegistryObject<Item> WOOD_SCRAP = ITEMS.register("wood_scrap", () -> new ItemBurnable(new Item.Properties(), 250, "info.wood_scrap"));
@@ -79,7 +79,7 @@ public class RegItems {
     public static final RegistryObject<Item> PLATOL_PICKAXE = ITEMS.register("platol_pickaxe", () -> new PickaxeItem(SovietItemTier.PLATOL, 2, -2.8F, (new Item.Properties())));
     public static final RegistryObject<Item> PLATOL_SHOVEL = ITEMS.register("platol_shovel", () -> new ShovelItem(SovietItemTier.PLATOL, 2, -3F, (new Item.Properties())));
     public static final RegistryObject<Item> PLATOL_SWORD = ITEMS.register("platol_sword", () -> new SwordItem(SovietItemTier.PLATOL, 5, -1F, (new Item.Properties())));
-    public static final RegistryObject<Item> PULLER = ITEMS.register("puller", () -> new BaseItem(new Item.Properties().stacksTo(1).durability(180).setNoRepair(), "info.puller"));
+    public static final RegistryObject<Item> PULLER = ITEMS.register("puller", () -> new BaseItem(new Item.Properties().stacksTo(1).durability(30).setNoRepair(), "info.puller"));
     public static final RegistryObject<Item> SANDSPRAY_DUST = ITEMS.register("sandspray_dust", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> VARIANT_ITEM = ITEMS.register("variant_item", () -> new BaseItem(new Item.Properties(), "info.variant_item"));
     public static final RegistryObject<Item> WRENCH = ITEMS.register("wrench", () -> new BaseItem(new Item.Properties(), "wrench.info"));
@@ -150,9 +150,19 @@ public class RegItems {
     public static final RegistryObject<Item> LINO = ITEMS.register("lino", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> FLUOLAMP = ITEMS.register("fluolamp", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> FUEL_CANISTER = ITEMS.register("fuel_canister", () -> new BaseItem(new Item.Properties().stacksTo(1), "info.fuel_canister"));
-    public static final RegistryObject<Item> SUGAR = ITEMS.register("sugar", () -> new BaseItem(new Item.Properties().stacksTo(1), "info.sugar"));
-    public static final RegistryObject<Item> CONDENSED_MILK = ITEMS.register("condensed_milk", () -> new BaseItem(new Item.Properties().stacksTo(1), "info.condensed_milk"));
 
+
+
+    //misc
+    //public static final RegistryObject<Item> SUGAR2 = ITEMS.register("misc/sugar2", () -> new BaseItem(new Item.Properties().stacksTo(1), "info.sugar"));
+    //public static final RegistryObject<Item> TAMPONS = ITEMS.register("misc/tampons", () -> new BaseItem(new Item.Properties().stacksTo(1), "info.tampons"));
+    public static final RegistryObject<Item> SUGAR = ITEMS.register("misc/sugar", () -> new SugarItem(new Item.Properties(), "info.sugar"));
+    public static final RegistryObject<Item> CONDENSED_MILK = ITEMS.register("misc/condensed_milk", () -> new CondensedMilkItem(new Item.Properties(), "info.condensed_milk"));
+    public static final RegistryObject<Item> BANDAGE = ITEMS.register("misc/bandage", () -> new HealItem(new Item.Properties(), "info.bandage", 4.0f));
+    public static final RegistryObject<Item> MEDKIT = ITEMS.register("misc/medkit", () -> new HealItem(new Item.Properties(), "info.medkit", 8.0f));
+    public static final RegistryObject<Item> E_THING = ITEMS.register("misc/e_thing", () -> new EThingItem(new Item.Properties(), "info.e_thing"));
+    public static final RegistryObject<Item> MATCH = ITEMS.register("misc/match", () -> new MatchItem(new Item.Properties(), "info.match"));
+    public static final RegistryObject<Item> MOONSHINE = ITEMS.register("misc/moonshine", () -> new MoonshineItem(new Item.Properties(), "info.moonshine"));
 
     public enum SovietItemTier implements Tier {
 
@@ -187,5 +197,4 @@ public class RegItems {
         @Override public int getEnchantmentValue() {return this.enchantmentValue;}
         @Override public @NotNull Ingredient getRepairIngredient() {return this.repairIngredient.get();}
     }
-
 }

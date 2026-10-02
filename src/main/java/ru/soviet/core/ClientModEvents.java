@@ -1,6 +1,8 @@
 package ru.soviet.core;
 
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -20,6 +22,7 @@ import ru.soviet.blocks.entities.holder.HolderBlockRenderer;
 import ru.soviet.reg.RegBlockEntities;
 import ru.soviet.reg.RegMenuTypes;
 import ru.soviet.reg.RegEntities;
+import ru.soviet.client.EThingProjectileRenderer;
 
 @Mod.EventBusSubscriber(modid = SovietEra.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientModEvents {
@@ -41,10 +44,9 @@ public class ClientModEvents {
                 new EntityRenderer<Entity>(context) {
                     @Override
                     public void render(Entity entity, float entityYaw, float partialTicks,
-                                       com.mojang.blaze3d.vertex.PoseStack poseStack,
-                                       net.minecraft.client.renderer.MultiBufferSource buffer,
+                                       PoseStack poseStack,
+                                       MultiBufferSource buffer,
                                        int packedLight) {
-
                     }
 
                     @Override
@@ -53,5 +55,6 @@ public class ClientModEvents {
                     }
                 }
         );
+        event.registerEntityRenderer(RegEntities.E_THING_PROJECTILE.get(), EThingProjectileRenderer::new);
     }
 }

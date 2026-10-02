@@ -3,7 +3,7 @@
     "variants": {
         "facing=east":  { "model": "soviet:block/outerdeco/symbols/i", "y": 270 },
         "facing=west":  { "model": "soviet:block/outerdeco/symbols/i", "y": 90  },
-        "facing=south": { "model": "soviet:block/outerdeco/symbols/i", "y": 0   },
+        "facing=south": { "model": "soviet:block/outerdeco/symbols/i"           },
         "facing=north": { "model": "soviet:block/outerdeco/symbols/i", "y": 180 }
     }
 }

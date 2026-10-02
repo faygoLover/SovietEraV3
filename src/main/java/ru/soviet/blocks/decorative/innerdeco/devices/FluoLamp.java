@@ -18,6 +18,7 @@ import org.jetbrains.annotations.NotNull;
 import ru.soviet.blocks.baseblock.Directional4H2x2VMBlock;
 import ru.soviet.reg.RegItems;
 import ru.soviet.reg.RegSounds;
+import net.minecraft.server.level.ServerPlayer;
 
 public class FluoLamp extends Directional4H2x2VMBlock {
     public static final BooleanProperty CLOSED = BooleanProperty.create("closed");
@@ -71,14 +72,20 @@ public class FluoLamp extends Directional4H2x2VMBlock {
             if (actionPullerClosed) {
                 // Снять плитку
                 level.setBlock(pos, state.setValue(CLOSED, false), 3);
-                Block.popResource(level, pos, new ItemStack(RegItems.REST_TILE_NEW.get()));
+                if (!player.isCreative()) {
+                    Block.popResource(level, pos, new ItemStack(RegItems.REST_TILE_NEW.get()));
+                    stack.hurt(1, level.random, (ServerPlayer) player);
+                }
                 level.playSound(null, pos, RegSounds.DEMONT.get(), SoundSource.BLOCKS, 0.5F, 1.0F);
             } else if (actionPullerOpen) {
                 // Демонтировать лампу
                 int newLamps = lamps == 2 ? 1 : 0;
                 boolean newToggled = newLamps != 0 && toggled;
                 level.setBlock(pos, state.setValue(LAMPS, newLamps).setValue(TOGGLED, newToggled), 3);
-                Block.popResource(level, pos, new ItemStack(RegItems.FLUOLAMP.get()));
+                if (!player.isCreative()) {
+                    Block.popResource(level, pos, new ItemStack(RegItems.FLUOLAMP.get()));
+                    stack.hurt(1, level.random, (ServerPlayer) player);
+                }
                 level.playSound(null, pos, RegSounds.DEMONT.get(), SoundSource.BLOCKS, 0.5F, 1.0F);
             } else if (actionAddLamp) {
                 // Установить лампу

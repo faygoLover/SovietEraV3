@@ -1,7 +1,6 @@
 {
   "variants": {
-    "": {
-      "model": "soviet:block/concrete/concrete_gray_br"
+    "": { "model": "soviet:block/concrete/concrete_gray_br"
     }
   }
 }

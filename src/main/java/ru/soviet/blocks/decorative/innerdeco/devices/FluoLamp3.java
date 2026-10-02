@@ -18,6 +18,7 @@ import org.jetbrains.annotations.NotNull;
 import ru.soviet.blocks.baseblock.Directional4H2x2VMBlock;
 import ru.soviet.reg.RegItems;
 import ru.soviet.reg.RegSounds;
+import net.minecraft.server.level.ServerPlayer;
 
 public class FluoLamp3 extends Directional4H2x2VMBlock {
     public static final IntegerProperty LAMPS = IntegerProperty.create("lamps",0,1);
@@ -62,7 +63,10 @@ public class FluoLamp3 extends Directional4H2x2VMBlock {
             if (actionPullerOpen) {
                 // Демонтировать лампу
                 level.setBlock(pos, state.setValue(LAMPS, 0).setValue(TOGGLED, false), 3);
-                Block.popResource(level, pos, new ItemStack(RegItems.FLUOLAMP.get()));
+                if (!player.isCreative()) {
+                    Block.popResource(level, pos, new ItemStack(RegItems.FLUOLAMP.get()));
+                    stack.hurt(1, level.random, (ServerPlayer) player);
+                }
                 level.playSound(null, pos, RegSounds.DEMONT.get(), SoundSource.BLOCKS, 0.5F, 1.0F);
             } else {
                 // Установить лампу

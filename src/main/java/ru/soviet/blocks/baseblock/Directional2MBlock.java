@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class Directional2MBlock extends RotatedBlock {
-    public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
+    public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.HORIZONTAL_AXIS;
 
     public Directional2MBlock(Properties properties, String hoverTextKey, VoxelShape shape) {
         super(properties, hoverTextKey, shape);

@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=east":  { "model": "soviet:block/innerdeco/furniture/gas_stove_red", "y": 270 },
+        "facing=west":  { "model": "soviet:block/innerdeco/furniture/gas_stove_red", "y": 90  },
+        "facing=south": { "model": "soviet:block/innerdeco/furniture/gas_stove_red"           },
+        "facing=north": { "model": "soviet:block/innerdeco/furniture/gas_stove_red", "y": 180 }
+ }
+}

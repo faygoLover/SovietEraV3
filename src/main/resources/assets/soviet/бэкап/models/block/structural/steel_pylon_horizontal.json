@@ -1,0 +1,49 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Tesmio for Soviet Era 2",
+	"parent": "block/cube_all",
+	"textures": {
+		"0": "soviet:block/structural/rusty_door_2",
+		"1": "soviet:block/structural/rusty_door_2_dark",
+		"particle": "soviet:block/structural/rusty_door_2"
+	},
+	"elements": [
+		{
+			"from": [6, 5, 0],
+			"to": [10, 11, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [12, 8, 16, 14], "texture": "#1"},
+				"east": {"uv": [0, 8, 16, 14], "texture": "#1"},
+				"south": {"uv": [0, 8, 4, 14], "texture": "#1"},
+				"west": {"uv": [0, 8, 16, 14], "texture": "#1"}
+			}
+		},
+		{
+			"from": [5, 3, 0],
+			"to": [11, 5, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [10, 14, 16, 16], "texture": "#0"},
+				"east": {"uv": [0, 14, 16, 16], "texture": "#0"},
+				"south": {"uv": [0, 14, 6, 16], "texture": "#0"},
+				"west": {"uv": [0, 14, 16, 16], "texture": "#0"},
+				"up": {"uv": [0, 0, 16, 6], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [0, 0, 16, 6], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"from": [5, 11, 0],
+			"to": [11, 13, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [10, 6, 16, 8], "texture": "#0"},
+				"east": {"uv": [0, 6, 16, 8], "texture": "#0"},
+				"south": {"uv": [0, 6, 6, 8], "texture": "#0"},
+				"west": {"uv": [0, 6, 16, 8], "texture": "#0"},
+				"up": {"uv": [0, 0, 16, 6], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [0, 0, 16, 6], "rotation": 270, "texture": "#0"}
+			}
+		}
+	]
+}

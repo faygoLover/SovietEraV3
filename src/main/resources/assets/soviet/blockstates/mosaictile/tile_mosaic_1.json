@@ -1,7 +1,6 @@
 {
   "variants": {
-    "": {
-      "model": "soviet:block/mosaictile/tile_mosaic_1"
+    "": { "model": "soviet:block/mosaictile/tile_mosaic_1"
     }
   }
 }

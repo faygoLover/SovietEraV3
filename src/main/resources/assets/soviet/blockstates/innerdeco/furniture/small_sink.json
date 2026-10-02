@@ -2,7 +2,7 @@
     "variants": {
         "facing=west":  { "model": "soviet:block/innerdeco/furniture/small_sink", "y": 270 },
         "facing=east":  { "model": "soviet:block/innerdeco/furniture/small_sink", "y": 90  },
-        "facing=north": { "model": "soviet:block/innerdeco/furniture/small_sink", "y": 0   },
+        "facing=north": { "model": "soviet:block/innerdeco/furniture/small_sink"           },
         "facing=south": { "model": "soviet:block/innerdeco/furniture/small_sink", "y": 180 }
  }
 }

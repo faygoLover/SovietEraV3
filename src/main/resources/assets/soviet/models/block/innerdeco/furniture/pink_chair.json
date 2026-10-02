@@ -1,6 +1,7 @@
 {
+	"format_version": "1.9.0",
 	"credit": "Autor Tesmio special for SovietEra 2023",
-    "parent": "block/cube_all",
+	"parent": "block/cube_all",
 	"textures": {
 		"0": "soviet:block/structural/dsp4",
 		"1": "soviet:block/structural/dsp4_dark",
@@ -9,9 +10,9 @@
 	},
 	"elements": [
 		{
-			"from": [1.5, 12.75, 8],
-			"to": [14.5, 23, 10],
-			"rotation": {"angle": 22.5, "axis": "x", "origin": [16, 7, -6]},
+			"from": [1.5, 6.18194, 11.01988],
+			"to": [14.5, 16.43194, 13.01988],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 11.30694, 12.01988]},
 			"faces": {
 				"north": {"uv": [2, 1, 15, 11], "texture": "#2"},
 				"east": {"uv": [0, 0, 2, 10], "texture": "#2"},
@@ -35,8 +36,8 @@
 			}
 		},
 		{
-			"from": [15, 8, 0.575],
-			"to": [15.75, 9, 12.075],
+			"from": [15, 8, 0.5],
+			"to": [15.75, 9, 12],
 			"rotation": {"angle": 0, "axis": "z", "origin": [16, 8, 2.5]},
 			"faces": {
 				"north": {"uv": [0, 0, 0.75, 1], "texture": "#0"},
@@ -48,8 +49,8 @@
 			}
 		},
 		{
-			"from": [14.5, 0, 2.075],
-			"to": [16, 8, 12.075],
+			"from": [14.5, 0, 2],
+			"to": [16, 8, 12],
 			"rotation": {"angle": 0, "axis": "z", "origin": [16.25, 0, 4]},
 			"faces": {
 				"north": {"uv": [0, 0, 1.5, 8], "texture": "#0"},
@@ -61,8 +62,8 @@
 			}
 		},
 		{
-			"from": [14.5, 0, 12.075],
-			"to": [16, 16, 15],
+			"from": [14.5, 0, 12],
+			"to": [16, 16, 14.925],
 			"rotation": {"angle": 0, "axis": "z", "origin": [16.25, 0, 14]},
 			"faces": {
 				"north": {"uv": [0, 0, 1.5, 16], "texture": "#0"},
@@ -74,8 +75,8 @@
 			}
 		},
 		{
-			"from": [14.5, 9, 0.075],
-			"to": [16, 9.75, 12.075],
+			"from": [14.5, 9, 0],
+			"to": [16, 9.75, 12],
 			"rotation": {"angle": 0, "axis": "z", "origin": [16, 9, 2.5]},
 			"faces": {
 				"north": {"uv": [0, 0, 1.5, 0.75], "texture": "#2"},
@@ -87,8 +88,8 @@
 			}
 		},
 		{
-			"from": [0, 0, 2.075],
-			"to": [1.5, 8, 12.075],
+			"from": [0, 0, 2],
+			"to": [1.5, 8, 12],
 			"rotation": {"angle": 0, "axis": "z", "origin": [1.75, 0, 4]},
 			"faces": {
 				"north": {"uv": [0, 0, 1.5, 8], "texture": "#0"},
@@ -100,8 +101,8 @@
 			}
 		},
 		{
-			"from": [0, 0, 12.075],
-			"to": [1.5, 16, 15],
+			"from": [0, 0, 12],
+			"to": [1.5, 16, 14.925],
 			"rotation": {"angle": 0, "axis": "z", "origin": [1.75, 0, 14]},
 			"faces": {
 				"north": {"uv": [0, 0, 1.5, 16], "texture": "#0"},
@@ -113,8 +114,8 @@
 			}
 		},
 		{
-			"from": [0.5, 8, 0.575],
-			"to": [1.25, 9, 12.075],
+			"from": [0.5, 8, 0.5],
+			"to": [1.25, 9, 12],
 			"rotation": {"angle": 0, "axis": "z", "origin": [1.5, 8, 2.5]},
 			"faces": {
 				"north": {"uv": [0, 0, 0.75, 1], "texture": "#0"},
@@ -126,8 +127,8 @@
 			}
 		},
 		{
-			"from": [0, 9, 0.075],
-			"to": [1.5, 9.75, 12.075],
+			"from": [0, 9, 0],
+			"to": [1.5, 9.75, 12],
 			"rotation": {"angle": 0, "axis": "z", "origin": [1.5, 9, 2.5]},
 			"faces": {
 				"north": {"uv": [0, 0, 1.5, 0.75], "texture": "#2"},

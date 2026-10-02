@@ -1,7 +1,6 @@
 {
   "variants": {
-    "": {
-      "model": "soviet:block/wallpapers/wp14"
+    "": { "model": "soviet:block/wallpapers/wp14"
     }
   }
 }

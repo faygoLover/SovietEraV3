@@ -1,7 +1,6 @@
 {
   "variants": {
-    "": {
-      "model": "soviet:block/structural/leadceramic_tile"
+    "": { "model": "soviet:block/structural/leadceramic_tile"
     }
   }
 }

@@ -2,11 +2,11 @@
     "variants": {
         "powered=false,facing=east":  { "model": "soviet:block/innerdeco/devices/clock_electronika", "y": 270 },
         "powered=false,facing=west":  { "model": "soviet:block/innerdeco/devices/clock_electronika", "y": 90  },
-        "powered=false,facing=south": { "model": "soviet:block/innerdeco/devices/clock_electronika", "y": 0   },
+        "powered=false,facing=south": { "model": "soviet:block/innerdeco/devices/clock_electronika"           },
         "powered=false,facing=north": { "model": "soviet:block/innerdeco/devices/clock_electronika", "y": 180 },
         "powered=true,facing=east":  { "model": "soviet:block/innerdeco/devices/clock_electronika_enb", "y": 270 },
         "powered=true,facing=west":  { "model": "soviet:block/innerdeco/devices/clock_electronika_enb", "y": 90  },
-        "powered=true,facing=south": { "model": "soviet:block/innerdeco/devices/clock_electronika_enb", "y": 0   },
+        "powered=true,facing=south": { "model": "soviet:block/innerdeco/devices/clock_electronika_enb"           },
         "powered=true,facing=north": { "model": "soviet:block/innerdeco/devices/clock_electronika_enb", "y": 180 }
     }
 }

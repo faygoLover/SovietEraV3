@@ -13,6 +13,7 @@ import ru.soviet.blocks.entities.container.dsp.DspStorageBlockEntity;
 import ru.soviet.blocks.entities.container.kitchen.KitchenStorageBlockEntity;
 import ru.soviet.blocks.entities.container.safe.SafeStorageBlockEntity;
 import ru.soviet.blocks.entities.clock.ClockBlockEntity;
+import ru.soviet.blocks.entities.devices.PcBlockEntity;
 import ru.soviet.blocks.entities.holder.HolderBlockEntity;
 import ru.soviet.core.SovietEra;
 
@@ -61,4 +62,10 @@ public class RegBlockEntities {
     public static final RegistryObject<BlockEntityType<ClockBlockEntity>> CLOCK =
             register("clock", ClockBlockEntity::new,
                     RegBlocksInner.CLOCK_ELECTRINIKA_DISP);
+
+    public static final RegistryObject<BlockEntityType<PcBlockEntity>> PC =
+            register("pc", PcBlockEntity::new,
+                    RegBlocksInner.SMALL_COMPUTER,
+                    RegBlocksInner.COMPUTER,
+                    RegBlocksInner.SPEC_MONITOR);
 }

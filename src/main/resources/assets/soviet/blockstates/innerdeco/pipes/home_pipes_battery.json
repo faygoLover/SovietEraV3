@@ -2,7 +2,7 @@
     "variants": {
         "facing=west":  { "model": "soviet:block/innerdeco/pipes/home_pipes_battery", "y": 270 },
         "facing=east":  { "model": "soviet:block/innerdeco/pipes/home_pipes_battery", "y": 90  },
-        "facing=north": { "model": "soviet:block/innerdeco/pipes/home_pipes_battery", "y": 0   },
+        "facing=north": { "model": "soviet:block/innerdeco/pipes/home_pipes_battery"           },
         "facing=south": { "model": "soviet:block/innerdeco/pipes/home_pipes_battery", "y": 180 }
  }
 }

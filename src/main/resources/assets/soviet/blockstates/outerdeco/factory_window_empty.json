@@ -3,7 +3,7 @@
     "variants": {
         "facing=west":  { "model": "soviet:block/outerdeco/factory_window_empty", "y": 270 },
         "facing=east":  { "model": "soviet:block/outerdeco/factory_window_empty", "y": 90  },
-        "facing=north": { "model": "soviet:block/outerdeco/factory_window_empty", "y": 0   },
+        "facing=north": { "model": "soviet:block/outerdeco/factory_window_empty"           },
         "facing=south": { "model": "soviet:block/outerdeco/factory_window_empty", "y": 180 }
     }
 }

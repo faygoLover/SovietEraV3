@@ -1,6 +1,8 @@
 package ru.soviet.blocks.entities.chair;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -14,8 +16,8 @@ import ru.soviet.blocks.baseblock.Directional4MBlock;
 import java.util.Optional;
 
 public class ChairBlock extends Directional4MBlock {
-    private final double seatHeight;   // высота сиденья относительно нижней части блока
-    private final double seatDepth;    // смещение по горизонтали от центра блока (по направлению взгляда)
+    private final double seatHeight;
+    private final double seatDepth;
 
     public ChairBlock(Properties properties, String hoverTextKey, VoxelShape shape, double seatHeight, double seatDepth) {
         super(properties, hoverTextKey, shape);
@@ -56,8 +58,27 @@ public class ChairBlock extends Directional4MBlock {
                 level.addFreshEntity(seat);
             }
 
+            // Поворачиваем игрока лицом в сторону, куда смотрит стул
+            Direction facing = state.getValue(FACING).getOpposite();
+            float yaw = switch (facing) {
+                case SOUTH -> 0.0F;
+                case WEST -> 90.0F;
+                case NORTH -> 180.0F;
+                case EAST -> 270.0F;
+                default -> player.getYRot();
+            };
+
             // Сажаем игрока
             player.startRiding(seat);
+
+            // Устанавливаем начальный поворот для ограничений
+            seat.setRiderStartYaw(yaw);
+
+            // Принудительно устанавливаем вращение и синхронизируем с клиентом
+            if (player instanceof ServerPlayer serverPlayer) {
+                serverPlayer.connection.teleport(player.getX(), player.getY(), player.getZ(), yaw, 0.0F);
+            }
+
             return InteractionResult.CONSUME;
         }
         return InteractionResult.SUCCESS;

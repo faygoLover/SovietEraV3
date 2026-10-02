@@ -2,7 +2,7 @@
     "variants": {
         "facing=east":  { "model": "soviet:block/innerdeco/devices/mixer", "y": 270 },
         "facing=west":  { "model": "soviet:block/innerdeco/devices/mixer", "y": 90  },
-        "facing=south": { "model": "soviet:block/innerdeco/devices/mixer", "y": 0   },
+        "facing=south": { "model": "soviet:block/innerdeco/devices/mixer"           },
         "facing=north": { "model": "soviet:block/innerdeco/devices/mixer", "y": 180 }
  }
 }

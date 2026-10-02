@@ -1,16 +1,8 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "soviet:block/mech/diesel_electro_generator",
-      "y": 180 },
-    "facing=west": {
-      "model": "soviet:block/mech/diesel_electro_generator",
-      "y": 0   },
-    "facing=north": {
-       "model": "soviet:block/mech/diesel_electro_generator",
-       "y": 90  },
-    "facing=south": {
-       "model": "soviet:block/mech/diesel_electro_generator",
-       "y": 270 }
+    "facing=east": { "model": "soviet:block/mech/diesel_electro_generator", "y": 180 },
+    "facing=west": { "model": "soviet:block/mech/diesel_electro_generator"           },
+    "facing=north": { "model": "soviet:block/mech/diesel_electro_generator", "y": 90  },
+    "facing=south": { "model": "soviet:block/mech/diesel_electro_generator", "y": 270 }
   }
 }

@@ -18,6 +18,7 @@ import org.jetbrains.annotations.NotNull;
 import ru.soviet.blocks.baseblock.Directional4H2x2VMBlock;
 import ru.soviet.reg.RegItems;
 import ru.soviet.reg.RegSounds;
+import net.minecraft.server.level.ServerPlayer;
 
 public class FluoLamp2 extends Directional4H2x2VMBlock {
     public static final IntegerProperty LAMPS = IntegerProperty.create("lamps",0,2);
@@ -43,9 +44,7 @@ public class FluoLamp2 extends Directional4H2x2VMBlock {
     }
 
     @Override
-    public @NotNull InteractionResult use(@NotNull BlockState state, Level level, @NotNull BlockPos pos,
-                                          @NotNull Player player, @NotNull InteractionHand hand,
-                                          @NotNull BlockHitResult hit) {
+    public @NotNull InteractionResult use(@NotNull BlockState state, Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
         var stack = player.getItemInHand(hand);
         var item = stack.getItem();
         int lamps = state.getValue(LAMPS);
@@ -64,7 +63,10 @@ public class FluoLamp2 extends Directional4H2x2VMBlock {
                 int newLamps = lamps == 2 ? 1 : 0;
                 boolean newToggled = newLamps != 0 && toggled;
                 level.setBlock(pos, state.setValue(LAMPS, newLamps).setValue(TOGGLED, newToggled), 3);
-                Block.popResource(level, pos, new ItemStack(RegItems.FLUOLAMP.get()));
+                if (!player.isCreative()) {
+                    Block.popResource(level, pos, new ItemStack(RegItems.FLUOLAMP.get()));
+                    stack.hurt(1, level.random, (ServerPlayer) player);
+                }
                 level.playSound(null, pos, RegSounds.DEMONT.get(), SoundSource.BLOCKS, 0.5F, 1.0F);
             } else {
                 // Установить лампу

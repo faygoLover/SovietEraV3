@@ -1,7 +1,6 @@
 {
   "variants": {
-    "": {
-      "model": "soviet:block/smalltile/small_tile_yellow_br"
+    "": { "model": "soviet:block/smalltile/small_tile_yellow_br"
     }
   }
 }

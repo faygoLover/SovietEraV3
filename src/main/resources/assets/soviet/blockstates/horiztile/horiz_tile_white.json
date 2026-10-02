@@ -1,7 +1,6 @@
 {
   "variants": {
-    "": {
-      "model": "soviet:block/horiztile/horiz_tile_white"
+    "": { "model": "soviet:block/horiztile/horiz_tile_white"
     }
   }
 }

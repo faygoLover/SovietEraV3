@@ -3,6 +3,6 @@
         "facing=west":  { "model": "soviet:block/innerdeco/accelerator/accl_calc", "y": 90  },
         "facing=east":  { "model": "soviet:block/innerdeco/accelerator/accl_calc", "y": 270 },
         "facing=north": { "model": "soviet:block/innerdeco/accelerator/accl_calc", "y": 180 },
-        "facing=south": { "model": "soviet:block/innerdeco/accelerator/accl_calc", "y": 0   }
+        "facing=south": { "model": "soviet:block/innerdeco/accelerator/accl_calc"           }
  }
 }

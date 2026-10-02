@@ -1,7 +1,6 @@
 {
   "variants": {
-    "": {
-      "model": "soviet:block/regtile/tile_reg_brown_br"
+    "": { "model": "soviet:block/regtile/tile_reg_brown_br"
     }
   }
 }

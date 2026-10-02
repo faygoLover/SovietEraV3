@@ -2,11 +2,11 @@
     "variants": {
         "facing=east,toggled=false": { "model": "soviet:block/innerdeco/furniture/bio_tumbler", "y": 270 },
         "facing=west,toggled=false": { "model": "soviet:block/innerdeco/furniture/bio_tumbler",  "y": 90  },
-        "facing=south,toggled=false": { "model": "soviet:block/innerdeco/furniture/bio_tumbler", "y": 0   },
+        "facing=south,toggled=false": { "model": "soviet:block/innerdeco/furniture/bio_tumbler"           },
         "facing=north,toggled=false": { "model": "soviet:block/innerdeco/furniture/bio_tumbler", "y": 180 },
         "facing=east,toggled=true": { "model": "soviet:block/innerdeco/furniture/bio_tumbler_on", "y": 270 },
         "facing=west,toggled=true": { "model": "soviet:block/innerdeco/furniture/bio_tumbler_on", "y": 90  },
-        "facing=south,toggled=true": { "model": "soviet:block/innerdeco/furniture/bio_tumbler_on", "y": 0   },
+        "facing=south,toggled=true": { "model": "soviet:block/innerdeco/furniture/bio_tumbler_on"           },
         "facing=north,toggled=true": { "model": "soviet:block/innerdeco/furniture/bio_tumbler_on", "y": 180 }
     }
 }

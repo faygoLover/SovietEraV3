@@ -1,7 +1,6 @@
 {
   "variants": {
-    "": {
-      "model": "soviet:block/structural/panel_tile"
+    "": { "model": "soviet:block/structural/panel_tile"
     }
   }
 }

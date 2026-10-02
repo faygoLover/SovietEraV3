@@ -3,6 +3,7 @@ package ru.soviet.blocks.entities.clock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -17,7 +18,7 @@ public class ClockBroken extends Directional4MBlock {
     public static final BooleanProperty POWERED = BooleanProperty.create("powered");
 
     public ClockBroken(Properties properties, String hoverTextKey, VoxelShape shape) {
-        super(properties.lightLevel(state -> state.getValue(POWERED) ? 5 : 0), hoverTextKey, shape);
+        super(properties, hoverTextKey, shape);
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)
                 .setValue(POWERED, false)
@@ -41,6 +42,11 @@ public class ClockBroken extends Directional4MBlock {
         super.createBlockStateDefinition(builder);
         builder.add(POWERED);
     }
+    @Override
+    public int getLightEmission(BlockState state, BlockGetter level, BlockPos pos) {
+        return state.getValue(POWERED) ? 5 : 0;
+    }
+
 
     @Override
     public void neighborChanged(@NotNull BlockState state, Level level, @NotNull BlockPos pos, @NotNull Block block, @NotNull BlockPos fromPos, boolean isMoving) {

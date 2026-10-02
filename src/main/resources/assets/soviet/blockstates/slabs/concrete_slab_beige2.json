@@ -1,40 +1,16 @@
 {
   "variants": {
-    "facing=east,damaged=false": {
-      "model": "soviet:block/slabs/concrete_slab_beige2",
-      "y": 270 },
-    "facing=west,damaged=false": {
-      "model": "soviet:block/slabs/concrete_slab_beige2",
-      "y": 90  },
-    "facing=south,damaged=false": {
-      "model": "soviet:block/slabs/concrete_slab_beige2"
-    },
-    "facing=north,damaged=false": {
-      "model": "soviet:block/slabs/concrete_slab_beige2",
-      "y": 180 },
-    "facing=up,damaged=false": {
-      "model": "soviet:block/slabs/concrete_slab_beige2",
-      "x": 90  },
-    "facing=down,damaged=false": {
-      "model": "soviet:block/slabs/concrete_slab_beige2",
-      "x": 270 },
-    "facing=east,damaged=true": {
-      "model": "soviet:block/slabs/concrete_slab_beige2_br",
-      "y": 270 },
-    "facing=west,damaged=true": {
-      "model": "soviet:block/slabs/concrete_slab_beige2_br",
-      "y": 90  },
-    "facing=south,damaged=true": {
-      "model": "soviet:block/slabs/concrete_slab_beige2_br"
-    },
-    "facing=north,damaged=true": {
-      "model": "soviet:block/slabs/concrete_slab_beige2_br",
-      "y": 180 },
-    "facing=up,damaged=true": {
-      "model": "soviet:block/slabs/concrete_slab_beige2_br",
-      "x": 90  },
-    "facing=down,damaged=true": {
-      "model": "soviet:block/slabs/concrete_slab_beige2_br",
-      "x": 270 }
+    "facing=east,damaged=false": { "model": "soviet:block/slabs/concrete_slab_beige2", "y": 270 },
+    "facing=west,damaged=false": { "model": "soviet:block/slabs/concrete_slab_beige2", "y": 90  },
+    "facing=south,damaged=false": { "model": "soviet:block/slabs/concrete_slab_beige2" },
+    "facing=north,damaged=false": { "model": "soviet:block/slabs/concrete_slab_beige2", "y": 180 },
+    "facing=up,damaged=false": { "model": "soviet:block/slabs/concrete_slab_beige2", "x": 90  },
+    "facing=down,damaged=false": { "model": "soviet:block/slabs/concrete_slab_beige2", "x": 270 },
+    "facing=east,damaged=true": { "model": "soviet:block/slabs/concrete_slab_beige2_br", "y": 270 },
+    "facing=west,damaged=true": { "model": "soviet:block/slabs/concrete_slab_beige2_br", "y": 90  },
+    "facing=south,damaged=true": { "model": "soviet:block/slabs/concrete_slab_beige2_br" },
+    "facing=north,damaged=true": { "model": "soviet:block/slabs/concrete_slab_beige2_br", "y": 180 },
+    "facing=up,damaged=true": { "model": "soviet:block/slabs/concrete_slab_beige2_br", "x": 90  },
+    "facing=down,damaged=true": { "model": "soviet:block/slabs/concrete_slab_beige2_br", "x": 270 }
   }
 }

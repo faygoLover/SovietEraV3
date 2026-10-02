@@ -12,8 +12,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 //import org.slf4j.Logger;
 import ru.soviet.reg.*;
 
-
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod(SovietEra.MODID)
 public class SovietEra {
 
@@ -25,7 +23,6 @@ public class SovietEra {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         RegTabs.CREATIVE_MODE_TABS.register(modEventBus);
-        //RegBlocks.BLOCKS.register(modEventBus);
         RegBlocksInner.BLOCKS_INNER.register(modEventBus);
         RegBlocksOuter.BLOCKS_OUTER.register(modEventBus);
         RegBlocksMain.BLOCKS_MAIN.register(modEventBus);
@@ -34,9 +31,8 @@ public class SovietEra {
         RegEntities.ENTITIES.register(modEventBus);
         RegMenuTypes.MENUS.register(modEventBus);
         RegSounds.SOUND_EVENTS.register(modEventBus);
-        //RegFluids.FLUIDS.register(modEventBus);
         RegItems.ITEMS.register(modEventBus);
-        // Register ourselves for server and other game events we are interested in
+        RegItems.BLOCK_ITEMS.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
 
 

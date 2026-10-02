@@ -1,7 +1,6 @@
 {
   "variants": {
-    "": {
-      "model": "soviet:block/lino/lino2"
+    "": { "model": "soviet:block/lino/lino2"
     }
   }
 }

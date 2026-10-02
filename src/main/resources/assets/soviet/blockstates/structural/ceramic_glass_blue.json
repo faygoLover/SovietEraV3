@@ -1,7 +1,6 @@
 {
   "variants": {
-    "": {
-      "model": "soviet:block/structural/ceramic_glass_blue"
+    "": { "model": "soviet:block/structural/ceramic_glass_blue"
     }
   }
 }

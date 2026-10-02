@@ -3,6 +3,6 @@
 	"facing=west":  { "model": "soviet:block/cleaned/vent_grid", "y": 270 },
         "facing=east":  { "model": "soviet:block/cleaned/vent_grid", "y": 90  },
         "facing=south": { "model": "soviet:block/cleaned/vent_grid", "y": 180 },
-        "facing=north": { "model": "soviet:block/cleaned/vent_grid", "y": 0   }
+        "facing=north": { "model": "soviet:block/cleaned/vent_grid"           }
     }
 }

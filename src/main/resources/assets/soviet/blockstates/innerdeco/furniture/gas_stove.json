@@ -1,12 +1,12 @@
 {
-    "variantiants": {
-        "facing=east,variant=0":  { "model": "soviet:block/innerdeco/furniture/gas_stove", "y": 270 },
-        "facing=west,variant=0":  { "model": "soviet:block/innerdeco/furniture/gas_stove", "y": 90  },
-        "facing=south,variant=0": { "model": "soviet:block/innerdeco/furniture/gas_stove", "y": 0   },
-        "facing=north,variant=0": { "model": "soviet:block/innerdeco/furniture/gas_stove", "y": 180 },
+    "variants": {
+        "facing=east,variant=0":  { "model": "soviet:block/innerdeco/furniture/gas_stove",     "y": 270 },
+        "facing=west,variant=0":  { "model": "soviet:block/innerdeco/furniture/gas_stove",     "y": 90  },
+        "facing=south,variant=0": { "model": "soviet:block/innerdeco/furniture/gas_stove"               },
+        "facing=north,variant=0": { "model": "soviet:block/innerdeco/furniture/gas_stove",     "y": 180 },
         "facing=east,variant=1":  { "model": "soviet:block/innerdeco/furniture/gas_stove_red", "y": 270 },
         "facing=west,variant=1":  { "model": "soviet:block/innerdeco/furniture/gas_stove_red", "y": 90  },
-        "facing=south,variant=1": { "model": "soviet:block/innerdeco/furniture/gas_stove_red", "y": 0   },
+        "facing=south,variant=1": { "model": "soviet:block/innerdeco/furniture/gas_stove_red"           },
         "facing=north,variant=1": { "model": "soviet:block/innerdeco/furniture/gas_stove_red", "y": 180 }
  }
 }

@@ -100,6 +100,6 @@ public class RegBlocksSymbols {
     }
 
     public static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
-        return RegItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        return RegItems.BLOCK_ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 }

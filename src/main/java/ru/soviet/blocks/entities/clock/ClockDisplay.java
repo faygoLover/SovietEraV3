@@ -3,6 +3,7 @@ package ru.soviet.blocks.entities.clock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.EntityBlock;
@@ -23,7 +24,7 @@ public class ClockDisplay extends Directional4MBlock implements EntityBlock {
     public static final BooleanProperty POWERED = BooleanProperty.create("powered");
 
     public ClockDisplay(Properties properties, String hoverTextKey, VoxelShape shape) {
-        super(properties.lightLevel(state -> state.getValue(POWERED) ? 5 : 0), hoverTextKey, shape);
+        super(properties, hoverTextKey, shape);
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)
                 .setValue(POWERED, false)
@@ -46,6 +47,11 @@ public class ClockDisplay extends Directional4MBlock implements EntityBlock {
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder);
         builder.add(POWERED);
+    }
+
+    @Override
+    public int getLightEmission(BlockState state, BlockGetter level, BlockPos pos) {
+        return state.getValue(POWERED) ? 5 : 0;
     }
 
     @Nullable

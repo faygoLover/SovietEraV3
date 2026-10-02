@@ -2,7 +2,7 @@
     "variants": {
         "facing=east":  { "model": "soviet:block/innerdeco/devices/phys/soldering_station", "y": 270 },
         "facing=west":  { "model": "soviet:block/innerdeco/devices/phys/soldering_station", "y": 90  },
-        "facing=south": { "model": "soviet:block/innerdeco/devices/phys/soldering_station", "y": 0   },
+        "facing=south": { "model": "soviet:block/innerdeco/devices/phys/soldering_station"           },
         "facing=north": { "model": "soviet:block/innerdeco/devices/phys/soldering_station", "y": 180 }
  }
 }

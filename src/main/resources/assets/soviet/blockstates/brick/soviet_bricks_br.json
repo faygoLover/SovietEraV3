@@ -1,7 +1,6 @@
 {
   "variants": {
-    "": {
-      "model": "soviet:block/brick/soviet_bricks_br"
+    "": { "model": "soviet:block/brick/soviet_bricks_br"
     }
   }
 }

@@ -2,7 +2,7 @@
     "variants": {
         "facing=east":  { "model": "soviet:block/innerdeco/furniture/safe", "y": 270 },
         "facing=west":  { "model": "soviet:block/innerdeco/furniture/safe", "y": 90  },
-        "facing=south": { "model": "soviet:block/innerdeco/furniture/safe", "y": 0   },
+        "facing=south": { "model": "soviet:block/innerdeco/furniture/safe"           },
         "facing=north": { "model": "soviet:block/innerdeco/furniture/safe", "y": 180 }
  }
 }
