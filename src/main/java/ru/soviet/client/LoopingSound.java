@@ -1,22 +1,22 @@
-package ru.soviet.utils;
+package ru.soviet.client;
 
 import net.minecraft.client.resources.sounds.AbstractSoundInstance;
+import net.minecraft.client.resources.sounds.SoundInstance;
 import net.minecraft.client.resources.sounds.TickableSoundInstance;
+import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.util.RandomSource;
-import net.minecraft.core.BlockPos;
 
 public class LoopingSound extends AbstractSoundInstance implements TickableSoundInstance {
     private boolean stopped;
 
     public LoopingSound(SoundEvent event, SoundSource source, float volume, float pitch, BlockPos pos) {
-        super(event, source, RandomSource.create());
+        super(event, source, SoundInstance.createUnseededRandom());
         this.volume = volume;
         this.pitch = pitch;
-        this.x = pos.getX();
-        this.y = pos.getY();
-        this.z = pos.getZ();
+        this.x = pos.getX() + 0.5;
+        this.y = pos.getY() + 0.5;
+        this.z = pos.getZ() + 0.5;
         this.looping = true;
         this.delay = 0;
     }

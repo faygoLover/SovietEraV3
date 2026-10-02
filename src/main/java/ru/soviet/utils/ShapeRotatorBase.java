@@ -13,6 +13,9 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public abstract class ShapeRotatorBase<D extends Enum<D>> {
     private final ConcurrentHashMap<D, ConcurrentHashMap<List<AabbKey>, VoxelShape>> cache = new ConcurrentHashMap<>();
+    // Быстрый путь: VoxelShape сравнивается по ссылке, а блоки передают сюда одни и те же объекты форм,
+    // так что повторный вызов обходится одним поиском в карте без разбора формы на боксы.
+    private final ConcurrentHashMap<D, ConcurrentHashMap<VoxelShape, VoxelShape>> identityCache = new ConcurrentHashMap<>();
     private final D baseDirection;
 
     protected ShapeRotatorBase(D baseDirection) {
@@ -28,6 +31,11 @@ public abstract class ShapeRotatorBase<D extends Enum<D>> {
     public VoxelShape rotateShape(VoxelShape shape, D direction) {
         if (direction == baseDirection) return shape;
 
+        ConcurrentHashMap<VoxelShape, VoxelShape> byIdentity =
+                identityCache.computeIfAbsent(direction, d -> new ConcurrentHashMap<>());
+        VoxelShape known = byIdentity.get(shape);
+        if (known != null) return known;
+
         // Собираем все ограничивающие прямоугольники (AABB) исходной формы
         List<AabbKey> boxes = new ArrayList<>();
         shape.forAllBoxes((x1, y1, z1, x2, y2, z2) ->
@@ -41,7 +49,9 @@ public abstract class ShapeRotatorBase<D extends Enum<D>> {
                 cache.computeIfAbsent(direction, d -> new ConcurrentHashMap<>());
 
         // Возвращаем уже повёрнутую форму из кэша или создаём новую
-        return dirCache.computeIfAbsent(boxes, key -> rotateBoxes(key, direction));
+        VoxelShape rotated = dirCache.computeIfAbsent(boxes, key -> rotateBoxes(key, direction));
+        byIdentity.put(shape, rotated);
+        return rotated;
     }
 
     /**
@@ -74,6 +84,7 @@ public abstract class ShapeRotatorBase<D extends Enum<D>> {
      */
     public void clearCache() {
         cache.clear();
+        identityCache.clear();
     }
 
     /**

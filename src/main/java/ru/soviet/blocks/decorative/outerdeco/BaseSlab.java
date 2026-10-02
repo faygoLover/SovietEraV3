@@ -57,4 +57,9 @@ public class BaseSlab extends ModelBlock {
             default -> SHAPE_NORTH;
         };
     }
+
+    @Override
+    public @NotNull VoxelShape getCollisionShape(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull CollisionContext context) {
+        return getShape(state, level, pos, context);
+    }
 }

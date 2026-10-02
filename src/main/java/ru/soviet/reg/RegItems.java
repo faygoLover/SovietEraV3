@@ -19,17 +19,17 @@ public class RegItems {
     //public static final RegistryObject<Item> SUIT_JACKET         = ITEMS.register("adc_jacket",          () -> new Suit(ArmorMaterial.DIAMOND, EquipmentSlotType.CHEST, (new Item.Properties())));
     //public static final RegistryObject<Item> SUIT_LEGS           = ITEMS.register("adc_legs",            () -> new Suit(ArmorMaterial.DIAMOND, EquipmentSlotType.LEGS, (new Item.Properties())));
     //public static final RegistryObject<Item> SUIT_BOOTS          = ITEMS.register("adc_boots",           () -> new Suit(ArmorMaterial.DIAMOND, EquipmentSlotType.FEET, (new Item.Properties())));
-    //public static final RegistryObject<Item> DYE_BRUSH           = ITEMS.register("dye_brush",           () -> new DyeBrush());
-    //public static final RegistryObject<Item> DYE_SCRAPPER        = ITEMS.register("dye_scrapper",        () -> new DyeScrapper("info.dye_scrapper"));
-    //public static final RegistryObject<Item> DYE_SCRAPPER_FILLER = ITEMS.register("dye_scrapper_filler", () -> new FillerScrapper());
+    public static final RegistryObject<Item> DYE_BRUSH           = ITEMS.register("dye_brush",           DyeBrushItem::new);
+    public static final RegistryObject<Item> DYE_SCRAPPER        = ITEMS.register("dye_scrapper",        DyeScrapperItem::new);
+    public static final RegistryObject<Item> DYE_SCRAPPER_FILLER = ITEMS.register("dye_scrapper_filler", FillerScrapperItem::new);
     //public static final RegistryObject<Item> HAMMER              = ITEMS.register("hammer",              () -> new Hammer("info.hammer"));
     //public static final RegistryObject<Item> ARMATURES           = ITEMS.register("armatures",           () -> new ArmatureFrame(new Item.Properties()));
     //public static final RegistryObject<Item> SANDSPRAY           = ITEMS.register("sandspray",           () -> new SandsprayItem(new Item.Properties()));
-    //public static final RegistryObject<Item> MORTAR              = ITEMS.register("mortar", Mortar::new);
-    //public static final RegistryObject<Item> PESTLE              = ITEMS.register("pestle", Pestle::new);
+    public static final RegistryObject<Item> MORTAR              = ITEMS.register("mortar",              () -> new CraftingToolItem(750));
+    public static final RegistryObject<Item> PESTLE              = ITEMS.register("pestle",              () -> new CraftingToolItem(150));
     //public static final RegistryObject<Item> REDSTONE_GRINDER    = ITEMS.register("redstone_grinder", RedstoneGrinder::new);
-    //public static final RegistryObject<Item> SIEVE               = ITEMS.register("sieve", DamageableItem::new);
-    //public static final RegistryObject<Item> WIRE_CUTTERS        = ITEMS.register("wire_cutters", WireCutter::new);
+    public static final RegistryObject<Item> SIEVE               = ITEMS.register("sieve",               () -> new CraftingToolItem(750));
+    public static final RegistryObject<Item> WIRE_CUTTERS        = ITEMS.register("wire_cutters",        WireCutterItem::new);
     //public static final RegistryObject<Item> TOXIC_WATER_BUCKET  = ITEMS.register("toxic_water_bucket",  () -> new BucketItem(() -> RegFluids.TOXIC_WATER.get(), new Item.Properties().stacksTo(1)));
 
 
@@ -81,7 +81,7 @@ public class RegItems {
     public static final RegistryObject<Item> PLATOL_SWORD = ITEMS.register("platol_sword", () -> new SwordItem(SovietItemTier.PLATOL, 5, -1F, (new Item.Properties())));
     public static final RegistryObject<Item> PULLER = ITEMS.register("puller", () -> new BaseItem(new Item.Properties().stacksTo(1).durability(30).setNoRepair(), "info.puller"));
     public static final RegistryObject<Item> SANDSPRAY_DUST = ITEMS.register("sandspray_dust", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> VARIANT_ITEM = ITEMS.register("variant_item", () -> new BaseItem(new Item.Properties(), "info.variant_item"));
+    public static final RegistryObject<Item> VARIANT_ITEM = ITEMS.register("variant_item", () -> new VariantItem(new Item.Properties(), "info.variant_item"));
     public static final RegistryObject<Item> WRENCH = ITEMS.register("wrench", () -> new BaseItem(new Item.Properties(), "wrench.info"));
 
     //ingots

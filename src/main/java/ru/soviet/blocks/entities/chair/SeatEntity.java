@@ -9,6 +9,7 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
@@ -21,7 +22,8 @@ public class SeatEntity extends Entity {
     private static final EntityDataAccessor<BlockPos> SEAT_POS = SynchedEntityData.defineId(SeatEntity.class, EntityDataSerializers.BLOCK_POS);
     private double seatHeight;
     private double seatDepth;
-    private float riderStartYaw; // начальный поворот севшего игрока (для ограничения вращения)
+    private static final float MAX_TURN = 80.0F; // максимальное отклонение взгляда от направления стула, градусы
+    private float riderStartYaw; // начальный поворот севшего игрока (запасной вариант, если блок стула не найден)
 
     public SeatEntity(EntityType<?> entityType, Level level) {
         super(entityType, level);
@@ -102,25 +104,29 @@ public class SeatEntity extends Entity {
                 return;
             }
 
-            // Ограничение поворота для сидящего игрока
-            Entity passenger = this.getPassengers().get(0);
-            if (passenger instanceof ServerPlayer serverPlayer) {
-                float currentYaw = serverPlayer.getYRot();
-                float delta = currentYaw - this.riderStartYaw;
-                // Нормализуем угол в диапазон [-180, 180]
-                while (delta > 180) delta -= 360;
-                while (delta < -180) delta += 360;
-
-                float maxAngle = 80.0F; // максимальное отклонение в градусах
-                if (Math.abs(delta) > maxAngle) {
-                    float newYaw = this.riderStartYaw + (delta > 0 ? maxAngle : -maxAngle);
-                    // Нормализуем newYaw
-                    newYaw = ((newYaw % 360) + 360) % 360;
-                    // Меняем только поворот, координаты остаются теми же
-                    serverPlayer.connection.teleport(serverPlayer.getX(), serverPlayer.getY(), serverPlayer.getZ(), newYaw, serverPlayer.getXRot());
-                }
-            }
         }
+    }
+
+    // Угол, вокруг которого сидящий может крутить головой: туда, куда смотрит стул
+    private float getSeatYaw() {
+        BlockState state = this.level().getBlockState(this.entityData.get(SEAT_POS));
+        if (state.getBlock() instanceof ChairBlock) {
+            return state.getValue(ChairBlock.FACING).getOpposite().toYRot();
+        }
+        return this.riderStartYaw;
+    }
+
+    // Ограничение поворота сидящего. Вызывается на клиенте при каждом движении мыши (как у лодки),
+    // поэтому работает без задержки и без телепортов с сервера.
+    @Override
+    public void onPassengerTurned(Entity passenger) {
+        float seatYaw = getSeatYaw();
+        passenger.setYBodyRot(seatYaw);
+        float delta = Mth.wrapDegrees(passenger.getYRot() - seatYaw);
+        float clamped = Mth.clamp(delta, -MAX_TURN, MAX_TURN);
+        passenger.yRotO += clamped - delta;
+        passenger.setYRot(passenger.getYRot() + clamped - delta);
+        passenger.setYHeadRot(passenger.getYRot());
     }
 
     @Override

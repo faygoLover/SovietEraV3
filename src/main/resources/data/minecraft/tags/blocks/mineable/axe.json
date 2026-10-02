@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "soviet:structural/parquet_block",
+    "soviet:structural/parquet_block_diagonal",
     "soviet:lino/lino1",
     "soviet:lino/lino2",
     "soviet:lino/lino3",
@@ -8,6 +10,26 @@
     "soviet:lino/lino5",
     "soviet:lino/lino6",
     "soviet:lino/lino7",
-    "soviet:lino/lino8"
+    "soviet:lino/lino8",
+    "soviet:innerdeco/furniture/dsp_tumb",
+    "soviet:innerdeco/furniture/dsp_table",
+    "soviet:innerdeco/furniture/dsp_table_non_cloth",
+    "soviet:innerdeco/furniture/purple_table",
+    "soviet:innerdeco/furniture/kitchen_table",
+    "soviet:innerdeco/furniture/dsp_chair",
+    "soviet:innerdeco/furniture/purple_chair",
+    "soviet:innerdeco/furniture/pink_chair",
+    "soviet:innerdeco/biolab_chair",
+    "soviet:innerdeco/furniture/dsp_panel",
+    "soviet:innerdeco/furniture/bio_power_socket",
+    "soviet:innerdeco/furniture/bio_tumbler",
+    "soviet:innerdeco/furniture/tumbler",
+    "soviet:innerdeco/devices/small_button",
+    "soviet:innerdeco/ladder_1",
+    "soviet:innerdeco/ladder_2",
+    "soviet:innerdeco/windows/wood_window_empty",
+    "soviet:innerdeco/windows/wood_window",
+    "soviet:innerdeco/windows/wood_window_leaf",
+    "soviet:innerdeco/windows/wood_window_leaf_empty"
   ]
 }

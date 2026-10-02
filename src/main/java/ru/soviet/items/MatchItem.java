@@ -25,6 +25,8 @@ public class MatchItem extends BaseItem {
         Level level = context.getLevel();
         BlockPos pos = context.getClickedPos();
         BlockState state = level.getBlockState(pos);
+        // Шанс считает только сервер, иначе клиент и сервер бросают кубик по отдельности и расходятся
+        if (level.isClientSide) return InteractionResult.SUCCESS;
         boolean success = RANDOM.nextFloat() < 0.5f; // 50% шанс успеха
 
         if (success) {

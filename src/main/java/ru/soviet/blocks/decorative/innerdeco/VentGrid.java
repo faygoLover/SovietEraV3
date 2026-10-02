@@ -44,6 +44,11 @@ public class VentGrid extends Directional4H4x2VMBlock {
     }
 
     @Override
+    public @NotNull VoxelShape getCollisionShape(@NotNull BlockState state, @NotNull BlockGetter world, @NotNull BlockPos pos, @NotNull CollisionContext context) {
+        return getShape(state, world, pos, context);
+    }
+
+    @Override
     public @NotNull InteractionResult use(@NotNull BlockState state, Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
         if (!level.isClientSide) {
             level.setBlock(pos, state.setValue(TOGGLED, !state.getValue(TOGGLED)), 3);

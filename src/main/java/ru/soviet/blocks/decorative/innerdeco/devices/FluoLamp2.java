@@ -65,7 +65,7 @@ public class FluoLamp2 extends Directional4H2x2VMBlock {
                 level.setBlock(pos, state.setValue(LAMPS, newLamps).setValue(TOGGLED, newToggled), 3);
                 if (!player.isCreative()) {
                     Block.popResource(level, pos, new ItemStack(RegItems.FLUOLAMP.get()));
-                    stack.hurt(1, level.random, (ServerPlayer) player);
+                    stack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(hand));
                 }
                 level.playSound(null, pos, RegSounds.DEMONT.get(), SoundSource.BLOCKS, 0.5F, 1.0F);
             } else {

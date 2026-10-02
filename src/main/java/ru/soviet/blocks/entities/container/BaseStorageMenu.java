@@ -70,6 +70,10 @@ public abstract class BaseStorageMenu extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(@NotNull Player player) {
+        // На клиенте меню работает с пустым ItemStackHandler, проверять нечего
+        if (itemHandler instanceof BaseStorageBlockEntity.StorageHandler handler) {
+            return handler.getOwner().stillValid(player);
+        }
         return true;
     }
 }

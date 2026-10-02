@@ -14,6 +14,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import ru.soviet.blocks.baseblock.Directional4MBlock;
+import ru.soviet.client.ClientPcSounds;
 import ru.soviet.reg.RegBlockEntities;
 
 public class PCs extends Directional4MBlock implements EntityBlock {
@@ -84,6 +85,8 @@ public class PCs extends Directional4MBlock implements EntityBlock {
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(@NotNull Level level, @NotNull BlockState state,
                                                                   @NotNull BlockEntityType<T> type) {
-        return type == RegBlockEntities.PC.get() ? (lvl, pos, st, be) -> ((PcBlockEntity) be).tick(lvl, pos, st) : null;
+        // Серверу тикать нечего: блок-сущность нужна только для звука на клиенте
+        if (!level.isClientSide || type != RegBlockEntities.PC.get()) return null;
+        return (lvl, pos, st, be) -> ClientPcSounds.tick(lvl, pos, st, (PcBlockEntity) be);
     }
 }

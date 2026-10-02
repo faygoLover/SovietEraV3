@@ -8,7 +8,7 @@
 		"4": "soviet:block/structural/rusty_ralling",
 		"5": "soviet:block/mech/dark_autowriter_side",
 		"6": "soviet:block/mech/gas_disp_2",
-		"particle": "soviet:block/structural/autowriter_side"
+		"particle": "soviet:block/mech/autowriter_side"
 	},
 	"elements": [
 		{

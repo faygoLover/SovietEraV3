@@ -27,12 +27,28 @@ public abstract class BaseStorageBlockEntity<T extends AbstractContainerMenu> ex
     public BaseStorageBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state, Component displayName, int inventorySize) {
         super(type, pos, state);
         this.displayName = displayName;
-        this.itemHandler = new ItemStackHandler(inventorySize) {
-            @Override
-            protected void onContentsChanged(int slot) {
-                setChanged();
-            }
-        };
+        this.itemHandler = new StorageHandler(inventorySize);
+    }
+
+    // Хранилище, которое знает свою блок-сущность: меню по нему проверяет, что блок ещё на месте
+    public class StorageHandler extends ItemStackHandler {
+        private StorageHandler(int size) {
+            super(size);
+        }
+
+        public BaseStorageBlockEntity<?> getOwner() {
+            return BaseStorageBlockEntity.this;
+        }
+
+        @Override
+        protected void onContentsChanged(int slot) {
+            setChanged();
+        }
+    }
+
+    public boolean stillValid(Player player) {
+        if (isRemoved() || level == null || level.getBlockEntity(worldPosition) != this) return false;
+        return player.distanceToSqr(worldPosition.getX() + 0.5, worldPosition.getY() + 0.5, worldPosition.getZ() + 0.5) <= 64.0;
     }
 
     @Override

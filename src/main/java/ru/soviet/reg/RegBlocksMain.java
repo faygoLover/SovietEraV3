@@ -11,6 +11,8 @@ import net.minecraftforge.registries.RegistryObject;
 import ru.soviet.blocks.baseblock.BaseBlock;
 import ru.soviet.blocks.decorative.outerdeco.BaseSlab;
 import ru.soviet.blocks.decorative.outerdeco.BaseStairs;
+import ru.soviet.blocks.decorative.panel.PanelCornerBlock;
+import ru.soviet.blocks.decorative.panel.PanelSideBlock;
 import ru.soviet.blocks.subtypes.*;
 import ru.soviet.core.SovietEra;
 
@@ -44,9 +46,9 @@ public class RegBlocksMain {
     public static final RegistryObject<Block> CONCRETE_STAIRS_RED = registerBlock("stairs/concrete_red_stairs", () -> new BaseStairs(CONCRETE_RED.get().defaultBlockState(),  "info.red_var"));
     public static final RegistryObject<Block> CONCRETE_STAIRS_ORANGE = registerBlock("stairs/concrete_orange_stairs", () -> new BaseStairs(CONCRETE_ORANGE.get().defaultBlockState(),  "info.orange_var"));
     public static final RegistryObject<Block> CONCRETE_STAIRS_YELLOW = registerBlock("stairs/concrete_yellow_stairs", () -> new BaseStairs(CONCRETE_YELLOW.get().defaultBlockState(),  "info.yellow_var"));
-    public static final RegistryObject<Block> CONCRETE_STAIRS_GREEN = registerBlock("stairs/concrete_green_stairs", () -> new BaseStairs(CONCRETE_GRAY.get().defaultBlockState(),  "info.green_var"));
+    public static final RegistryObject<Block> CONCRETE_STAIRS_GREEN = registerBlock("stairs/concrete_green_stairs", () -> new BaseStairs(CONCRETE_GREEN.get().defaultBlockState(),  "info.green_var"));
     public static final RegistryObject<Block> CONCRETE_STAIRS_BLUE = registerBlock("stairs/concrete_blue_stairs", () -> new BaseStairs(CONCRETE_BLUE.get().defaultBlockState(), "info.blue_var"));
-    public static final RegistryObject<Block> CONCRETE_STAIRS_GRAY = registerBlock("stairs/concrete_gray_stairs", () -> new BaseStairs(CONCRETE_GREEN.get().defaultBlockState(), "info.gray_var"));
+    public static final RegistryObject<Block> CONCRETE_STAIRS_GRAY = registerBlock("stairs/concrete_gray_stairs", () -> new BaseStairs(CONCRETE_GRAY.get().defaultBlockState(), "info.gray_var"));
     public static final RegistryObject<Block> CONCRETE_STAIRS_BEIGE = registerBlock("stairs/concrete_beige_stairs", () -> new BaseStairs(CONCRETE_BEIGE.get().defaultBlockState(),  "info.beige_var"));
     public static final RegistryObject<Block> CONCRETE_STAIRS_BEIGE2 = registerBlock("stairs/concrete_beige2_stairs", () -> new BaseStairs(CONCRETE_BEIGE2.get().defaultBlockState(),  "info.beige2_var"));
     public static final RegistryObject<Block> CONCRETE_STAIRS_WHITE = registerBlock("stairs/concrete_white_stairs", () -> new BaseStairs(CONCRETE_WHITE.get().defaultBlockState(), "info.white_var"));
@@ -56,7 +58,7 @@ public class RegBlocksMain {
     public static final RegistryObject<Block> CONCRETE_STAIRS_YELLOW_FULL = registerBlock("stairs/concrete_yellow_stairs_full", () -> new BaseStairs(CONCRETE_YELLOW.get().defaultBlockState(),  "info.yellow_var"));
     public static final RegistryObject<Block> CONCRETE_STAIRS_GREEN_FULL = registerBlock("stairs/concrete_green_stairs_full", () -> new BaseStairs(CONCRETE_GREEN.get().defaultBlockState(),  "info.green_var"));
     public static final RegistryObject<Block> CONCRETE_STAIRS_BLUE_FULL = registerBlock("stairs/concrete_blue_stairs_full", () -> new BaseStairs(CONCRETE_BLUE.get().defaultBlockState(), "info.blue_var"));
-    public static final RegistryObject<Block> CONCRETE_STAIRS_GRAY_FULL = registerBlock("stairs/concrete_gray_stairs_full", () -> new BaseStairs(CONCRETE_GREEN.get().defaultBlockState(), "info.gray_var"));
+    public static final RegistryObject<Block> CONCRETE_STAIRS_GRAY_FULL = registerBlock("stairs/concrete_gray_stairs_full", () -> new BaseStairs(CONCRETE_GRAY.get().defaultBlockState(), "info.gray_var"));
     public static final RegistryObject<Block> CONCRETE_STAIRS_BEIGE_FULL = registerBlock("stairs/concrete_beige_stairs_full", () -> new BaseStairs(CONCRETE_BEIGE.get().defaultBlockState(),  "info.beige_var"));
     public static final RegistryObject<Block> CONCRETE_STAIRS_BEIGE2_FULL = registerBlock("stairs/concrete_beige2_stairs_full", () -> new BaseStairs(CONCRETE_BEIGE2.get().defaultBlockState(),  "info.beige2_var"));
     public static final RegistryObject<Block> CONCRETE_STAIRS_WHITE_FULL = registerBlock("stairs/concrete_white_stairs_full", () -> new BaseStairs(CONCRETE_WHITE.get().defaultBlockState(), "info.white_var"));
@@ -83,15 +85,15 @@ public class RegBlocksMain {
     public static final RegistryObject<Block> HORIZ_TILE_DARK_BLUE = registerBlock("horiztile/horiz_tile_dark_blue", () -> new TilledBlock( "info.horiz_tile_dark_blue"));
     public static final RegistryObject<Block> HORIZ_TILE_WHITE = registerBlock("horiztile/horiz_tile_white", () -> new TilledBlock( "info.horiz_tile_white"));
 
-    public static final RegistryObject<Block> TILE_QUAD_1_BR = registerBlock("quadtile/tile_quad_1_br", () -> new TilledBlock( "info.quadtile_1_br"));
-    public static final RegistryObject<Block> TILE_QUAD_2_BR = registerBlock("quadtile/tile_quad_2_br", () -> new TilledBlock( "info.quadtile_2_br"));
-    public static final RegistryObject<Block> SMALL_TILE_RED_BR = registerBlock("smalltile/small_tile_red_br", () -> new TilledBlock( "info.small_tile_red_br"));
-    public static final RegistryObject<Block> SMALL_TILE_YELLOW_BR = registerBlock("smalltile/small_tile_yellow_br", () -> new TilledBlock( "info.small_tile_yellow_br"));
-    public static final RegistryObject<Block> SMALL_TILE_WHITE_BR = registerBlock("smalltile/small_tile_white_br", () -> new TilledBlock( "info.small_tile_white_br"));
-    public static final RegistryObject<Block> SMALL_TILE_BLUE_BR = registerBlock("smalltile/small_tile_blue_br", () -> new TilledBlock( "info.small_tile_blue_br"));
-    public static final RegistryObject<Block> HORIZ_TILE_BLUE_BR = registerBlock("horiztile/horiz_tile_blue_br", () -> new TilledBlock( "info.horiz_tile_blue_br"));
-    public static final RegistryObject<Block> HORIZ_TILE_DARK_BLUE_BR = registerBlock("horiztile/horiz_tile_dark_blue_br", () -> new TilledBlock( "info.horiz_tile_dark_blue_br"));
-    public static final RegistryObject<Block> HORIZ_TILE_WHITE_BR = registerBlock("horiztile/horiz_tile_white_br", () -> new TilledBlock( "info.horiz_tile_white_br"));
+    public static final RegistryObject<Block> TILE_QUAD_1_BR = registerBlock("quadtile/tile_quad_1_br", () -> new TilledBlock("info.quadtile_1_br", TILE_QUAD_1, RegItems.QUAD_TILE_NEW));
+    public static final RegistryObject<Block> TILE_QUAD_2_BR = registerBlock("quadtile/tile_quad_2_br", () -> new TilledBlock("info.quadtile_2_br", TILE_QUAD_2, RegItems.QUAD_TILE_NEW));
+    public static final RegistryObject<Block> SMALL_TILE_RED_BR = registerBlock("smalltile/small_tile_red_br", () -> new TilledBlock("info.small_tile_red_br", SMALL_TILE_RED, RegItems.SMALL_TILE_NEW));
+    public static final RegistryObject<Block> SMALL_TILE_YELLOW_BR = registerBlock("smalltile/small_tile_yellow_br", () -> new TilledBlock("info.small_tile_yellow_br", SMALL_TILE_YELLOW, RegItems.SMALL_TILE_NEW));
+    public static final RegistryObject<Block> SMALL_TILE_WHITE_BR = registerBlock("smalltile/small_tile_white_br", () -> new TilledBlock("info.small_tile_white_br", SMALL_TILE_WHITE, RegItems.SMALL_TILE_NEW));
+    public static final RegistryObject<Block> SMALL_TILE_BLUE_BR = registerBlock("smalltile/small_tile_blue_br", () -> new TilledBlock("info.small_tile_blue_br", SMALL_TILE_BLUE, RegItems.SMALL_TILE_NEW));
+    public static final RegistryObject<Block> HORIZ_TILE_BLUE_BR = registerBlock("horiztile/horiz_tile_blue_br", () -> new TilledBlock("info.horiz_tile_blue_br", HORIZ_TILE_BLUE, RegItems.REST_TILE_NEW));
+    public static final RegistryObject<Block> HORIZ_TILE_DARK_BLUE_BR = registerBlock("horiztile/horiz_tile_dark_blue_br", () -> new TilledBlock("info.horiz_tile_dark_blue_br", HORIZ_TILE_DARK_BLUE, RegItems.REST_TILE_NEW));
+    public static final RegistryObject<Block> HORIZ_TILE_WHITE_BR = registerBlock("horiztile/horiz_tile_white_br", () -> new TilledBlock("info.horiz_tile_white_br", HORIZ_TILE_WHITE, RegItems.REST_TILE_NEW));
 
     //tiles
     public static final RegistryObject<Block> TILE_QUAD_3 = registerBlock("quadtile/tile_quad_3", () -> new TilledBlock( "info.quadtile_3"));
@@ -104,45 +106,45 @@ public class RegBlocksMain {
     public static final RegistryObject<Block> REGULAR_LIL_TILE = registerBlock("regtile/tile_reg_lil", () -> new TilledBlock( "info.tile_reg_lil"));
     public static final RegistryObject<Block> REGULAR_AM_TILE = registerBlock("regtile/tile_reg_am", () -> new TilledBlock( "info.tile_reg_am"));
 
-    public static final RegistryObject<Block> TILE_QUAD_3_BR = registerBlock("quadtile/tile_quad_3_br", () -> new TilledBlock( "info.quadtile_3_br"));
-    public static final RegistryObject<Block> TILE_QUAD_WHITE_BR = registerBlock("quadtile/tile_quad_white_br", () -> new TilledBlock( "info.quadtile_white_br"));
-    public static final RegistryObject<Block> TILE_QUAD_BLUE_BR = registerBlock("quadtile/tile_quad_blue_br", () -> new TilledBlock( "info.quadtile_blue_br"));
-    public static final RegistryObject<Block> TILE_QUAD_5_BRf = registerBlock("quadtile/tile_quad_5_brf", () -> new TilledBlock( "info.quadtile_5_br"));
-    public static final RegistryObject<Block> TILE_QUAD_5_BR = registerBlock("quadtile/tile_quad_5_br", () -> new TilledBlock( "info.quadtile_5_brf"));
-    public static final RegistryObject<Block> TILE_REST_BLACK_BR = registerBlock("resttile/tile_rest_black_br", () -> new TilledBlock( "info.tile_rest_black_br"));
-    public static final RegistryObject<Block> REGULAR_BROWN_TILE_BR = registerBlock("regtile/tile_reg_brown_br", () -> new TilledBlock( "info.tile_reg_brown_br"));
-    public static final RegistryObject<Block> REGULAR_LIL_TILE_BR = registerBlock("regtile/tile_reg_lil_br", () -> new TilledBlock( "info.tile_reg_lil_br"));
-    public static final RegistryObject<Block> REGULAR_AM_TILE_BR = registerBlock("regtile/tile_reg_am_br", () -> new TilledBlock( "info.tile_reg_am_br"));
+    public static final RegistryObject<Block> TILE_QUAD_3_BR = registerBlock("quadtile/tile_quad_3_br", () -> new TilledBlock("info.quadtile_3_br", TILE_QUAD_3, RegItems.QUAD_TILE_NEW));
+    public static final RegistryObject<Block> TILE_QUAD_WHITE_BR = registerBlock("quadtile/tile_quad_white_br", () -> new TilledBlock("info.quadtile_white_br", TILE_QUAD_WHITE, RegItems.QUAD_TILE_NEW));
+    public static final RegistryObject<Block> TILE_QUAD_BLUE_BR = registerBlock("quadtile/tile_quad_blue_br", () -> new TilledBlock("info.quadtile_blue_br", TILE_QUAD_BLUE, RegItems.QUAD_TILE_NEW));
+    public static final RegistryObject<Block> TILE_QUAD_5_BRf = registerBlock("quadtile/tile_quad_5_brf", () -> new TilledBlock("info.quadtile_5_brf", () -> RegBlocksMain.TILE_QUAD_5_BR.get(), RegItems.QUAD_TILE_NEW));
+    public static final RegistryObject<Block> TILE_QUAD_5_BR = registerBlock("quadtile/tile_quad_5_br", () -> new TilledBlock("info.quadtile_5_br", TILE_QUAD_5, RegItems.QUAD_TILE_NEW));
+    public static final RegistryObject<Block> TILE_REST_BLACK_BR = registerBlock("resttile/tile_rest_black_br", () -> new TilledBlock("info.tile_rest_black_br", TILE_REST_BLACK, RegItems.REST_TILE_NEW));
+    public static final RegistryObject<Block> REGULAR_BROWN_TILE_BR = registerBlock("regtile/tile_reg_brown_br", () -> new TilledBlock("info.tile_reg_brown_br", REGULAR_BROWN_TILE, RegItems.BIG_TILE_NEW));
+    public static final RegistryObject<Block> REGULAR_LIL_TILE_BR = registerBlock("regtile/tile_reg_lil_br", () -> new TilledBlock("info.tile_reg_lil_br", REGULAR_LIL_TILE, RegItems.BIG_TILE_NEW));
+    public static final RegistryObject<Block> REGULAR_AM_TILE_BR = registerBlock("regtile/tile_reg_am_br", () -> new TilledBlock("info.tile_reg_am_br", REGULAR_AM_TILE, RegItems.BIG_TILE_NEW));
 
     public static final RegistryObject<Block> TILE_REST_BROWN = registerBlock("resttile/tile_rest_brown", () -> new TilledBlock( "info.tile_rest_brown"));
     public static final RegistryObject<Block> TILE_REST_DARK_BLUE = registerBlock("resttile/tile_rest_dark_blue", () -> new TilledBlock( "info.tile_rest_dark_blue"));
     public static final RegistryObject<Block> TILE_REST_BLUE = registerBlock("resttile/tile_rest_blue", () -> new TilledBlock( "info.tile_rest_blue"));
     public static final RegistryObject<Block> TILE_REST_WHITE = registerBlock("resttile/tile_rest_white", () -> new TilledBlock( "info.tile_rest_white"));
-    public static final RegistryObject<Block> TILE_QUAD_CONCRETE = registerBlock("quadtile/tile_quad_concrete", () -> new TilledBlock( "info.quadtile_concrete"));
+    public static final RegistryObject<Block> TILE_QUAD_CONCRETE = registerBlock("quadtile/tile_quad_concrete", () -> new TilledBlock("info.quadtile_concrete", TILE_QUAD_WHITE_BR, RegItems.QUAD_TILE_NEW));
     public static final RegistryObject<Block> TILE_QUAD_GRAY = registerBlock("quadtile/tile_quad_gray", () -> new TilledBlock( "info.quadtile_gray"));
     public static final RegistryObject<Block> CERAMIC_GLASS_BROWN = registerBlock("structural/ceramic_glass_brown", GlassBlock::new);
     public static final RegistryObject<Block> CERAMIC_GLASS_BLUE = registerBlock("structural/ceramic_glass_blue", GlassBlock::new);
     public static final RegistryObject<Block> CERAMIC_GLASS_GREEN = registerBlock("structural/ceramic_glass_green", GlassBlock::new);
 
-    public static final RegistryObject<Block> TILE_REST_BROWN_BR = registerBlock("resttile/tile_rest_brown_br", () -> new TilledBlock( "info.tile_rest_brown_br"));
-    public static final RegistryObject<Block> TILE_REST_DARK_BLUE_BR = registerBlock("resttile/tile_rest_dark_blue_br", () -> new TilledBlock( "info.tile_rest_dark_blue_br"));
-    public static final RegistryObject<Block> TILE_REST_BLUE_BR = registerBlock("resttile/tile_rest_blue_br", () -> new TilledBlock( "info.tile_rest_blue_br"));
-    public static final RegistryObject<Block> TILE_REST_WHITE_BR = registerBlock("resttile/tile_rest_white_br", () -> new TilledBlock( "info.tile_rest_white_br"));
+    public static final RegistryObject<Block> TILE_REST_BROWN_BR = registerBlock("resttile/tile_rest_brown_br", () -> new TilledBlock("info.tile_rest_brown_br", TILE_REST_BROWN, RegItems.REST_TILE_NEW));
+    public static final RegistryObject<Block> TILE_REST_DARK_BLUE_BR = registerBlock("resttile/tile_rest_dark_blue_br", () -> new TilledBlock("info.tile_rest_dark_blue_br", TILE_REST_DARK_BLUE, RegItems.REST_TILE_NEW));
+    public static final RegistryObject<Block> TILE_REST_BLUE_BR = registerBlock("resttile/tile_rest_blue_br", () -> new TilledBlock("info.tile_rest_blue_br", TILE_REST_BLUE, RegItems.REST_TILE_NEW));
+    public static final RegistryObject<Block> TILE_REST_WHITE_BR = registerBlock("resttile/tile_rest_white_br", () -> new TilledBlock("info.tile_rest_white_br", TILE_REST_WHITE, RegItems.REST_TILE_NEW));
     public static final RegistryObject<Block> TILE_MOSAIC_1 = registerBlock("mosaictile/tile_mosaic_1", () -> new TilledBlock("info.mosaic_tile1"));
     public static final RegistryObject<Block> TILE_MOSAIC_2 = registerBlock("mosaictile/tile_mosaic_2", () -> new TilledBlock("info.mosaic_tile2"));
     public static final RegistryObject<Block> PANEL_CONCRETE_YELLOW = registerBlock("structural/panel_concrete_yellow", () -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(3f, 8f).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> PANEL_CONCRETE_YELLOW_SIDE = registerBlock("structural/panel_concrete_yellow_side", () -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(3f, 8f).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> PANEL_CONCRETE_YELLOW_CORNER = registerBlock("structural/panel_concrete_yellow_corner", () -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(3f, 8f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> PANEL_CONCRETE_YELLOW_SIDE = registerBlock("structural/panel_concrete_yellow_side", () -> new PanelSideBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(3f, 8f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> PANEL_CONCRETE_YELLOW_CORNER = registerBlock("structural/panel_concrete_yellow_corner", () -> new PanelCornerBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(3f, 8f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> SHORT_BRICKS = registerBlock("brick/short_bricks", BrickBlock::new);
     public static final RegistryObject<Block> BRICKS_WITH_WHITE = registerBlock("brick/soviet_bricks_with_white", BrickBlock::new);
     public static final RegistryObject<Block> SMALL_BRICKS = registerBlock("brick/small_bricks", BrickBlock::new);
     public static final RegistryObject<Block> PANEL_TILE = registerBlock("structural/panel_tile", () -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(3f, 8f).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> PANEL_TILE_SIDE = registerBlock("structural/panel_tile_side", () -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(3f, 8f).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> PANEL_TILE_CORNER = registerBlock("structural/panel_tile_corner", () -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(3f, 8f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> PANEL_TILE_SIDE = registerBlock("structural/panel_tile_side", () -> new PanelSideBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(3f, 8f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> PANEL_TILE_CORNER = registerBlock("structural/panel_tile_corner", () -> new PanelCornerBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(3f, 8f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> PANEL_CONCRETE = registerBlock("structural/panel_concrete", () -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(3f, 8f).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> PANEL_CONCRETE_SIDE = registerBlock("structural/panel_concrete_side", () -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(3f, 8f).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> PANEL_CONCRETE_CORNER = registerBlock("structural/panel_concrete_corner", () -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(3f, 8f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> PANEL_CONCRETE_SIDE = registerBlock("structural/panel_concrete_side", () -> new PanelSideBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(3f, 8f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> PANEL_CONCRETE_CORNER = registerBlock("structural/panel_concrete_corner", () -> new PanelCornerBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(3f, 8f).requiresCorrectToolForDrops()));
 
 
     //bricks
@@ -199,7 +201,7 @@ public class RegBlocksMain {
     public static final RegistryObject<Block> TRIM_TILE_RED = registerBlock("structural/trim_tile_red", TilledBlock::new);
     public static final RegistryObject<Block> TRIM_TILE_BLUE = registerBlock("structural/trim_tile_blue", TilledBlock::new);
 
-    public static final RegistryObject<Block> TRIM_TILE_1_BR = registerBlock("structural/trim_tile_1_br", TilledBlock::new);
+    public static final RegistryObject<Block> TRIM_TILE_1_BR = registerBlock("structural/trim_tile_1_br", () -> new TilledBlock(null, TRIM_TILE_1, RegItems.REST_TILE_NEW));
     public static final RegistryObject<Block> CONCRETE_PLATE = registerBlock("structural/concrete_plate", () -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(5.5f, 15f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> TRIM_METAL_1 = registerBlock("structural/trim_metal_1", MetalBlock::new);
     public static final RegistryObject<Block> TRIM_METAL_2 = registerBlock("structural/trim_metal_2", MetalBlock::new);

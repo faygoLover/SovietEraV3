@@ -33,8 +33,9 @@ public class FenceBlock extends BaseBlock {
     private final VoxelShape collisionBaseShape;
     private final VoxelShape collisionConnectionShape;
 
-    private static final VoxelShape[] OUTLINE_CACHE = new VoxelShape[16];
-    private static final VoxelShape[] COLLISION_CACHE = new VoxelShape[16];
+    // Кэши не статические: у каждого блока-забора свои формы
+    private final VoxelShape[] outlineCache = new VoxelShape[16];
+    private final VoxelShape[] collisionCache = new VoxelShape[16];
 
     public FenceBlock(Properties properties, VoxelShape baseShape, VoxelShape connectionShape) {
         super(properties.noOcclusion(), "info.connectable");
@@ -133,10 +134,10 @@ public class FenceBlock extends BaseBlock {
     @Override
     public @NotNull VoxelShape getShape(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull CollisionContext context) {
         int index = getShapeIndex(state);
-        VoxelShape cached = OUTLINE_CACHE[index];
+        VoxelShape cached = outlineCache[index];
         if (cached == null) {
             cached = createCombinedShape(state, baseShape, connectionShape);
-            OUTLINE_CACHE[index] = cached;
+            outlineCache[index] = cached;
         }
         return cached;
     }
@@ -144,10 +145,10 @@ public class FenceBlock extends BaseBlock {
     @Override
     public @NotNull VoxelShape getCollisionShape(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull CollisionContext context) {
         int index = getShapeIndex(state);
-        VoxelShape cached = COLLISION_CACHE[index];
+        VoxelShape cached = collisionCache[index];
         if (cached == null) {
             cached = createCombinedShape(state, collisionBaseShape, collisionConnectionShape);
-            COLLISION_CACHE[index] = cached;
+            collisionCache[index] = cached;
         }
         return cached;
     }

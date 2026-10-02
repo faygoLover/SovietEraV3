@@ -3,7 +3,7 @@
 	"credit": "Made special for SovietLab",
 	"textures": {
 		"0": "soviet:block/structural/rasty_blue_metal_d",
-		"1": "soviet:block/mech/d_dark_metal",
+		"1": "soviet:block/structural/d_dark_metal",
 		"2": "soviet:block/structural/blue_metal_l",
 		"4": "soviet:block/structural/gray_metal",
 		"5": "soviet:block/structural/gray_metal",

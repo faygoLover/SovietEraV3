@@ -35,7 +35,9 @@ public class BarbWire extends BaseBlock {
     private final VoxelShape baseShape;
     private final VoxelShape connectionShape;
 
-    private static final VoxelShape[] OUTLINE_CACHE = new VoxelShape[16];
+    // Кэши не статические: у каждого блока свои формы
+    private final VoxelShape[] outlineCache = new VoxelShape[16];
+    private final VoxelShape[] sidesCache = new VoxelShape[16];
 
     private static final WeakHashMap<Entity, Long> LAST_DAMAGE_TIME = new WeakHashMap<>();
     private static final WeakHashMap<Entity, Boolean> WAS_IN_DANGER_ZONE = new WeakHashMap<>();
@@ -120,10 +122,10 @@ public class BarbWire extends BaseBlock {
     @Override
     public @NotNull VoxelShape getShape(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull CollisionContext context) {
         int index = getShapeIndex(state);
-        VoxelShape cached = OUTLINE_CACHE[index];
+        VoxelShape cached = outlineCache[index];
         if (cached == null) {
             cached = createCombinedShape(state, baseShape, connectionShape);
-            OUTLINE_CACHE[index] = cached;
+            outlineCache[index] = cached;
         }
         return cached;
     }
@@ -153,6 +155,16 @@ public class BarbWire extends BaseBlock {
         return shape.optimize();
     }
 
+    private VoxelShape getSidesOnlyShape(BlockState state) {
+        int index = getShapeIndex(state);
+        VoxelShape cached = sidesCache[index];
+        if (cached == null) {
+            cached = createSidesOnlyShape(state);
+            sidesCache[index] = cached;
+        }
+        return cached;
+    }
+
     private VoxelShape createSidesOnlyShape(BlockState state) {
         VoxelShape shape = Shapes.empty();
         for (Direction direction : Direction.Plane.HORIZONTAL) {
@@ -166,9 +178,10 @@ public class BarbWire extends BaseBlock {
 
     @Override
     public void entityInside(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull Entity entity) {
-        if (!(entity instanceof LivingEntity living)) return;
+        // Урон и замедление считает сервер: статические карты ниже не рассчитаны на два потока
+        if (level.isClientSide || !(entity instanceof LivingEntity living)) return;
 
-        VoxelShape sidesShape = createSidesOnlyShape(state);
+        VoxelShape sidesShape = getSidesOnlyShape(state);
         AABB entityBox = entity.getBoundingBox();
         boolean inDangerZone = false;
         for (AABB aabb : sidesShape.toAabbs()) {
@@ -201,9 +214,7 @@ public class BarbWire extends BaseBlock {
                 LAST_DAMAGE_TIME.put(entity, currentTime);
             }
         } else {
-            if (wasInZone != null && wasInZone) {
-                living.removeEffect(MobEffects.MOVEMENT_SLOWDOWN);
-            }
+            // Замедление длится 5 тиков и спадает само; снимать его нельзя — это может быть эффект зелья
             PREVIOUS_POS.remove(entity);
         }
 

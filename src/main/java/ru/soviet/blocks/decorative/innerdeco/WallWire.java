@@ -108,8 +108,10 @@ public class WallWire extends DirectionalCornerBlock {
                     power = Math.max(power, neighborPower - 1);
                 }
             } else {
-                // Непроводной источник: сигнал, который он излучает в нашу сторону
-                int signal = level.getSignal(neighborPos, dir.getOpposite());
+                // Непроводной источник: сигнал, который он излучает в нашу сторону.
+                // Второй аргумент getSignal — направление от нас к соседу (как в Level.getBestNeighborSignal),
+                // иначе повторители и компараторы читаются задом наперёд.
+                int signal = level.getSignal(neighborPos, dir);
                 if (signal > power) {
                     power = signal;
                 }

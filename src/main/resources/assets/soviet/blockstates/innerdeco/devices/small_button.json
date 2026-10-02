@@ -1,16 +1,44 @@
 {
-    "variants": {
-	"facing=west,toggled=false":  { "model": "soviet:block/innerdeco/devices/small_button", "x": 90, "y": 90  },
- 	"facing=up,toggled=false":  { "model": "soviet:block/innerdeco/devices/small_button", "x": 180 },
-    "facing=east,toggled=false":  { "model": "soviet:block/innerdeco/devices/small_button", "x": 90, "y": 270 },
-    "facing=down,toggled=false":  { "model": "soviet:block/innerdeco/devices/small_button", "y": 270 },
-    "facing=south,toggled=false": { "model": "soviet:block/innerdeco/devices/small_button", "y": 0, "x": 90  },
-    "facing=north,toggled=false": { "model": "soviet:block/innerdeco/devices/small_button", "y": 0, "x": 270 },
-    "facing=west,toggled=true":  { "model": "soviet:block/innerdeco/devices/small_button_enb", "x": 90, "y": 90  },
-    "facing=up,toggled=true":  { "model": "soviet:block/innerdeco/devices/small_button_enb", "x": 180 },
-    "facing=east,toggled=true":  { "model": "soviet:block/innerdeco/devices/small_button_enb", "x": 90, "y": 270 },
-    "facing=down,toggled=true":  { "model": "soviet:block/innerdeco/devices/small_button_enb", "y": 270 },
-    "facing=south,toggled=true": { "model": "soviet:block/innerdeco/devices/small_button_enb", "y": 0, "x": 90  },
-    "facing=north,toggled=true": { "model": "soviet:block/innerdeco/devices/small_button_enb", "y": 0, "x": 270 }
+  "variants": {
+    "facing=west,toggled=false": {
+      "model": "soviet:block/innerdeco/devices/small_button",
+      "x": 90,
+      "y": 90
+    },
+    "facing=east,toggled=false": {
+      "model": "soviet:block/innerdeco/devices/small_button",
+      "x": 90,
+      "y": 270
+    },
+    "facing=south,toggled=false": {
+      "model": "soviet:block/innerdeco/devices/small_button",
+      "y": 0,
+      "x": 90
+    },
+    "facing=north,toggled=false": {
+      "model": "soviet:block/innerdeco/devices/small_button",
+      "y": 0,
+      "x": 270
+    },
+    "facing=west,toggled=true": {
+      "model": "soviet:block/innerdeco/devices/small_button_enb",
+      "x": 90,
+      "y": 90
+    },
+    "facing=east,toggled=true": {
+      "model": "soviet:block/innerdeco/devices/small_button_enb",
+      "x": 90,
+      "y": 270
+    },
+    "facing=south,toggled=true": {
+      "model": "soviet:block/innerdeco/devices/small_button_enb",
+      "y": 0,
+      "x": 90
+    },
+    "facing=north,toggled=true": {
+      "model": "soviet:block/innerdeco/devices/small_button_enb",
+      "y": 0,
+      "x": 270
     }
+  }
 }

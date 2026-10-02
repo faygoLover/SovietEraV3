@@ -6,6 +6,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.minecraftforge.items.IItemHandlerModifiable;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -32,6 +33,11 @@ public class BlockEntityDrop {
                     itemEntity.setPickUpDelay(40);
 
                     level.addFreshEntity(itemEntity);
+
+                    // Слот очищаем: иначе у игрока с открытым меню останутся те же предметы (дюп)
+                    if (handler instanceof IItemHandlerModifiable modifiable) {
+                        modifiable.setStackInSlot(i, ItemStack.EMPTY);
+                    }
                 }
             }
         });

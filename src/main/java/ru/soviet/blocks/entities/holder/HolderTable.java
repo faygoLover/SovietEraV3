@@ -69,8 +69,7 @@ public class HolderTable extends Linear4MBlock implements EntityBlock {
             float yaw = player.getYRot();
             int rotation = Math.round((yaw + 360) % 360 / 30) * 30; // начальный поворот по взгляду
 
-            BlockState blockToPlace = blockItem.getBlock().defaultBlockState();
-            holder.setStoredBlock(blockToPlace);
+            holder.setStoredItem(stack);
             holder.setRotation(rotation);
 
             if (!player.getAbilities().instabuild) stack.shrink(1);
@@ -90,13 +89,9 @@ public class HolderTable extends Linear4MBlock implements EntityBlock {
 
         // Если внутри есть блок – выбрасываем его в мир и предотвращаем разрушение
         if (!holder.isEmpty()) {
-            BlockState stored = holder.getStoredBlock();
-            if (stored != null) {
-                ItemStack stack = new ItemStack(stored.getBlock());
-                popResource(level, pos, stack);
-                holder.setStoredBlock(null);
-                level.playSound(null, pos, SoundEvents.ITEM_FRAME_REMOVE_ITEM, SoundSource.BLOCKS, 1.0f, 1.0f);
-            }
+            popResource(level, pos, holder.getStoredItem());
+            holder.setStoredItem(ItemStack.EMPTY);
+            level.playSound(null, pos, SoundEvents.ITEM_FRAME_REMOVE_ITEM, SoundSource.BLOCKS, 1.0f, 1.0f);
             // Не вызываем super, чтобы блок не получил урон (атака обработана)
         } else {
             // Если внутри пусто, разрешаем стандартную атаку (разрушение блока)
@@ -110,11 +105,7 @@ public class HolderTable extends Linear4MBlock implements EntityBlock {
         if (!state.is(newState.getBlock())) {
             BlockEntity be = level.getBlockEntity(pos);
             if (be instanceof HolderBlockEntity holder && !holder.isEmpty()) {
-                BlockState stored = holder.getStoredBlock();
-                if (stored != null) {
-                    ItemStack stack = new ItemStack(stored.getBlock());
-                    popResource(level, pos, stack);
-                }
+                popResource(level, pos, holder.getStoredItem());
             }
             super.onRemove(state, level, pos, newState, isMoving);
         }

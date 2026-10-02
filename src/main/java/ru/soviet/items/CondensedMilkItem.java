@@ -1,5 +1,7 @@
 package ru.soviet.items;
 
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
@@ -12,6 +14,12 @@ import org.jetbrains.annotations.NotNull;
 public class CondensedMilkItem extends BaseItem {
     public CondensedMilkItem(Properties properties, String hoverTextKey) {
         super(properties.stacksTo(1), hoverTextKey);
+    }
+
+    @Override
+    public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level level, @NotNull Player player, @NotNull InteractionHand hand) {
+        player.startUsingItem(hand);
+        return InteractionResultHolder.consume(player.getItemInHand(hand));
     }
 
     @Override

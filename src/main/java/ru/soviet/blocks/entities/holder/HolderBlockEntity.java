@@ -2,9 +2,12 @@ package ru.soviet.blocks.entities.holder;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.Tag;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -15,6 +18,8 @@ import ru.soviet.reg.RegBlockEntities;
 
 public class HolderBlockEntity extends BlockEntity {
 
+    // Храним сам предмет, а не только блок: так сохраняются NBT предмета (например, содержимое шалкера)
+    private ItemStack storedItem = ItemStack.EMPTY;
     private BlockState storedBlock = Blocks.AIR.defaultBlockState();
     private int rotation = 0; // угол поворота в градусах (0–360, кратен 30)
 
@@ -31,8 +36,19 @@ public class HolderBlockEntity extends BlockEntity {
         return storedBlock.isAir() ? null : storedBlock;
     }
 
-    public void setStoredBlock(@Nullable BlockState state) {
-        this.storedBlock = state == null ? Blocks.AIR.defaultBlockState() : state;
+    /** Предмет, лежащий на столе (копия), или ItemStack.EMPTY. */
+    public ItemStack getStoredItem() {
+        return storedItem.copy();
+    }
+
+    private static BlockState stateOf(ItemStack stack) {
+        return stack.getItem() instanceof BlockItem blockItem ? blockItem.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState();
+    }
+
+    /** Кладёт на стол один предмет-блок; ItemStack.EMPTY очищает стол. */
+    public void setStoredItem(ItemStack stack) {
+        this.storedItem = stack.isEmpty() ? ItemStack.EMPTY : stack.copyWithCount(1);
+        this.storedBlock = stateOf(this.storedItem);
         this.rotation = 0; // сбрасываем поворот при установке нового блока
         setChanged();
         if (level != null) {
@@ -60,8 +76,8 @@ public class HolderBlockEntity extends BlockEntity {
     @Override
     protected void saveAdditional(@NotNull CompoundTag tag) {
         super.saveAdditional(tag);
-        if (!storedBlock.isAir()) {
-            tag.putInt("stored_block", Block.getId(storedBlock));
+        if (!storedItem.isEmpty()) {
+            tag.put("stored_item", storedItem.save(new CompoundTag()));
         }
         tag.putInt("rotation", rotation);
     }
@@ -69,11 +85,15 @@ public class HolderBlockEntity extends BlockEntity {
     @Override
     public void load(@NotNull CompoundTag tag) {
         super.load(tag);
-        if (tag.contains("stored_block")) {
-            storedBlock = Block.stateById(tag.getInt("stored_block"));
+        if (tag.contains("stored_item", Tag.TAG_COMPOUND)) {
+            storedItem = ItemStack.of(tag.getCompound("stored_item"));
+        } else if (tag.contains("stored_block", Tag.TAG_INT)) {
+            // Старый формат: числовой id состояния блока. Он зависит от набора модов, поэтому больше не пишется.
+            storedItem = new ItemStack(Block.stateById(tag.getInt("stored_block")).getBlock());
         } else {
-            storedBlock = Blocks.AIR.defaultBlockState();
+            storedItem = ItemStack.EMPTY;
         }
+        storedBlock = stateOf(storedItem);
         rotation = tag.getInt("rotation");
         // нормализация, если вдруг сохранено некорректное значение
         rotation = (rotation / 30) * 30;
